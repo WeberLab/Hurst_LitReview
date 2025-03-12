@@ -1,0 +1,3177 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  sn-vancouver,
+  Numbered,
+  referee,
+  lineno]{sn-jnl}
+
+
+
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+%%%% Standard Packages
+
+\usepackage{graphicx}%
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}%
+
+%%%%
+
+\raggedbottom
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{\textbf{Figure}}
+\else
+  \newcommand\figurename{\textbf{Figure}}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{\textbf{Table}}
+\else
+  \newcommand\tablename{\textbf{Table}}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\captionsetup{labelsep=period}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Brain Dynamics},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title[Brain Dynamics]{Brain Dynamics}
+
+% author setup
+\author*[1,2]{\fnm{Alexander Mark} \sur{Weber}}\email{aweber@bcchr.ca}
+% affil setup
+\affil[1]{\orgdiv{BC Children's Hospital Research
+Institute}, \orgname{The University of British
+Columbia}, \orgaddress{\street{938 West 28th
+Avenue}, \city{Vancouver}, \postcode{V5Z 4H4}, \country{Canada}}}
+\affil[2]{\orgdiv{Pediatrics}, \orgname{The University of British
+Columbia}, \orgaddress{\street{2329 West
+Mall}, \city{Vancouver}, \postcode{V6T 1Z4}, \country{Canada}}}
+
+% abstract 
+
+\abstract{An introduction to the idea of brain dynamics in fMRI studies}
+
+% keywords
+
+\begin{document}
+\maketitle
+
+\textsuperscript{1} The University of British Columbia\\
+\textsuperscript{2} The University of British Columbia
+
+\textsuperscript{*} Correspondence:
+\href{mailto:aweber@bcchr.ca}{Alexander Mark Weber
+\textless{}aweber@bcchr.ca\textgreater{}}
+
+\section{Introduction}\label{introduction}
+
+A fractal structure, either spatial or temporal, is composed of smaller
+parts that exhibit the same pattern at every scale
+\citep{koch1904, kochMethodeGeometriqueElementaire1906, mandelbrotHowLongCoast1967}.
+Classic spatial examples of fractals in nature are coastlines
+\citep{mandelbrotHowLongCoast1967}, circulatory system
+\citep{jayalalithaFractalModelBlood2008}, and brain anatomy
+\citep{ansellUnveilingUniversalAspects2024}, where at each level of
+magnification these structures look the same;
+i.e.~\emph{self-similarity}. For a dynamic process, or in the temporal
+domain, this is known as \emph{scale invariance}, meaning that both
+rapid and slow processes follow the same pattern
+\citep{rileyTutorialIntroductionAdaptive2012}. Scale-free behavior,
+characterized by the absence of any inherent scale or preferred length,
+is a signature characteristic of complex systems that can be understood
+as the collective outcome of numerous interacting components with weak
+and random connections \citep{csermelyWeakLinksStabilizers2006}.
+Physiological systems usually need a mix of randomness and structure to
+function optimally. When a system is operating near the critical point,
+it is expected to exhibit these long range temporal correlations
+(LRTCs). Therefore, by analyzing the LRTC of a time-series, valuable
+insights can be found into the underlying mechanisms driving system
+behavior, such as memory effects, self-organization, and criticality
+\citep{beggsCortexCriticalPoint2022}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{quote}
+``Because pink noise lies between white and Brown(ian) noise, it has
+been proven to bring stability and adaptability into dynamic processes,
+thus, crucial properties of well-functioning complex systems''
+\citep{bakSelforganizedCriticalityExplanation1987}
+\end{quote}
+
+\begin{quote}
+``as pink noise arises from the interaction of multiple systems and
+operates over different scales, it has been shown to contribute to
+system resiliency and structural integrity if individual components were
+lost or interrupted''
+\citep{lipsitzLossComplexityAging1992, lipsitzDynamicsStabilityPhysiologic2002}
+\end{quote}
+
+See \citet{hermanFractalCharacterizationComplexity2009} for a really
+good review
+
+\begin{quote}
+Scale-free dynamics is a hallmark of complexity viewed as an emergent
+property of biological systems composed of numerous elements with a
+network of stochastic (typically weak) connections amongst them
+(Csermely, 2006) from \citet{mukliImpactHealthyAging2018}
+\end{quote}
+
+Another good review is by Werner (2010) linking fractals/Hurst and
+Criticality \citet{wernerFractalsNervousSystem2010}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Fractal Dimension and Hurst
+Exponent}\label{fractal-dimension-and-hurst-exponent}
+
+Non-periodic fluctuations are prevalent in physiological systems, and
+these irregular patterns can be mathematically modeled using stochastic,
+chaotic, or noisy chaotic methods. Stochastic models assume that the
+fluctuations result from a large number of weak influences, while
+chaotic models conceptualize that strong nonlinear interactions between
+a few factors shape the fluctuations. Among the various stochastic
+approaches, `fractal' models offer the most accurate representation of
+reality by considering the self-similar nature of physiological
+fluctuations over different time scales
+\citep{ekeFractalCharacterizationComplexity2002}. Fractal structures
+were first expressed in the late 19th and early 20th century by
+mathematicians who generated complex geometrical structures with simple
+objects (e.g.~a triangle) by applying a simple rule of transformation in
+an infinite number of iterative steps Figure~\ref{fig-fractal}. A
+use-case for these geometric structures was not fully realized until the
+1960s, when Benoit Mandelbrot formalized them as a new form of geometry
+capable of describing the complex shapes and forms of nature
+\citep{mandelbrotHowLongCoast1967}.
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-latex/notebooks-Figures-fig-fractal-output-1.png}
+
+}
+
+\caption{\label{fig-fractal}\textbf{Ideal mathematical fractal.} The 2D
+Sierpinski triangle starts with a simple equilateral triangle (left),
+and subdivides it recursively into smaller equilateral triangles. For
+every iteration, each triangle (in blue) is further subdivided it into
+four smaller congruent equilateral triangles with the central triangle
+removed. The first such iteration is shown in the centre, with the fifth
+iteration shown on the right.}
+
+\end{figure}%
+
+Unlike Euclidean structures that can use axioms and rules to describe an
+object of integer dimensions, fractal structures can only be
+characterized by recursive algorithms that extend the use of dimension
+to the non-integer range \citep{hermanFractalBranchingPattern2001}.
+Recognizing this difference, Mandelbrot named these complex structures
+`fractals', and defined their non-Euclidean dimension as a `fractal
+dimension' (FD) --- that is, a non-integer. For the one-dimensional
+time-series, FD will be between 1 and 2. While a structure such as the
+Sierpinski triangle is an `exact fractal', meaning it is assembled from
+pieces that are an exact replica of the whole, nature is composed of
+`statistical fractals', whose self-similarity is found in the power law
+scaling of the parameters characterizing their structures at different
+scales of observation Figure~\ref{fig-statisticalfractal}. Unlike
+Euclidean structures which can be defined by axioms, fractals can only
+be characterized by a set of properties that, when present, indicate the
+structure is indeed fractal (see Section~\ref{sec-properties}).
+
+\begin{figure}
+
+\centering{
+
+\includegraphics{./image/exact_vs_statistical_tree.png}
+
+}
+
+\caption{\label{fig-statisticalfractal}\textbf{A comparison of
+statistical and exact fractal patterns.} The two basic forms of fractals
+are demonstrated. Zooming in on tree branches (left), an exact
+self-similar element cannot be found. Zooming in on an exact fractal
+(right), exact replica of the whole are found. Photo by author.
+Branching fractal made in Python. Figure inspired by Taylor (2006)
+\citep{taylorPersonalReflectionsJackson2006}}
+
+\end{figure}%
+
+The Hurst exponent (H) is a statistical measure used to quantify
+long-range dependence or persistence in time-series data (i.e.~LRTCs).
+First introduced by Harold Hurst in 1951 for hydrological applications
+\citep{hurstLongTermStorageCapacity1951}, it was Mandelbrot again who
+helped popularize its use for studying complex shapes and forms of
+nature
+\citep{mandelbrotClasseProcessusStochastiques1965, mandelbrotHowLongCoast1967}.
+Since then it has been applied across various fields, including finance,
+geophysics, ecology, and neuroscience, to characterize complex systems
+with intricate dynamics
+\citep{molzFractionalBrownianMotion1997, korvinFractalModelsEarth1992, parkSelfSimilarNetworkTraffic2000, gravesBriefHistoryLong2017}.
+H and FD for time-series can be directly converted, as
+\begin{equation}\phantomsection\label{eq-HRD}{
+H=2–D.
+}\end{equation} This means that FD and H are inversely correlated, and
+that H is a real number between 0 and 1 (non-inclusive; although it can
+be extended to \textgreater{} 1; see \ldots). For the rest of this
+paper, we will be discussing H.
+
+\emph{Thus, the basic premise behind fractal time-series analysis is
+that, beneath the seemingly chaotic and unpredictable variations in the
+signal, there lies a stable underlying mechanism which can be
+effectively described using the fewest possible parameters (i.e.~H or
+FD).}
+
+\subsection{Properties}\label{sec-properties}
+
+When H = 0.5 (FD = 1.5), the time-series is completely uncorrelated, has
+no memory, and is like white noise (pure random). It represents the
+highest level of unpredictability and entropy, but not necessarily the
+most complex state in a physiological sense. When H \textless{} 0.5 (FD
+\textgreater{} 1.5), the time-series is said to be anti-persistent,
+exhibiting negative correlations: i.e.~if the signal increases at one
+point, it's likely to decrease at the next point. This is also known as
+short-term reversal. This tends to make the time-series more predictable
+and reduces randomness, often simplifying dynamics. When H
+\textgreater{} 0.5 (FD \textless{} 1.5), the time-series exhibits
+positive long-range correlations, and is more structured. The
+time-series displays a long-term trend, meaning past states influence
+future states.
+
+There are four main properties that must be present for a time-series to
+be characterized by H or FD: 1) self-similarity; 2) power law scaling
+relationship; 3) scale-invariance; and 4) a scaling range
+(\textbf{?@fig-fourprop}). Each of these will be discussed in turn.
+
+\subsubsection{Self-similarity}\label{self-similarity}
+
+Self-similarity means that pieces of the structure, when enlarged,
+resemble larger pieces or the whole (Figure~\ref{fig-statisticalfractal}
+and \textbf{?@fig-fourprop} A-C). Technically speaking, physiological
+time-series are self-affine, meaning their scaling is anisotropic
+(i.e.~the proportions between enlarged pieces are different in one
+direction from those in the other). This is because in one direction
+(time) the proportions between the enlarged pieces is different than in
+the other (amplitude of signal; e.g.~fMRI BOLD)
+\citep{ekePhysiologicalTimeSeries2000}.
+
+\subsubsection{Power law scaling
+relationship}\label{power-law-scaling-relationship}
+
+Power law scaling means that, for a quantitative property, \(q\), is
+measured in quantities of \(s\), its value depends on \(s\) according to
+the following scaling relationship:
+
+\begin{equation}\phantomsection\label{eq-qfs}{
+q=f(s).
+}\end{equation}
+
+For non-fractal objects, the estimate of \(q\) using progressively
+smaller units of measure \(s\) will converge to a single value as the
+size of the measurement units approaches zero. On the other hand,
+fractals exhibit a power law scaling relationship with \(s\), whereby
+the estimated value of \(q\) increases without limit as the size of the
+\(s\) decreases.
+
+\begin{equation}\phantomsection\label{eq-powerlawscalingrelationship}{
+q=ps^{\epsilon}
+}\end{equation}
+
+where \(p\) is a factor of proportionality (prefactor) and \(\epsilon\)
+is a negative number, the scaling exponent. The value of \(\epsilon\)
+can be determined as the slope of the linear regression fit to the data
+pairs on the plot of \(\log{q}\) versus \(\log{s}\):
+
+\begin{equation}\phantomsection\label{eq-logpowerlawscaling}{
+\log{q} = \log{p} + \epsilon\log{s}
+}\end{equation}
+
+Data points for exact fractals will line up along perfectly with
+regression slope, while statistical fractals scatter around it since the
+two sides of Equation~\ref{eq-logpowerlawscaling} are equal only in
+distribution.
+
+\subsubsection{Scale-invariance}\label{scale-invariance}
+
+The ratio of two estimates of \(q\) measured at two different scales,
+\(s_{1}\) and \(s_{2}\), \(q_{2}/q_{1}\) depends only on the ratio of
+scales (relative scale), \(s_{2}/s_{1}\), and not directly on the
+absolute scale, \(s_{1}\) or \(s_{2}\)
+
+\begin{equation}\phantomsection\label{eq-scaleinv}{
+q_{2}/q_{1} = ps_2^\epsilon / ps_1^\epsilon = (s_2 / s_1)^\epsilon
+}\end{equation}
+
+For statistical fractals, like those of nature, \(s_2/s_1\) may change
+in a continuous fashion still leaving the validity of
+Equation~\ref{eq-scaleinv} unaffected. The scale-invariance of fractals
+arises from the fact that the geometrical structure only depends on the
+scaling factor (ratio of scales), and not the absolute scale. As a
+result, quantitative properties of smaller parts are similar to those of
+larger parts.
+
+\subsubsection{Scaling range}\label{scaling-range}
+
+Natural fractals may only display scale-invariance within a restricted
+range, as they are finite (either by definition or due to the fact that
+they must be sampled). The upper cut-off point (\(s_{max}\)) in
+Equation~\ref{eq-scalerange}, falls within the size range of the
+structure itself. Similarly, the lower cut-off point (\(s_{min}\)) falls
+within the dimensions of the smallest structural elements. The scaling
+range (SR) is defined in decades
+
+\begin{equation}\phantomsection\label{eq-scalerange}{
+\text{SR} = \log_{10}(s_{max}/s_{min})
+}\end{equation}
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-latex/notebooks-Figures-fig-typicalsamplepaths-output-2.png}
+
+}
+
+\caption{\label{fig-typicalsamplepaths}\textbf{Simulated fractional
+Gaussian noise and fractional Brownian motion.} Raw simulated
+time-series with 1,024 time-points and known Hurst values. Signals were
+created using the Davies-Harte method. a-c) are fractional Gaussian
+noise while d-f are fractional Brownian motion. a) and d) have H values
+of 0.1; b) and e) have H values of 0.5; and c) and f) have H values of
+0.9. Note how fractional Gaussian noise remain centered around a mean
+(i.e.~stationary), while fractional Brownian motion is free to wander
+(i.e.~non-stationary). Exact fractal time-series were created using the
+Davies-Harte method.}
+
+\end{figure}%
+
+If the class of signal is not appropriately identified --- for example,
+when \(\beta\) is \(\sim\) 1 --- it is possible to seriously
+miscalculate the H value, such that a true H \(\sim\) 0.9 will be
+calculated as 0.1. Therefore, algorithms and research in properly
+classifying fractal signals is crucially important.
+
+\subsection{Prerequisites to measuring
+H}\label{prerequisites-to-measuring-h}
+
+\subsubsection{Time-points}\label{time-points}
+
+Before determining if a time-series exhibits a power-law scaling
+relationship, one should first determine if the time-series has enough
+time-points to do so. The rule of thumb is that the power law
+relationship should be present in a range larger than two decades in the
+frequency domain of a PSD \citep{ekePhysiologicalTimeSeries2000}. Due to
+the Whittaker--Nyquist-Shannon sampling theorem
+\citep{shannonCommunicationPresenceNoise1949}, one requires two times as
+many time-points as frequency samples. Since two decades in the
+frequency domain is 100 distinct frequencies, one would required at
+least 200 time-points to proceed.
+
+\subsubsection{Power-law scaling
+relationship}\label{power-law-scaling-relationship-1}
+
+The next step would be to perform a periodogram or PSD and test for a
+power-law scaling relationship. Usually power laws are tested using a
+probability distribution
+\citep{clausetPowerLawDistributionsEmpirical2009}. However, as the PSD
+is not a probability distribution, alternative methods must be used. A
+goodness-of-fit test can be devised based on
+\citet{clausetPowerLawDistributionsEmpirical2009}, which can also help
+us derive the SR (i.e.~\(freq_{min}\) and \(freq_{max}\)). First, a PSD
+is produced, and the variance (\(\sigma^2\)), \(\beta\), and H are
+computed using Equation~\ref{eq-psdH}. Next, the Kolmogorov--Smirnov
+statistic
+\citep{kolmogorovSullaDeterminazioneEmpirica1933, smirnovTableEstimatingGoodness1948}
+is used to measure the distance D between the raw PSD data-points and
+the best-fit linear-regression line used to calculate H (i.e.~the
+residuals). The D in this case is the largest residual error. Then,
+1,000 time series of either fGn or fBm (depending on what value of
+\(\beta\) was found; see Equation~\ref{eq-psdH}) with the same length (n
+\textgreater{} 200), \(\sigma^2\), and Hurst exponent are generated
+using one of several methods for producing exact fractal signals:
+spectral synthesis method (SSM) \citep{peitgenScienceFractalImages1988},
+Davies-Harte method (DH) \citep{daviesTestsHurstEffect1987}, Cholesky
+method \citep{asmussenStochasticSimulationView1998}, or the Hosking's
+method \citep{hoskingModelingPersistenceHydrological1984}. Each
+synthetic time-series is converted to a PSD, and the Kolmogorov--Smirnov
+statistic is used to measure the distance D between the raw PSD
+data-points and the best-fit linear-regression line. The \(p\)-value is
+defined as the fraction of synthetic time series with Ds that are larger
+than the original D of the original time-series. The larger the
+\(p\)-value, the more plausible the synthetic model (either fGn or fBm)
+is for representing the original time-series, and the better the fit of
+the original data to a scale-free distribution. The null-hypothesis that
+the time-series is not scale free is rejected if \(p\) \textless{} 0.05
+(i.e.~if \(p\) \textgreater{} 0.05, we say that the time-series is
+scale-free).
+
+However, this method can be computationally intensive, and prone to
+false negatives, especially signals with very high or low H values. One
+solution is, instead of applying this test to every voxel in a 4D fMRI
+brain scan, to segment the brain into separate ROIs (e.g.~anatomically
+based on an atlas, or functionally by first running ICA to identify
+RSNs), average the time-series within each ROI, which will improve SNR,
+and then run the power-law scaling test.
+
+A sample python code is provide in Section~\ref{sec-powerlawscalingcode}
+
+\subsubsection{Scaling range}\label{scaling-range-1}
+
+\subsubsection{fGn or fBm}\label{fgn-or-fbm}
+
+\subsubsection{Choosing the right
+method}\label{choosing-the-right-method}
+
+\begin{quote}
+Ideally therefore, a long memory process signal should be categorized as
+either stationary (fGn) or non-stationary (fBm) and the variance and
+correlation defined. from \citep{ekePhysiologicalTimeSeries2000}
+\end{quote}
+
+\subsection{Methods of measuring H}\label{methods-of-measuring-h}
+
+\begin{quote}
+Fractal methods are diverse, but their approaches have one thing in
+common in that they employ equation (2) in fitting their proposed model
+to data pairs of log feature versus log scale for finding the scaling
+exponent, ε, from the regression slope. Each fractal analysis tool has
+different performance, prerequisite conditions, and limitations, and
+each needs thorough evaluation in order to avoid bias or
+misinterpretation of the derived fractal parameters {[}5, 6, 8, 9{]},
+especially when applied to physiological signals which may be
+contaminated with noise {[}15, 28{]}. from
+\citep{ekePhysiologicalTimeSeries2000}
+\end{quote}
+
+\subsection{Neuroscience Applications}\label{neuroscience-applications}
+
+H has emerged as a valuable tool in neuroscience and clinical research.
+Typically, H values reported in adult brains are above 0.5, with higher
+H values in grey matter than white matter or cerebrospinal fluid
+\citep{dongHurstExponentAnalysis2018, winkMonofractalMultifractalDynamics2008}.
+Some key findings from neuroscience research include: a decrease in H
+during task performance
+\citep{ciuciuInterplayFunctionalConnectivity2014, heScaleFreePropertiesFunctional2011};
+negative correlations with task novelty and difficulty
+\citep{churchillSuppressionScalefreeFMRI2016}; increases with age in the
+frontal and parietal lobes \citep{dongHurstExponentAnalysis2018}, and
+hippocampus \citep{winkAgeCholinergicEffects2006}; decreases with age in
+the insula, and limbic, occipital and temporal lobes
+\citep{dongHurstExponentAnalysis2018}; H \textless{} 0.5 in preterm
+infants \citep{mellaTemporalComplexityBOLDsignal2024}; and more
+\citep{campbellMonofractalAnalysisFunctional2022}. In terms of clinical
+findings, abnormal H values have been identified in Alzheimer's disease
+(AD)
+\citep{maximFractionalGaussianNoise2005, warsiCorrelatingBrainBlood2012},
+autism spectrum disorder (ASD)
+\citep{donaTemporalFractalAnalysis2017, laiShiftRandomnessBrain2010, linkeAlteredDevelopmentHurst2024, uscatescuUsingExcitationInhibition2022},
+mild traumatic brain injury \citep{donaFractalAnalysisBrain2017}, major
+depressive disorder
+\citep{weiIdentifyingMajorDepressive2013, jingIdentifyingCurrentRemitted2017}
+and schizophrenia
+\citep{sokunbiNonlinearComplexityAnalysis2014, uscatescuUsingExcitationInhibition2022}.
+
+\subsection{fMRI preprocessing
+considerations}\label{fmri-preprocessing-considerations}
+
+\subsubsection{Nuissance regression}\label{nuissance-regression}
+
+When attempting to regress out non-BOLD signal, it is important to apply
+the regression at the same time, and not in succession. Even performing
+a band-pass filter after nuissance regression can re-introduce noise
+components \citep{lindquistModularPreprocessingPipelines2019}.
+
+\subsubsection{Detrending}\label{detrending}
+
+see \citet{tanabeComparisonDetrendingMethods2002}
+
+\phantomsection\label{cell-fig-scaleinvariance}
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-pdf/fig-scaleinvariance-1.pdf}
+
+}
+
+\caption{\label{fig-scaleinvariance}\textbf{Simulated fractional
+Gaussian noise.} a) Raw simulated time-series with 1,024 time-points and
+a known Hurst value of 0.75; b) The same signal from a) in a log-log
+power spectral density plot and a linear-regression used to calculate
+the estimated Hurst value.}
+
+\end{figure}%
+
+\section{Hurst Reviews}\label{hurst-reviews}
+
+\subsubsection{\texorpdfstring{Nonparametric trend estimation in the
+presence of fractal noise: Application to fMRI time-series analysis -
+Afshinpour et al.~(2008)
+\citep{afshinpourNonparametricTrendEstimation2008}}{Nonparametric trend estimation in the presence of fractal noise: Application to fMRI time-series analysis - Afshinpour et al.~(2008) {[}@afshinpourNonparametricTrendEstimation2008{]}}}\label{nonparametric-trend-estimation-in-the-presence-of-fractal-noise-application-to-fmri-time-series-analysis---afshinpour-et-al.-2008-afshinpournonparametrictrendestimation2008}
+
+\begin{quote}
+In this paper, a method for estimating trend in the presence of fractal
+noise is proposed and applied to fMRI time-series. To this end, a partly
+linear model (PLM) is fitted to each time-series. The parametric and
+nonparametric parts of PLM are considered as contributions of
+hemodynamic response and trend, respectively. Using the whitening
+property of wavelet transform, the unknown components of the model are
+estimated in the wavelet domain. The results of the proposed method are
+compared to those of other parametric trend-removal approaches such as
+spline and polynomial models. It is shown that the proposed method
+improves activation detection and decreases variance of the estimated
+parameters relative to the other methods.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  trend estimation paper
+\item
+  1.5T, 3.9x3.9x6mm, 1.648s TR, 256 time-points
+\item
+  Hurst method: Wavelet db4 with 5 scales
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Fractal Analysis of BOLD time-series in a
+Network Associated With Waiting Impulsivity - Akhrif et al.~(2018)
+\citep{akhrifFractalAnalysisBOLD2018}}{Fractal Analysis of BOLD time-series in a Network Associated With Waiting Impulsivity - Akhrif et al.~(2018) {[}@akhrifFractalAnalysisBOLD2018{]}}}\label{fractal-analysis-of-bold-time-series-in-a-network-associated-with-waiting-impulsivity---akhrif-et-al.-2018-akhriffractalanalysisbold2018}
+
+\begin{quote}
+examined \textbf{103 } healthy male students at \textbf{rest} and while
+performing the 5-choice serial reaction time \textbf{task}. We addressed
+fractality in a network associated with waiting impulsivity using the
+\textbf{adaptive fractal analysis (AFA)} approach to determine H. We
+revealed the fractal nature of the impulsivity network. Furthermore,
+fractality was influenced by individual impulsivity in terms of
+decreasing fractality (H) with higher impulsivity in regions of top-down
+control (left middle frontal gyrus) as well as reward processing
+(nucleus accumbens and anterior cingulate cortex).
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  fMRI split into low and high frequency components. LFC is the second
+  order polynomial that is a smooth and global fit of the original time
+  course.
+\item
+  AFA: variance of fluctuation computed around, in this case, a second
+  order polynomial trend \(v(i)\) fitted to time-series within each
+  segment \(w\), and its size:
+  \begin{equation}\phantomsection\label{eq-AFA}{
+  F(w) = \sqrt{\frac{1}{N} \sum_{i=1}^{N} \big(u(i) - v(i)\big)^2} \sim w^H
+  }\end{equation}
+\end{itemize}
+
+\(N\): length of the time-series
+
+\[
+w = 2n + 1, n = 5,6..., 13
+\]
+
+H is determined as the slope of the log-log plot
+log\textsubscript{2}(\(F(w)\)) as a function of
+log\textsubscript{2}(\(w\))
+
+Example code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np}
+
+\KeywordTok{def}\NormalTok{ adaptive\_fractal\_analysis(signal, n\_values}\OperatorTok{=}\BuiltInTok{range}\NormalTok{(}\DecValTok{5}\NormalTok{, }\DecValTok{14}\NormalTok{)):}
+    \CommentTok{"""}
+\CommentTok{    Perform Adaptive Fractal Analysis (AFA) to compute the Hurst exponent.}
+\CommentTok{    }
+\CommentTok{    Parameters:}
+\CommentTok{        signal (array{-}like): time{-}series data to analyze.}
+\CommentTok{        n\_values (iterable): Sequence of \textasciigrave{}n\textasciigrave{} values to define window sizes as w = 2n + 1.}
+\CommentTok{    }
+\CommentTok{    Returns:}
+\CommentTok{        float: Estimated Hurst exponent (H).}
+\CommentTok{    """}
+    \CommentTok{\# Define window sizes as w = 2n + 1}
+\NormalTok{    window\_sizes }\OperatorTok{=}\NormalTok{ [}\DecValTok{2} \OperatorTok{*}\NormalTok{ n }\OperatorTok{+} \DecValTok{1} \ControlFlowTok{for}\NormalTok{ n }\KeywordTok{in}\NormalTok{ n\_values]}
+\NormalTok{    fluctuations }\OperatorTok{=}\NormalTok{ []}
+
+    \ControlFlowTok{for}\NormalTok{ window\_size }\KeywordTok{in}\NormalTok{ window\_sizes:}
+\NormalTok{        segment\_variances }\OperatorTok{=}\NormalTok{ []}
+        \ControlFlowTok{for}\NormalTok{ start }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{0}\NormalTok{, }\BuiltInTok{len}\NormalTok{(signal) }\OperatorTok{{-}}\NormalTok{ window\_size }\OperatorTok{+} \DecValTok{1}\NormalTok{, window\_size):}
+            \CommentTok{\# Extract the window}
+\NormalTok{            window }\OperatorTok{=}\NormalTok{ signal[start:start }\OperatorTok{+}\NormalTok{ window\_size]}
+            \CommentTok{\# Fit a second{-}order polynomial (quadratic fit) and compute residual}
+\NormalTok{            x }\OperatorTok{=}\NormalTok{ np.arange(}\BuiltInTok{len}\NormalTok{(window))}
+\NormalTok{            p }\OperatorTok{=}\NormalTok{ np.polyfit(x, window, deg}\OperatorTok{=}\DecValTok{2}\NormalTok{)  }\CommentTok{\# Degree 2 polynomial}
+\NormalTok{            residual }\OperatorTok{=}\NormalTok{ window }\OperatorTok{{-}}\NormalTok{ np.polyval(p, x)}
+            \CommentTok{\# Compute variance of the residuals}
+\NormalTok{            variance }\OperatorTok{=}\NormalTok{ np.var(residual)}
+\NormalTok{            segment\_variances.append(variance)}
+        
+        \CommentTok{\# Compute average variance for this window size}
+\NormalTok{        fluctuations.append(np.mean(segment\_variances))}
+
+    \CommentTok{\# Fit the scaling law: log(fluctuations) vs. log(window\_sizes)}
+\NormalTok{    log\_window\_sizes }\OperatorTok{=}\NormalTok{ np.log(window\_sizes)}
+\NormalTok{    log\_fluctuations }\OperatorTok{=}\NormalTok{ np.log(fluctuations)}
+\NormalTok{    slope, intercept }\OperatorTok{=}\NormalTok{ np.polyfit(log\_window\_sizes, log\_fluctuations, deg}\OperatorTok{=}\DecValTok{1}\NormalTok{)}
+    
+    \CommentTok{\# The slope corresponds to the Hurst exponent}
+    \ControlFlowTok{return}\NormalTok{ slope}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{\texorpdfstring{Endogenous human brain dynamics recover
+slowly following cognitive effort - Barnes et al.~(2009)
+\citep{barnesEndogenousHumanBrain2009}}{Endogenous human brain dynamics recover slowly following cognitive effort - Barnes et al.~(2009) {[}@barnesEndogenousHumanBrain2009{]}}}\label{endogenous-human-brain-dynamics-recover-slowly-following-cognitive-effort---barnes-et-al.-2009-barnesendogenoushumanbrain2009}
+
+\begin{quote}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\tightlist
+\item
+  Does performance of a cognitively effortful task significantly change
+  fractal scaling properties of fMRI time-series compared to their
+  values before task performance? 2) If so, can we relate the extent of
+  task-related perturbation to the difficulty of the task? This result
+  supports the model that endogenous low frequency oscillatory dynamics
+  are relevant to the brain's response to exogenous stimulation.
+  Moreover, it suggests that large-scale neurocognitive systems measured
+  using fMRI, like the heart and other physiological systems subjected
+  to external demands for enhanced performance, can take a considerable
+  period of time to return to a stable baseline state.
+\end{enumerate}
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  maximum likelihood in the wavelet domain
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Wavelets and functional magnetic
+resonance imaging of the human brain - Bullmore et al.~(2004)
+\citep{bullmoreWaveletsFunctionalMagnetic2004}}{Wavelets and functional magnetic resonance imaging of the human brain - Bullmore et al.~(2004) {[}@bullmoreWaveletsFunctionalMagnetic2004{]}}}\label{wavelets-and-functional-magnetic-resonance-imaging-of-the-human-brain---bullmore-et-al.-2004-bullmorewaveletsfunctionalmagnetic2004}
+
+\begin{quote}
+We provide a brief formal introduction to key properties of the DWT and
+review the growing literature on its application to fMRI. We focus on
+three applications in particular: (i) wavelet coefficient resampling or
+``wavestrapping'' of 1-D time-series, 2- to 3-D spatial maps and 4-D
+spatiotemporal processes; (ii) wavelet-based estimators for signal and
+noise parameters of time-series regression models assuming the errors
+are fractional Gaussian noise (fGn); and (iii) wavelet shrinkage in
+frequentist and Bayesian frameworks to support multiresolution
+hypothesis testing on spatially extended statistic maps.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  This paper suggests that motion correction translates many fBm signals
+  to fGn\ldots{} however, it is not clear where this data comes from.
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Fractal-Based Analysis of fMRI BOLD
+Signal During Naturalistic Viewing Conditions - Campbell et al.~(2021)
+\citep{campbellFractalBasedAnalysisFMRI2022}}{Fractal-Based Analysis of fMRI BOLD Signal During Naturalistic Viewing Conditions - Campbell et al.~(2021) {[}@campbellFractalBasedAnalysisFMRI2022{]}}}\label{fractal-based-analysis-of-fmri-bold-signal-during-naturalistic-viewing-conditions---campbell-et-al.-2021-campbellfractalbasedanalysisfmri2022}
+
+\begin{quote}
+We performed fractal analysis on Human Connectome Project 7T fMRI data
+(n = 72, 41 females, mean age 29.46 ± 3.76 years) to compare H across
+movie-watching and rest. Results: In contrast to previous work using
+conventional tasks, we found higher H values for movie relative to rest
+(mean difference = 0.014; p = 5.279 × 10−7; 95\% CI {[}0.009, 0.019{]}).
+H was significantly higher in movie than rest in the visual, somatomotor
+and dorsal attention networks, but was significantly lower during movie
+in the frontoparietal and default networks. We found no cross-condition
+differences in test-retest reliability of H. Finally, we found that H of
+movie-derived stimulus properties (e.g., luminance changes) were fractal
+whereas H of head motion estimates were non-fractal.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Scale-free brain dynamics under physical
+and psychological distress: Pre-treatment effects in women diagnosed
+with breast cancer - Churchill et al.~(2015)
+\citep{churchillScalefreeBrainDynamics2015}}{Scale-free brain dynamics under physical and psychological distress: Pre-treatment effects in women diagnosed with breast cancer - Churchill et al.~(2015) {[}@churchillScalefreeBrainDynamics2015{]}}}\label{scale-free-brain-dynamics-under-physical-and-psychological-distress-pre-treatment-effects-in-women-diagnosed-with-breast-cancer---churchill-et-al.-2015-churchillscalefreebraindynamics2015}
+
+\begin{quote}
+In a BOLD functional magnetic resonance imaging study, we scanned three
+groups during a working memory task: women scheduled to receive
+chemotherapy or radiotherapy and aged-matched controls. Surprisingly,
+patients' BOLD signal exhibited greater H with increasing intensity of
+anticipated treatment. However, an analysis of H and functional
+connectivity against self-reported measures of psychological distress
+(Worry, Anxiety, Depression) and physical distress (Fatigue, Sleep
+problems) revealed significant interactions. The modulation of (Worry,
+Anxiety) versus (Fatigue, Sleep Problems, Depression) showed the
+strongest effect, where higher worry and lower fatigue was related to
+reduced H in regions involved in visuospatial search, attention, and
+memory processing. This is also linked to decreased functional
+connectivity in these brain regions.
+\end{quote}
+
+\textbf{Notes:}
+
+\subsubsection{\texorpdfstring{The suppression of scale-free fMRI brain
+dynamics across three different sources of effort: Aging, task novelty
+and task difficulty - Churchill et al.~(2016)
+\citep{churchillSuppressionScalefreeFMRI2016}}{The suppression of scale-free fMRI brain dynamics across three different sources of effort: Aging, task novelty and task difficulty - Churchill et al.~(2016) {[}@churchillSuppressionScalefreeFMRI2016{]}}}\label{the-suppression-of-scale-free-fmri-brain-dynamics-across-three-different-sources-of-effort-aging-task-novelty-and-task-difficulty---churchill-et-al.-2016-churchillsuppressionscalefreefmri2016}
+
+\begin{quote}
+Decreases in the Hurst exponent (H), which quantifies scale-free signal,
+was related to three different sources of cognitive effort/task
+engagement: 1) task difficulty, 2) task novelty, and 3) aging effects.
+These results were consistently observed across multiple datasets and
+task paradigms. We also demonstrated that estimates of H are robust
+across a range of time-window sizes. H was also compared to alternative
+metrics of BOLD variability (SDBOLD) and global connectivity (Gconn),
+with effort-related decreases in H producing similar decreases in SDBOLD
+and Gconn.
+\end{quote}
+
+\textbf{Notes:}
+
+\subsubsection{\texorpdfstring{Interplay between functional connectivity
+and scale-free dynamics in intrinsic fMRI networks - Ciuciu et
+al.~(2014)
+\citep{ciuciuInterplayFunctionalConnectivity2014}}{Interplay between functional connectivity and scale-free dynamics in intrinsic fMRI networks - Ciuciu et al.~(2014) {[}@ciuciuInterplayFunctionalConnectivity2014{]}}}\label{interplay-between-functional-connectivity-and-scale-free-dynamics-in-intrinsic-fmri-networks---ciuciu-et-al.-2014-ciuciuinterplayfunctionalconnectivity2014}
+
+\begin{quote}
+We applied this framework to fMRI data acquired from healthy young
+adults at rest and performing a visual detection task. First, we found
+that scale-invariance existed beyond univariate dynamics, being present
+also in bivariate cross-temporal dynamics. Second, we observed that
+frequencies within the scale-free range do not contribute evenly to
+interregional connectivity, with a systematically stronger contribution
+of the lowest frequencies, both at rest and during task. Third, in
+addition to a decrease of the Hurst exponent and inter-regional
+correlations, task performance modified cross-temporal dynamics,
+inducing a larger contribution of the highest frequencies within the
+scale-free range to global correlation. Lastly, we found that across
+individuals, a weaker task modulation of the frequency contribution to
+inter-regional connectivity was associated with better task performance
+manifesting as shorter and less variable reaction times. These findings
+bring together two related fields that have hitherto been studied
+separately -- resting-state networks and scale-free dynamics, and show
+that scale-free dynamics of human brain activity manifest in
+cross-regional interactions as well.
+\end{quote}
+
+\textbf{Notes:}
+
+\subsubsection{\texorpdfstring{Temporal fractal analysis of the rs-BOLD
+signal identifies brain abnormalities in autism spectrum disorder - Dona
+et al.~(2017)
+\citep{donaTemporalFractalAnalysis2017}}{Temporal fractal analysis of the rs-BOLD signal identifies brain abnormalities in autism spectrum disorder - Dona et al.~(2017) {[}@donaTemporalFractalAnalysis2017{]}}}\label{temporal-fractal-analysis-of-the-rs-bold-signal-identifies-brain-abnormalities-in-autism-spectrum-disorder---dona-et-al.-2017-donatemporalfractalanalysis2017}
+
+\begin{quote}
+``It is important to mention here that fractal dimension estimation
+based on adispersional analysis isquite robust with respect to
+uncorrelated noise and does not require preprocessing''
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  ASD = reduced FD = increased H;
+\item
+  rare study to properly define fGn vs fBm first?
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Fractal analysis of brain blood
+oxygenation level dependent (BOLD) signals from children with mild
+traumatic brain injury (mTBI) - Dona et al.~(2017)
+\citep{donaFractalAnalysisBrain2017}}{Fractal analysis of brain blood oxygenation level dependent (BOLD) signals from children with mild traumatic brain injury (mTBI) - Dona et al.~(2017) {[}@donaFractalAnalysisBrain2017{]}}}\label{fractal-analysis-of-brain-blood-oxygenation-level-dependent-bold-signals-from-children-with-mild-traumatic-brain-injury-mtbi---dona-et-al.-2017-donafractalanalysisbrain2017}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  children with mTBI; mTBI = reduced FD = increased H
+\item
+  rare study to properly define fGn vs fBm first?
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Hurst Exponent Analysis of Resting-State
+fMRI Signal Complexity across the Adult Lifespan - Dong et al.~(2018)
+\citep{dongHurstExponentAnalysis2018}}{Hurst Exponent Analysis of Resting-State fMRI Signal Complexity across the Adult Lifespan - Dong et al.~(2018) {[}@dongHurstExponentAnalysis2018{]}}}\label{hurst-exponent-analysis-of-resting-state-fmri-signal-complexity-across-the-adult-lifespan---dong-et-al.-2018-donghurstexponentanalysis2018}
+
+\begin{quote}
+Region-wise and voxel-wise analyses were performed to investigate the
+effects of age, gender, and their interaction on complexity. In
+region-wise analysis, we found that the healthy aging is accompanied by
+a loss of complexity in frontal and parietal lobe and increased
+complexity in insula, limbic, and temporal lobe. Meanwhile, differences
+in HE between genders were found to be significant in parietal lobe (p =
+0.04, corrected). However, there was no interaction between gender and
+age. In voxel-wise analysis, the significant complexity decrease with
+aging was found in frontal and parietal lobe, and complexity increase
+was found in insula, limbic lobe, occipital lobe, and temporal lobe with
+aging. Meanwhile, differences in HE between genders were found to be
+significant in frontal, parietal, and limbic lobe. Furthermore, we found
+age and sex interaction in right parahippocampal gyrus (p = 0.04,
+corrected). Our findings reveal HE variations of the rs-fMRI signal
+across the human adult lifespan and show that HE may serve as a new
+parameter to assess healthy aging process.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  They state that increase in age = decrease in complexity
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Pitfalls in fractal time-series analysis:
+fMRI BOLD as an exemplary case - Eke et al.~(2012)
+\citep{ekePitfallsFractalTime2012}}{Pitfalls in fractal time-series analysis: fMRI BOLD as an exemplary case - Eke et al.~(2012) {[}@ekePitfallsFractalTime2012{]}}}\label{pitfalls-in-fractal-time-series-analysis-fmri-bold-as-an-exemplary-case---eke-et-al.-2012-ekepitfallsfractaltime2012}
+
+\begin{quote}
+\end{quote}
+
+\subsubsection{\texorpdfstring{Wavelet-Generalized Least Squares: A New
+BLU Estimator of Linear Regression Models with 1/f Errors - Fadili \&
+Bullmore (2002)
+\citep{fadiliWaveletGeneralizedLeastSquares2002}}{Wavelet-Generalized Least Squares: A New BLU Estimator of Linear Regression Models with 1/f Errors - Fadili \& Bullmore (2002) {[}@fadiliWaveletGeneralizedLeastSquares2002{]}}}\label{wavelet-generalized-least-squares-a-new-blu-estimator-of-linear-regression-models-with-1f-errors---fadili-bullmore-2002-fadiliwaveletgeneralizedleastsquares2002}
+
+\begin{quote}
+\end{quote}
+
+\subsubsection{\texorpdfstring{Not in one metric: Neuroticism modulates
+different resting state metrics within distinctive brain regions -
+Gentili et al.~(2017)
+\citep{gentiliNotOneMetric2017}}{Not in one metric: Neuroticism modulates different resting state metrics within distinctive brain regions - Gentili et al.~(2017) {[}@gentiliNotOneMetric2017{]}}}\label{not-in-one-metric-neuroticism-modulates-different-resting-state-metrics-within-distinctive-brain-regions---gentili-et-al.-2017-gentilinotonemetric2017}
+
+\begin{quote}
+Metrics more related to the measurement of regional intrinsic brain
+activity (fALFF, ALFF and REHO), or that provide a parsimonious index of
+integrated and segregated brain activity (HE), were more broadly
+modulated in regions related to emotions and their regulation. Metrics
+related to connectivity were modulated across a wider network of areas.
+Overall, these results show that neuroticism affects distinct aspects of
+brain resting state activity.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  ``parsimonious index of integrated and segregated brain activity
+  (HE)''
+\item
+  HE was inversely correlated to neuroticism
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Proneness to social anxiety modulates
+neural complexity in the absence of exposure: A resting state fMRI study
+using Hurst exponent - Gentili et al.~(2015)
+\citep{gentiliPronenessSocialAnxiety2015}}{Proneness to social anxiety modulates neural complexity in the absence of exposure: A resting state fMRI study using Hurst exponent - Gentili et al.~(2015) {[}@gentiliPronenessSocialAnxiety2015{]}}}\label{proneness-to-social-anxiety-modulates-neural-complexity-in-the-absence-of-exposure-a-resting-state-fmri-study-using-hurst-exponent---gentili-et-al.-2015-gentilipronenesssocialanxiety2015}
+
+\begin{quote}
+Results from fALFF were highly consistent with those obtained using LSAS
+and BFNE to predict HE. Overall our data indicate that spontaneous brain
+activity is influenced by the degree of social anxiety, on a continuum
+and in the absence of social stimuli. These findings suggest that social
+anxiety is a trait characteristic that shapes brain activity and
+predisposes to different reactions in social contexts.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  ``A recent article (Rubin et al., 2013) analyzes the robustness of
+  different algorithms with respect to possible fMRI artifacts and
+  time-series lengths. In particular, the relevance of preprocessing
+  steps as motion correction, detrending and filtering were evaluated
+  both on simulated and real fMRI data, while other preprocessing steps
+  like segmentation were not evaluated, although they may have an impact
+  on''
+\item
+  ``The HE of fMRI time-series is generally higher in gray matter than
+  in white matter (Maxim et al., 2005), augments in the hippocampus with
+  aging, and decreases with cholinergic transmission enhancement (Wink
+  et al., 2006)''
+\item
+  ``As pointed out by Maxim (Maxim et al., 2005), fMRI noise, after
+  these pre-processing steps, can be described as fGn.''
+\item
+  ``The HE of fMRI time-series is generally higher in gray matter than
+  in white matter (Maxim et al., 2005), augments in the hippocampus with
+  aging, and decreases with cholinergic transmission enhancement (Wink
+  et al., 2006).''
+\item
+  ``a reduction of HE has been observed in autistic and schizophrenic
+  patients (Lai et al., 2010; Sokunbi et al., 2014)''
+\item
+  ``Since the HE can describe long and short range memory dynamics, it
+  has been proposed as a measure of online information-processing
+  efficiency: higher HEs are related to long memory dynamics and to
+  higher temporal redundancy and less freedom to vary (He, 2011).''
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Real-time fractal signal processing in
+the time domain. - Hartmann et al.~(2013)
+\citep{hartmannRealtimeFractalSignal2013}}{Real-time fractal signal processing in the time domain. - Hartmann et al.~(2013) {[}@hartmannRealtimeFractalSignal2013{]}}}\label{real-time-fractal-signal-processing-in-the-time-domain.---hartmann-et-al.-2013-hartmannrealtimefractalsignal2013}
+
+\begin{quote}
+Here we introduce real-time variants of the Detrended Fluctuation
+Analysis (DFA) and the closely related Signal Summation Conversion (SSC)
+methods, which are suitable to estimate the fractal exponent in one
+pass.
+\end{quote}
+
+\subsubsection{\texorpdfstring{Altered fractal dynamics of gait: Reduced
+stride-interval correlations with aging and Huntington's disease. -
+Hausdoff et al.~(1997)
+\citep{hausdorffAlteredFractalDynamics1997}}{Altered fractal dynamics of gait: Reduced stride-interval correlations with aging and Huntington's disease. - Hausdoff et al.~(1997) {[}@hausdorffAlteredFractalDynamics1997{]}}}\label{altered-fractal-dynamics-of-gait-reduced-stride-interval-correlations-with-aging-and-huntingtons-disease.---hausdoff-et-al.-1997-hausdorffalteredfractaldynamics1997}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  Gait\ldots{} not fMRI
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Scale-Free Properties of the Functional
+Magnetic Resonance Imaging Signal during Rest and Task - He (2011)
+\citep{heScaleFreePropertiesFunctional2011}}{Scale-Free Properties of the Functional Magnetic Resonance Imaging Signal during Rest and Task - He (2011) {[}@heScaleFreePropertiesFunctional2011{]}}}\label{scale-free-properties-of-the-functional-magnetic-resonance-imaging-signal-during-rest-and-task---he-2011-hescalefreepropertiesfunctional2011}
+
+\begin{quote}
+its power-law exponent differentiates between brain networks and
+correlates with fMRI signal variance and brain glucose metabolism.
+Importantly, in parallel to brain electrical field potentials, the
+variance and power-law exponent of the fMRI signal decrease during task
+activation, suggesting that the signal contains more long-range memory
+during rest and conversely is more efficient at online information
+processing during task. The scale-free properties of the fMRI signal and
+brain electrical field potentials bespeak their respective stationarity
+and nonstationarity. This suggests that neurovascular coupling mechanism
+is likely to contain a transformation from nonstationarity to
+stationarity.
+\end{quote}
+
+\begin{quote}
+The fMRI signal time course from each ROI was extracted for each subject
+and fMRI run. The normalized or non-normalized power spectrum of the
+fMRI signal was computed using the Bartlett smoothing procedure of
+deriving the power spectral function from the lagged autocorrelation or
+auto-covariance function, respectively (Jenkins and Watts, 1998). A
+Tukey window of 20 fMRI frame width was applied for additional
+smoothing. The power spectra were then averaged across runs and subjects
+and across homologous ROIs, resulting in an average power spectrum for
+each of 21 brain regions (Fig. 2A). Finally, to obtain the power-law
+exponent β, the \textless0.1 Hz range of each average power spectrum was
+fit with a power-law function: P(f) ∝ 1/fβ using a least-squares fit.
+Using the low-frequency range to fit the power-law exponent avoids
+aliasing artifact in higher-frequency range (we used TR of 2.16 s, hence
+Nyquist limit is 0.23 Hz) and yields reliable measurement of the
+scale-free distribution (Eke et al., 2002).
+\end{quote}
+
+\begin{quote}
+The DFA method has the particular advantage of being applicable to both
+stationary and nonstationary data. To analyze our fMRI data, window
+lengths of 5, 10, 19, 38, and 95 fMRI frames were chosen so that the
+number of frames in each run (190 after discarding the first four
+frames) is an integer multiple of the window length.
+\end{quote}
+
+\subsubsection{\texorpdfstring{Fractal characterization of complexity in
+dynamic signals: Application to cerebral hemodynamics - Herman (2009)
+\citep{hermanFractalCharacterizationComplexity2009}}{Fractal characterization of complexity in dynamic signals: Application to cerebral hemodynamics - Herman (2009) {[}@hermanFractalCharacterizationComplexity2009{]}}}\label{fractal-characterization-of-complexity-in-dynamic-signals-application-to-cerebral-hemodynamics---herman-2009-hermanfractalcharacterizationcomplexity2009}
+
+\subsubsection{\texorpdfstring{Identification of brain activity from
+fMRI data: Comparison of three fractal scaling analyses. - Hu (2006)
+\citep{huIdentificationBrainActivity2006}}{Identification of brain activity from fMRI data: Comparison of three fractal scaling analyses. - Hu (2006) {[}@huIdentificationBrainActivity2006{]}}}\label{identification-of-brain-activity-from-fmri-data-comparison-of-three-fractal-scaling-analyses.---hu-2006-huidentificationbrainactivity2006}
+
+\subsubsection{\texorpdfstring{A shift to randomness of brain
+oscillations in people with autism. Lai (2010)
+\citep{laiShiftRandomnessBrain2010}}{A shift to randomness of brain oscillations in people with autism. Lai (2010) {[}@laiShiftRandomnessBrain2010{]}}}\label{a-shift-to-randomness-of-brain-oscillations-in-people-with-autism.-lai-2010-laishiftrandomnessbrain2010}
+
+\begin{quote}
+Complex fractal scaling of fMRI time-series was found in both groups but
+globally there was a significant shift to randomness in the ASC (mean H
+= .758, SD = .045) compared with neurotypical volunteers (mean H = .788,
+SD = .047).
+\end{quote}
+
+\subsubsection{\texorpdfstring{Extraversion is encoded by scale-free
+dynamics of default mode network. Lei (2013)
+\citep{leiExtraversionEncodedScalefree2013}}{Extraversion is encoded by scale-free dynamics of default mode network. Lei (2013) {[}@leiExtraversionEncodedScalefree2013{]}}}\label{extraversion-is-encoded-by-scale-free-dynamics-of-default-mode-network.-lei-2013-leiextraversionencodedscalefree2013}
+
+\subsubsection{\texorpdfstring{Fractional Gaussian noise, functional MRI
+and Alzheimer's disease. Maxim (2005)
+\citep{maximFractionalGaussianNoise2005}}{Fractional Gaussian noise, functional MRI and Alzheimer's disease. Maxim (2005) {[}@maximFractionalGaussianNoise2005{]}}}\label{fractional-gaussian-noise-functional-mri-and-alzheimers-disease.-maxim-2005-maximfractionalgaussiannoise2005}
+
+\begin{quote}
+we adopted the Davies-Harte algorithm, which is both exact and fast, to
+generate the fGn simulations used here. For each value of H = 0.1,
+\ldots{} 0.9, we simulated 1000 realizations of fGn with 512 time-points
+in each series; we set \(\omega^{2} = 1\) for all simulations.
+\end{quote}
+
+\textbf{NOTES:}
+
+\begin{itemize}
+\tightlist
+\item
+  This paper has the figure showing signal goes from fBm to fGn with
+  proper motion regression
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Decomposing multifractal crossovers. Nagy
+(2017)
+\citep{nagyDecomposingMultifractalCrossovers2017}}{Decomposing multifractal crossovers. Nagy (2017) {[}@nagyDecomposingMultifractalCrossovers2017{]}}}\label{decomposing-multifractal-crossovers.-nagy-2017-nagydecomposingmultifractalcrossovers2017}
+
+\begin{quote}
+The NIRS and fMRI-BOLD low-frequency fluctuations were dominated by a
+multifractal component over an underlying biologically relevant random
+noise, thus forming a bimodal signal. The crossover between the EEG
+signal components was found at the boundary between the δ and θ bands,
+suggesting an independent generator for the multifractal δ rhythm. The
+robust implementation of the SFD method should be regarded as essential
+in the seamless processing of large volumes of bimodal fMRI-BOLD imaging
+data for the topology of multifractal metrics free of the masking effect
+of the underlying random noise.
+\end{quote}
+
+\subsubsection{\texorpdfstring{Optimizing complexity measures for FMRI
+data: Algorithm, artifact, and sensitivity. Rubin (2013)
+\citep{rubinOptimizingComplexityMeasures2013}}{Optimizing complexity measures for FMRI data: Algorithm, artifact, and sensitivity. Rubin (2013) {[}@rubinOptimizingComplexityMeasures2013{]}}}\label{optimizing-complexity-measures-for-fmri-data-algorithm-artifact-and-sensitivity.-rubin-2013-rubinoptimizingcomplexitymeasures2013}
+
+\begin{quote}
+Power-spectrum, Higuchi's fractal dimension, and generalized Hurst
+exponent based estimates were most successful by all criteria; the
+poorest-performing measures were wavelet, detrended fluctuation
+analysis, aggregated variance, and rescaled range. Our results clearly
+demonstrate that decisions regarding choice of algorithm, signal
+processing, time-series length, and scanner have a significant impact on
+the reliability and sensitivity of complexity estimates. operating on
+the edge of chaos, complex systems position themselves for optimal
+responsivity to inputs, as well as ability to maintain homeostatic
+regulation. Daubechies wavelet based computations (Hdb\emph{) have long
+computation times, are not sensitive to spikes, and show poor
+sensitivity to activation, tissue type, and emotional content; for these
+Daubechies wavelet based estimates the overall performance increases
+with the wavelet order up to a point (Hdb8), and then deteriorates. HRS
+and HAV, performed poorly across the board. In terms of image contrast,
+overlap with activation, and group differences, HDFA} performed poorly
+as well, with HDFA-S outperforming HDFA and HDFA-L, suggesting that the
+bulk of useful information is found at shorter lags. The most
+consistently successful measures were the powerspectrum based measures
+HFFT and HpWelch, with the latter slightly outperforming the former
+while taking much longer to compute Second, it appears that detrending,
+regressing out the global mean, and excluding low frequencies improves
+agreement between complexity and activation. 300-600 time-points
+Finally, the best measures to use are either the power-spectrum based
+ones (HFFT or HpWelch) on a restricted frequency range (above ,0.01 Hz),
+\end{quote}
+
+\subsubsection{\texorpdfstring{Mutual information identifies spurious
+Hurst phenomena in resting state EEG and fMRI data. von Wegner (2018)
+\citep{vonwegnerMutualInformationIdentifies2018}}{Mutual information identifies spurious Hurst phenomena in resting state EEG and fMRI data. von Wegner (2018) {[}@vonwegnerMutualInformationIdentifies2018{]}}}\label{mutual-information-identifies-spurious-hurst-phenomena-in-resting-state-eeg-and-fmri-data.-von-wegner-2018-vonwegnermutualinformationidentifies2018}
+
+\begin{quote}
+In these processes, which do not have long-range memory by construction,
+a spurious Hurst phenomenon occurs due to slow relaxation times and
+heteroscedasticity (time-varying conditional variance). In summary, we
+find that mutual information correctly distinguishes long-range from
+short-range dependence in the theoretical and experimental cases
+discussed. Our results also suggest that the stationary fGn process is
+not sufficient to describe neural data, which seem to belong to a more
+general class of stochastic processes, in which multiscale variance
+effects produce Hurst phenomena without long-range dependence. In our
+experimental data, the Hurst phenomenon and long-range memory appear as
+different system properties that should be estimated and interpreted
+independently.
+\end{quote}
+
+\newpage{}
+
+\section{References}\label{references}
+
+\renewcommand{\bibsection}{}
+\bibliography{references.bib}
+
+\newpage{}
+
+\section{Appendix}\label{appendix}
+
+\subsection{Python code}\label{python-code}
+
+\subsubsection{Sample python code for testing power-law
+scaling}\label{sec-powerlawscalingcode}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\StringTok{"HELLO"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+, color=``r'', fontsize=14) ax{[}1{]}{[}1{]}.text(0.002, .002, r'\$H=0.8
+
+\subsection{Gaussian noise vs Brownian
+motion}\label{gaussian-noise-vs-brownian-motion}
+
+Time-series that are scale-invariant come in two categories: fractional
+Gaussian noise (fGn) and fractional Brownian motion (fBm)
+Figure~\ref{fig-typicalsamplepaths}. fGn signals are stationary, meaning
+they tend to center themselves along a mean value over time. In
+contrast, fBm signals are non-stationary, and their values tend to
+wander away from the mean. fGn and fBm can easily be converted from one
+to the other: fGn to fBm by applying a successive summation between
+elements of the fGn series; and fBm to fGn by applying successive
+differences between elements of a fBm series.
+
+This introduces the first method of measuring H of a time-series: using
+a log-log plot of its power spectral density (\textbf{?@fig-fourprop} D
+and E), calculating the linear-regression slope, and, depending on the
+slope angle, using one of two equations:
+
+\begin{equation}\phantomsection\label{eq-psdH}{
+H =
+\begin{cases}
+\frac{\beta + 1}{2}, & \text{if } -1 < \beta < 1 \\
+\frac{\beta - 1}{2}, & \text{if } 1 < \beta < 3
+\end{cases}
+}\end{equation}
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-latex/notebooks-Figures-fig-typicalsamplepaths-output-2.png}
+
+}
+
+\caption{\label{fig-typicalsamplepaths}\textbf{Simulated fractional
+Gaussian noise and fractional Brownian motion.} Raw simulated
+time-series with 1,024 time-points and known Hurst values. Signals were
+created using the Davies-Harte method. a-c) are fractional Gaussian
+noise while d-f are fractional Brownian motion. a) and d) have H values
+of 0.1; b) and e) have H values of 0.5; and c) and f) have H values of
+0.9. Note how fractional Gaussian noise remain centered around a mean
+(i.e.~stationary), while fractional Brownian motion is free to wander
+(i.e.~non-stationary). Exact fractal time-series were created using the
+Davies-Harte method.}
+
+\end{figure}%
+
+If the class of signal is not appropriately identified --- for example,
+when \(\beta\) is \(\sim\) 1 --- it is possible to seriously
+miscalculate the H value, such that a true H \(\sim\) 0.9 will be
+calculated as 0.1. Therefore, algorithms and research in properly
+classifying fractal signals is crucially important.
+
+\subsection{Prerequisites to measuring
+H}\label{prerequisites-to-measuring-h-1}
+
+\subsubsection{Time-points}\label{time-points-1}
+
+Before determining if a time-series exhibits a power-law scaling
+relationship, one should first determine if the time-series has enough
+time-points to do so. The rule of thumb is that the power law
+relationship should be present in a range larger than two decades in the
+frequency domain of a PSD \citep{ekePhysiologicalTimeSeries2000}. Due to
+the Whittaker--Nyquist-Shannon sampling theorem
+\citep{shannonCommunicationPresenceNoise1949}, one requires two times as
+many time-points as frequency samples. Since two decades in the
+frequency domain is 100 distinct frequencies, one would required at
+least 200 time-points to proceed.
+
+\subsubsection{Power-law scaling
+relationship}\label{power-law-scaling-relationship-2}
+
+The next step would be to perform a periodogram or PSD and test for a
+power-law scaling relationship. Usually power laws are tested using a
+probability distribution
+\citep{clausetPowerLawDistributionsEmpirical2009}. However, as the PSD
+is not a probability distribution, alternative methods must be used. A
+goodness-of-fit test can be devised based on
+\citet{clausetPowerLawDistributionsEmpirical2009}, which can also help
+us derive the SR (i.e.~\(freq_{min}\) and \(freq_{max}\)). First, a PSD
+is produced, and the variance (\(\sigma^2\)), \(\beta\), and H are
+computed using Equation~\ref{eq-psdH}. Next, the Kolmogorov--Smirnov
+statistic
+\citep{kolmogorovSullaDeterminazioneEmpirica1933, smirnovTableEstimatingGoodness1948}
+is used to measure the distance D between the raw PSD data-points and
+the best-fit linear-regression line used to calculate H (i.e.~the
+residuals). The D in this case is the largest residual error. Then,
+1,000 time series of either fGn or fBm (depending on what value of
+\(\beta\) was found; see Equation~\ref{eq-psdH}) with the same length (n
+\textgreater{} 200), \(\sigma^2\), and Hurst exponent are generated
+using one of several methods for producing exact fractal signals:
+spectral synthesis method (SSM) \citep{peitgenScienceFractalImages1988},
+Davies-Harte method (DH) \citep{daviesTestsHurstEffect1987}, Cholesky
+method \citep{asmussenStochasticSimulationView1998}, or the Hosking's
+method \citep{hoskingModelingPersistenceHydrological1984}. Each
+synthetic time-series is converted to a PSD, and the Kolmogorov--Smirnov
+statistic is used to measure the distance D between the raw PSD
+data-points and the best-fit linear-regression line. The \(p\)-value is
+defined as the fraction of synthetic time series with Ds that are larger
+than the original D of the original time-series. The larger the
+\(p\)-value, the more plausible the synthetic model (either fGn or fBm)
+is for representing the original time-series, and the better the fit of
+the original data to a scale-free distribution. The null-hypothesis that
+the time-series is not scale free is rejected if \(p\) \textless{} 0.05
+(i.e.~if \(p\) \textgreater{} 0.05, we say that the time-series is
+scale-free).
+
+However, this method can be computationally intensive, and prone to
+false negatives, especially signals with very high or low H values. One
+solution is, instead of applying this test to every voxel in a 4D fMRI
+brain scan, to segment the brain into separate ROIs (e.g.~anatomically
+based on an atlas, or functionally by first running ICA to identify
+RSNs), average the time-series within each ROI, which will improve SNR,
+and then run the power-law scaling test.
+
+A sample python code is provide in Section~\ref{sec-powerlawscalingcode}
+
+\subsubsection{Scaling range}\label{scaling-range-2}
+
+\subsubsection{fGn or fBm}\label{fgn-or-fbm-1}
+
+\subsubsection{Choosing the right
+method}\label{choosing-the-right-method-1}
+
+\begin{quote}
+Ideally therefore, a long memory process signal should be categorized as
+either stationary (fGn) or non-stationary (fBm) and the variance and
+correlation defined. from \citep{ekePhysiologicalTimeSeries2000}
+\end{quote}
+
+\subsection{Methods of measuring H}\label{methods-of-measuring-h-1}
+
+\begin{quote}
+Fractal methods are diverse, but their approaches have one thing in
+common in that they employ equation (2) in fitting their proposed model
+to data pairs of log feature versus log scale for finding the scaling
+exponent, ε, from the regression slope. Each fractal analysis tool has
+different performance, prerequisite conditions, and limitations, and
+each needs thorough evaluation in order to avoid bias or
+misinterpretation of the derived fractal parameters {[}5, 6, 8, 9{]},
+especially when applied to physiological signals which may be
+contaminated with noise {[}15, 28{]}. from
+\citep{ekePhysiologicalTimeSeries2000}
+\end{quote}
+
+\subsection{Neuroscience
+Applications}\label{neuroscience-applications-1}
+
+H has emerged as a valuable tool in neuroscience and clinical research.
+Typically, H values reported in adult brains are above 0.5, with higher
+H values in grey matter than white matter or cerebrospinal fluid
+\citep{dongHurstExponentAnalysis2018, winkMonofractalMultifractalDynamics2008}.
+Some key findings from neuroscience research include: a decrease in H
+during task performance
+\citep{ciuciuInterplayFunctionalConnectivity2014, heScaleFreePropertiesFunctional2011};
+negative correlations with task novelty and difficulty
+\citep{churchillSuppressionScalefreeFMRI2016}; increases with age in the
+frontal and parietal lobes \citep{dongHurstExponentAnalysis2018}, and
+hippocampus \citep{winkAgeCholinergicEffects2006}; decreases with age in
+the insula, and limbic, occipital and temporal lobes
+\citep{dongHurstExponentAnalysis2018}; H \textless{} 0.5 in preterm
+infants \citep{mellaTemporalComplexityBOLDsignal2024}; and more
+\citep{campbellMonofractalAnalysisFunctional2022}. In terms of clinical
+findings, abnormal H values have been identified in Alzheimer's disease
+(AD)
+\citep{maximFractionalGaussianNoise2005, warsiCorrelatingBrainBlood2012},
+autism spectrum disorder (ASD)
+\citep{donaTemporalFractalAnalysis2017, laiShiftRandomnessBrain2010, linkeAlteredDevelopmentHurst2024, uscatescuUsingExcitationInhibition2022},
+mild traumatic brain injury \citep{donaFractalAnalysisBrain2017}, major
+depressive disorder
+\citep{weiIdentifyingMajorDepressive2013, jingIdentifyingCurrentRemitted2017}
+and schizophrenia
+\citep{sokunbiNonlinearComplexityAnalysis2014, uscatescuUsingExcitationInhibition2022}.
+
+\subsection{fMRI preprocessing
+considerations}\label{fmri-preprocessing-considerations-1}
+
+\subsubsection{Nuissance regression}\label{nuissance-regression-1}
+
+When attempting to regress out non-BOLD signal, it is important to apply
+the regression at the same time, and not in succession. Even performing
+a band-pass filter after nuissance regression can re-introduce noise
+components \citep{lindquistModularPreprocessingPipelines2019}.
+
+\subsubsection{Detrending}\label{detrending-1}
+
+see \citet{tanabeComparisonDetrendingMethods2002}
+
+\phantomsection\label{cell-fig-scaleinvariance}
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-pdf/fig-scaleinvariance-1.pdf}
+
+}
+
+\caption{\label{fig-scaleinvariance}\textbf{Simulated fractional
+Gaussian noise.} a) Raw simulated time-series with 1,024 time-points and
+a known Hurst value of 0.75; b) The same signal from a) in a log-log
+power spectral density plot and a linear-regression used to calculate
+the estimated Hurst value.}
+
+\end{figure}%
+
+\section{Hurst Reviews}\label{hurst-reviews-1}
+
+\subsubsection{\texorpdfstring{Nonparametric trend estimation in the
+presence of fractal noise: Application to fMRI time-series analysis -
+Afshinpour et al.~(2008)
+\citep{afshinpourNonparametricTrendEstimation2008}}{Nonparametric trend estimation in the presence of fractal noise: Application to fMRI time-series analysis - Afshinpour et al.~(2008) {[}@afshinpourNonparametricTrendEstimation2008{]}}}\label{nonparametric-trend-estimation-in-the-presence-of-fractal-noise-application-to-fmri-time-series-analysis---afshinpour-et-al.-2008-afshinpournonparametrictrendestimation2008-1}
+
+\begin{quote}
+In this paper, a method for estimating trend in the presence of fractal
+noise is proposed and applied to fMRI time-series. To this end, a partly
+linear model (PLM) is fitted to each time-series. The parametric and
+nonparametric parts of PLM are considered as contributions of
+hemodynamic response and trend, respectively. Using the whitening
+property of wavelet transform, the unknown components of the model are
+estimated in the wavelet domain. The results of the proposed method are
+compared to those of other parametric trend-removal approaches such as
+spline and polynomial models. It is shown that the proposed method
+improves activation detection and decreases variance of the estimated
+parameters relative to the other methods.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  trend estimation paper
+\item
+  1.5T, 3.9x3.9x6mm, 1.648s TR, 256 time-points
+\item
+  Hurst method: Wavelet db4 with 5 scales
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Fractal Analysis of BOLD time-series in a
+Network Associated With Waiting Impulsivity - Akhrif et al.~(2018)
+\citep{akhrifFractalAnalysisBOLD2018}}{Fractal Analysis of BOLD time-series in a Network Associated With Waiting Impulsivity - Akhrif et al.~(2018) {[}@akhrifFractalAnalysisBOLD2018{]}}}\label{fractal-analysis-of-bold-time-series-in-a-network-associated-with-waiting-impulsivity---akhrif-et-al.-2018-akhriffractalanalysisbold2018-1}
+
+\begin{quote}
+examined \textbf{103 } healthy male students at \textbf{rest} and while
+performing the 5-choice serial reaction time \textbf{task}. We addressed
+fractality in a network associated with waiting impulsivity using the
+\textbf{adaptive fractal analysis (AFA)} approach to determine H. We
+revealed the fractal nature of the impulsivity network. Furthermore,
+fractality was influenced by individual impulsivity in terms of
+decreasing fractality (H) with higher impulsivity in regions of top-down
+control (left middle frontal gyrus) as well as reward processing
+(nucleus accumbens and anterior cingulate cortex).
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  fMRI split into low and high frequency components. LFC is the second
+  order polynomial that is a smooth and global fit of the original time
+  course.
+\item
+  AFA: variance of fluctuation computed around, in this case, a second
+  order polynomial trend \(v(i)\) fitted to time-series within each
+  segment \(w\), and its size:
+  \begin{equation}\phantomsection\label{eq-AFA}{
+  F(w) = \sqrt{\frac{1}{N} \sum_{i=1}^{N} \big(u(i) - v(i)\big)^2} \sim w^H
+  }\end{equation}
+\end{itemize}
+
+\(N\): length of the time-series
+
+\[
+w = 2n + 1, n = 5,6..., 13
+\]
+
+H is determined as the slope of the log-log plot
+log\textsubscript{2}(\(F(w)\)) as a function of
+log\textsubscript{2}(\(w\))
+
+Example code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np}
+
+\KeywordTok{def}\NormalTok{ adaptive\_fractal\_analysis(signal, n\_values}\OperatorTok{=}\BuiltInTok{range}\NormalTok{(}\DecValTok{5}\NormalTok{, }\DecValTok{14}\NormalTok{)):}
+    \CommentTok{"""}
+\CommentTok{    Perform Adaptive Fractal Analysis (AFA) to compute the Hurst exponent.}
+\CommentTok{    }
+\CommentTok{    Parameters:}
+\CommentTok{        signal (array{-}like): time{-}series data to analyze.}
+\CommentTok{        n\_values (iterable): Sequence of \textasciigrave{}n\textasciigrave{} values to define window sizes as w = 2n + 1.}
+\CommentTok{    }
+\CommentTok{    Returns:}
+\CommentTok{        float: Estimated Hurst exponent (H).}
+\CommentTok{    """}
+    \CommentTok{\# Define window sizes as w = 2n + 1}
+\NormalTok{    window\_sizes }\OperatorTok{=}\NormalTok{ [}\DecValTok{2} \OperatorTok{*}\NormalTok{ n }\OperatorTok{+} \DecValTok{1} \ControlFlowTok{for}\NormalTok{ n }\KeywordTok{in}\NormalTok{ n\_values]}
+\NormalTok{    fluctuations }\OperatorTok{=}\NormalTok{ []}
+
+    \ControlFlowTok{for}\NormalTok{ window\_size }\KeywordTok{in}\NormalTok{ window\_sizes:}
+\NormalTok{        segment\_variances }\OperatorTok{=}\NormalTok{ []}
+        \ControlFlowTok{for}\NormalTok{ start }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{0}\NormalTok{, }\BuiltInTok{len}\NormalTok{(signal) }\OperatorTok{{-}}\NormalTok{ window\_size }\OperatorTok{+} \DecValTok{1}\NormalTok{, window\_size):}
+            \CommentTok{\# Extract the window}
+\NormalTok{            window }\OperatorTok{=}\NormalTok{ signal[start:start }\OperatorTok{+}\NormalTok{ window\_size]}
+            \CommentTok{\# Fit a second{-}order polynomial (quadratic fit) and compute residual}
+\NormalTok{            x }\OperatorTok{=}\NormalTok{ np.arange(}\BuiltInTok{len}\NormalTok{(window))}
+\NormalTok{            p }\OperatorTok{=}\NormalTok{ np.polyfit(x, window, deg}\OperatorTok{=}\DecValTok{2}\NormalTok{)  }\CommentTok{\# Degree 2 polynomial}
+\NormalTok{            residual }\OperatorTok{=}\NormalTok{ window }\OperatorTok{{-}}\NormalTok{ np.polyval(p, x)}
+            \CommentTok{\# Compute variance of the residuals}
+\NormalTok{            variance }\OperatorTok{=}\NormalTok{ np.var(residual)}
+\NormalTok{            segment\_variances.append(variance)}
+        
+        \CommentTok{\# Compute average variance for this window size}
+\NormalTok{        fluctuations.append(np.mean(segment\_variances))}
+
+    \CommentTok{\# Fit the scaling law: log(fluctuations) vs. log(window\_sizes)}
+\NormalTok{    log\_window\_sizes }\OperatorTok{=}\NormalTok{ np.log(window\_sizes)}
+\NormalTok{    log\_fluctuations }\OperatorTok{=}\NormalTok{ np.log(fluctuations)}
+\NormalTok{    slope, intercept }\OperatorTok{=}\NormalTok{ np.polyfit(log\_window\_sizes, log\_fluctuations, deg}\OperatorTok{=}\DecValTok{1}\NormalTok{)}
+    
+    \CommentTok{\# The slope corresponds to the Hurst exponent}
+    \ControlFlowTok{return}\NormalTok{ slope}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{\texorpdfstring{Endogenous human brain dynamics recover
+slowly following cognitive effort - Barnes et al.~(2009)
+\citep{barnesEndogenousHumanBrain2009}}{Endogenous human brain dynamics recover slowly following cognitive effort - Barnes et al.~(2009) {[}@barnesEndogenousHumanBrain2009{]}}}\label{endogenous-human-brain-dynamics-recover-slowly-following-cognitive-effort---barnes-et-al.-2009-barnesendogenoushumanbrain2009-1}
+
+\begin{quote}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\tightlist
+\item
+  Does performance of a cognitively effortful task significantly change
+  fractal scaling properties of fMRI time-series compared to their
+  values before task performance? 2) If so, can we relate the extent of
+  task-related perturbation to the difficulty of the task? This result
+  supports the model that endogenous low frequency oscillatory dynamics
+  are relevant to the brain's response to exogenous stimulation.
+  Moreover, it suggests that large-scale neurocognitive systems measured
+  using fMRI, like the heart and other physiological systems subjected
+  to external demands for enhanced performance, can take a considerable
+  period of time to return to a stable baseline state.
+\end{enumerate}
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  maximum likelihood in the wavelet domain
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Wavelets and functional magnetic
+resonance imaging of the human brain - Bullmore et al.~(2004)
+\citep{bullmoreWaveletsFunctionalMagnetic2004}}{Wavelets and functional magnetic resonance imaging of the human brain - Bullmore et al.~(2004) {[}@bullmoreWaveletsFunctionalMagnetic2004{]}}}\label{wavelets-and-functional-magnetic-resonance-imaging-of-the-human-brain---bullmore-et-al.-2004-bullmorewaveletsfunctionalmagnetic2004-1}
+
+\begin{quote}
+We provide a brief formal introduction to key properties of the DWT and
+review the growing literature on its application to fMRI. We focus on
+three applications in particular: (i) wavelet coefficient resampling or
+``wavestrapping'' of 1-D time-series, 2- to 3-D spatial maps and 4-D
+spatiotemporal processes; (ii) wavelet-based estimators for signal and
+noise parameters of time-series regression models assuming the errors
+are fractional Gaussian noise (fGn); and (iii) wavelet shrinkage in
+frequentist and Bayesian frameworks to support multiresolution
+hypothesis testing on spatially extended statistic maps.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  This paper suggests that motion correction translates many fBm signals
+  to fGn\ldots{} however, it is not clear where this data comes from.
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Fractal-Based Analysis of fMRI BOLD
+Signal During Naturalistic Viewing Conditions - Campbell et al.~(2021)
+\citep{campbellFractalBasedAnalysisFMRI2022}}{Fractal-Based Analysis of fMRI BOLD Signal During Naturalistic Viewing Conditions - Campbell et al.~(2021) {[}@campbellFractalBasedAnalysisFMRI2022{]}}}\label{fractal-based-analysis-of-fmri-bold-signal-during-naturalistic-viewing-conditions---campbell-et-al.-2021-campbellfractalbasedanalysisfmri2022-1}
+
+\begin{quote}
+We performed fractal analysis on Human Connectome Project 7T fMRI data
+(n = 72, 41 females, mean age 29.46 ± 3.76 years) to compare H across
+movie-watching and rest. Results: In contrast to previous work using
+conventional tasks, we found higher H values for movie relative to rest
+(mean difference = 0.014; p = 5.279 × 10−7; 95\% CI {[}0.009, 0.019{]}).
+H was significantly higher in movie than rest in the visual, somatomotor
+and dorsal attention networks, but was significantly lower during movie
+in the frontoparietal and default networks. We found no cross-condition
+differences in test-retest reliability of H. Finally, we found that H of
+movie-derived stimulus properties (e.g., luminance changes) were fractal
+whereas H of head motion estimates were non-fractal.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Scale-free brain dynamics under physical
+and psychological distress: Pre-treatment effects in women diagnosed
+with breast cancer - Churchill et al.~(2015)
+\citep{churchillScalefreeBrainDynamics2015}}{Scale-free brain dynamics under physical and psychological distress: Pre-treatment effects in women diagnosed with breast cancer - Churchill et al.~(2015) {[}@churchillScalefreeBrainDynamics2015{]}}}\label{scale-free-brain-dynamics-under-physical-and-psychological-distress-pre-treatment-effects-in-women-diagnosed-with-breast-cancer---churchill-et-al.-2015-churchillscalefreebraindynamics2015-1}
+
+\begin{quote}
+In a BOLD functional magnetic resonance imaging study, we scanned three
+groups during a working memory task: women scheduled to receive
+chemotherapy or radiotherapy and aged-matched controls. Surprisingly,
+patients' BOLD signal exhibited greater H with increasing intensity of
+anticipated treatment. However, an analysis of H and functional
+connectivity against self-reported measures of psychological distress
+(Worry, Anxiety, Depression) and physical distress (Fatigue, Sleep
+problems) revealed significant interactions. The modulation of (Worry,
+Anxiety) versus (Fatigue, Sleep Problems, Depression) showed the
+strongest effect, where higher worry and lower fatigue was related to
+reduced H in regions involved in visuospatial search, attention, and
+memory processing. This is also linked to decreased functional
+connectivity in these brain regions.
+\end{quote}
+
+\textbf{Notes:}
+
+\subsubsection{\texorpdfstring{The suppression of scale-free fMRI brain
+dynamics across three different sources of effort: Aging, task novelty
+and task difficulty - Churchill et al.~(2016)
+\citep{churchillSuppressionScalefreeFMRI2016}}{The suppression of scale-free fMRI brain dynamics across three different sources of effort: Aging, task novelty and task difficulty - Churchill et al.~(2016) {[}@churchillSuppressionScalefreeFMRI2016{]}}}\label{the-suppression-of-scale-free-fmri-brain-dynamics-across-three-different-sources-of-effort-aging-task-novelty-and-task-difficulty---churchill-et-al.-2016-churchillsuppressionscalefreefmri2016-1}
+
+\begin{quote}
+Decreases in the Hurst exponent (H), which quantifies scale-free signal,
+was related to three different sources of cognitive effort/task
+engagement: 1) task difficulty, 2) task novelty, and 3) aging effects.
+These results were consistently observed across multiple datasets and
+task paradigms. We also demonstrated that estimates of H are robust
+across a range of time-window sizes. H was also compared to alternative
+metrics of BOLD variability (SDBOLD) and global connectivity (Gconn),
+with effort-related decreases in H producing similar decreases in SDBOLD
+and Gconn.
+\end{quote}
+
+\textbf{Notes:}
+
+\subsubsection{\texorpdfstring{Interplay between functional connectivity
+and scale-free dynamics in intrinsic fMRI networks - Ciuciu et
+al.~(2014)
+\citep{ciuciuInterplayFunctionalConnectivity2014}}{Interplay between functional connectivity and scale-free dynamics in intrinsic fMRI networks - Ciuciu et al.~(2014) {[}@ciuciuInterplayFunctionalConnectivity2014{]}}}\label{interplay-between-functional-connectivity-and-scale-free-dynamics-in-intrinsic-fmri-networks---ciuciu-et-al.-2014-ciuciuinterplayfunctionalconnectivity2014-1}
+
+\begin{quote}
+We applied this framework to fMRI data acquired from healthy young
+adults at rest and performing a visual detection task. First, we found
+that scale-invariance existed beyond univariate dynamics, being present
+also in bivariate cross-temporal dynamics. Second, we observed that
+frequencies within the scale-free range do not contribute evenly to
+interregional connectivity, with a systematically stronger contribution
+of the lowest frequencies, both at rest and during task. Third, in
+addition to a decrease of the Hurst exponent and inter-regional
+correlations, task performance modified cross-temporal dynamics,
+inducing a larger contribution of the highest frequencies within the
+scale-free range to global correlation. Lastly, we found that across
+individuals, a weaker task modulation of the frequency contribution to
+inter-regional connectivity was associated with better task performance
+manifesting as shorter and less variable reaction times. These findings
+bring together two related fields that have hitherto been studied
+separately -- resting-state networks and scale-free dynamics, and show
+that scale-free dynamics of human brain activity manifest in
+cross-regional interactions as well.
+\end{quote}
+
+\textbf{Notes:}
+
+\subsubsection{\texorpdfstring{Temporal fractal analysis of the rs-BOLD
+signal identifies brain abnormalities in autism spectrum disorder - Dona
+et al.~(2017)
+\citep{donaTemporalFractalAnalysis2017}}{Temporal fractal analysis of the rs-BOLD signal identifies brain abnormalities in autism spectrum disorder - Dona et al.~(2017) {[}@donaTemporalFractalAnalysis2017{]}}}\label{temporal-fractal-analysis-of-the-rs-bold-signal-identifies-brain-abnormalities-in-autism-spectrum-disorder---dona-et-al.-2017-donatemporalfractalanalysis2017-1}
+
+\begin{quote}
+``It is important to mention here that fractal dimension estimation
+based on adispersional analysis isquite robust with respect to
+uncorrelated noise and does not require preprocessing''
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  ASD = reduced FD = increased H;
+\item
+  rare study to properly define fGn vs fBm first?
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Fractal analysis of brain blood
+oxygenation level dependent (BOLD) signals from children with mild
+traumatic brain injury (mTBI) - Dona et al.~(2017)
+\citep{donaFractalAnalysisBrain2017}}{Fractal analysis of brain blood oxygenation level dependent (BOLD) signals from children with mild traumatic brain injury (mTBI) - Dona et al.~(2017) {[}@donaFractalAnalysisBrain2017{]}}}\label{fractal-analysis-of-brain-blood-oxygenation-level-dependent-bold-signals-from-children-with-mild-traumatic-brain-injury-mtbi---dona-et-al.-2017-donafractalanalysisbrain2017-1}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  children with mTBI; mTBI = reduced FD = increased H
+\item
+  rare study to properly define fGn vs fBm first?
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Hurst Exponent Analysis of Resting-State
+fMRI Signal Complexity across the Adult Lifespan - Dong et al.~(2018)
+\citep{dongHurstExponentAnalysis2018}}{Hurst Exponent Analysis of Resting-State fMRI Signal Complexity across the Adult Lifespan - Dong et al.~(2018) {[}@dongHurstExponentAnalysis2018{]}}}\label{hurst-exponent-analysis-of-resting-state-fmri-signal-complexity-across-the-adult-lifespan---dong-et-al.-2018-donghurstexponentanalysis2018-1}
+
+\begin{quote}
+Region-wise and voxel-wise analyses were performed to investigate the
+effects of age, gender, and their interaction on complexity. In
+region-wise analysis, we found that the healthy aging is accompanied by
+a loss of complexity in frontal and parietal lobe and increased
+complexity in insula, limbic, and temporal lobe. Meanwhile, differences
+in HE between genders were found to be significant in parietal lobe (p =
+0.04, corrected). However, there was no interaction between gender and
+age. In voxel-wise analysis, the significant complexity decrease with
+aging was found in frontal and parietal lobe, and complexity increase
+was found in insula, limbic lobe, occipital lobe, and temporal lobe with
+aging. Meanwhile, differences in HE between genders were found to be
+significant in frontal, parietal, and limbic lobe. Furthermore, we found
+age and sex interaction in right parahippocampal gyrus (p = 0.04,
+corrected). Our findings reveal HE variations of the rs-fMRI signal
+across the human adult lifespan and show that HE may serve as a new
+parameter to assess healthy aging process.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  They state that increase in age = decrease in complexity
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Pitfalls in fractal time-series analysis:
+fMRI BOLD as an exemplary case - Eke et al.~(2012)
+\citep{ekePitfallsFractalTime2012}}{Pitfalls in fractal time-series analysis: fMRI BOLD as an exemplary case - Eke et al.~(2012) {[}@ekePitfallsFractalTime2012{]}}}\label{pitfalls-in-fractal-time-series-analysis-fmri-bold-as-an-exemplary-case---eke-et-al.-2012-ekepitfallsfractaltime2012-1}
+
+\begin{quote}
+\end{quote}
+
+\subsubsection{\texorpdfstring{Wavelet-Generalized Least Squares: A New
+BLU Estimator of Linear Regression Models with 1/f Errors - Fadili \&
+Bullmore (2002)
+\citep{fadiliWaveletGeneralizedLeastSquares2002}}{Wavelet-Generalized Least Squares: A New BLU Estimator of Linear Regression Models with 1/f Errors - Fadili \& Bullmore (2002) {[}@fadiliWaveletGeneralizedLeastSquares2002{]}}}\label{wavelet-generalized-least-squares-a-new-blu-estimator-of-linear-regression-models-with-1f-errors---fadili-bullmore-2002-fadiliwaveletgeneralizedleastsquares2002-1}
+
+\begin{quote}
+\end{quote}
+
+\subsubsection{\texorpdfstring{Not in one metric: Neuroticism modulates
+different resting state metrics within distinctive brain regions -
+Gentili et al.~(2017)
+\citep{gentiliNotOneMetric2017}}{Not in one metric: Neuroticism modulates different resting state metrics within distinctive brain regions - Gentili et al.~(2017) {[}@gentiliNotOneMetric2017{]}}}\label{not-in-one-metric-neuroticism-modulates-different-resting-state-metrics-within-distinctive-brain-regions---gentili-et-al.-2017-gentilinotonemetric2017-1}
+
+\begin{quote}
+Metrics more related to the measurement of regional intrinsic brain
+activity (fALFF, ALFF and REHO), or that provide a parsimonious index of
+integrated and segregated brain activity (HE), were more broadly
+modulated in regions related to emotions and their regulation. Metrics
+related to connectivity were modulated across a wider network of areas.
+Overall, these results show that neuroticism affects distinct aspects of
+brain resting state activity.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  ``parsimonious index of integrated and segregated brain activity
+  (HE)''
+\item
+  HE was inversely correlated to neuroticism
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Proneness to social anxiety modulates
+neural complexity in the absence of exposure: A resting state fMRI study
+using Hurst exponent - Gentili et al.~(2015)
+\citep{gentiliPronenessSocialAnxiety2015}}{Proneness to social anxiety modulates neural complexity in the absence of exposure: A resting state fMRI study using Hurst exponent - Gentili et al.~(2015) {[}@gentiliPronenessSocialAnxiety2015{]}}}\label{proneness-to-social-anxiety-modulates-neural-complexity-in-the-absence-of-exposure-a-resting-state-fmri-study-using-hurst-exponent---gentili-et-al.-2015-gentilipronenesssocialanxiety2015-1}
+
+\begin{quote}
+Results from fALFF were highly consistent with those obtained using LSAS
+and BFNE to predict HE. Overall our data indicate that spontaneous brain
+activity is influenced by the degree of social anxiety, on a continuum
+and in the absence of social stimuli. These findings suggest that social
+anxiety is a trait characteristic that shapes brain activity and
+predisposes to different reactions in social contexts.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  ``A recent article (Rubin et al., 2013) analyzes the robustness of
+  different algorithms with respect to possible fMRI artifacts and
+  time-series lengths. In particular, the relevance of preprocessing
+  steps as motion correction, detrending and filtering were evaluated
+  both on simulated and real fMRI data, while other preprocessing steps
+  like segmentation were not evaluated, although they may have an impact
+  on''
+\item
+  ``The HE of fMRI time-series is generally higher in gray matter than
+  in white matter (Maxim et al., 2005), augments in the hippocampus with
+  aging, and decreases with cholinergic transmission enhancement (Wink
+  et al., 2006)''
+\item
+  ``As pointed out by Maxim (Maxim et al., 2005), fMRI noise, after
+  these pre-processing steps, can be described as fGn.''
+\item
+  ``The HE of fMRI time-series is generally higher in gray matter than
+  in white matter (Maxim et al., 2005), augments in the hippocampus with
+  aging, and decreases with cholinergic transmission enhancement (Wink
+  et al., 2006).''
+\item
+  ``a reduction of HE has been observed in autistic and schizophrenic
+  patients (Lai et al., 2010; Sokunbi et al., 2014)''
+\item
+  ``Since the HE can describe long and short range memory dynamics, it
+  has been proposed as a measure of online information-processing
+  efficiency: higher HEs are related to long memory dynamics and to
+  higher temporal redundancy and less freedom to vary (He, 2011).''
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Real-time fractal signal processing in
+the time domain. - Hartmann et al.~(2013)
+\citep{hartmannRealtimeFractalSignal2013}}{Real-time fractal signal processing in the time domain. - Hartmann et al.~(2013) {[}@hartmannRealtimeFractalSignal2013{]}}}\label{real-time-fractal-signal-processing-in-the-time-domain.---hartmann-et-al.-2013-hartmannrealtimefractalsignal2013-1}
+
+\begin{quote}
+Here we introduce real-time variants of the Detrended Fluctuation
+Analysis (DFA) and the closely related Signal Summation Conversion (SSC)
+methods, which are suitable to estimate the fractal exponent in one
+pass.
+\end{quote}
+
+\subsubsection{\texorpdfstring{Altered fractal dynamics of gait: Reduced
+stride-interval correlations with aging and Huntington's disease. -
+Hausdoff et al.~(1997)
+\citep{hausdorffAlteredFractalDynamics1997}}{Altered fractal dynamics of gait: Reduced stride-interval correlations with aging and Huntington's disease. - Hausdoff et al.~(1997) {[}@hausdorffAlteredFractalDynamics1997{]}}}\label{altered-fractal-dynamics-of-gait-reduced-stride-interval-correlations-with-aging-and-huntingtons-disease.---hausdoff-et-al.-1997-hausdorffalteredfractaldynamics1997-1}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  Gait\ldots{} not fMRI
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Scale-Free Properties of the Functional
+Magnetic Resonance Imaging Signal during Rest and Task - He (2011)
+\citep{heScaleFreePropertiesFunctional2011}}{Scale-Free Properties of the Functional Magnetic Resonance Imaging Signal during Rest and Task - He (2011) {[}@heScaleFreePropertiesFunctional2011{]}}}\label{scale-free-properties-of-the-functional-magnetic-resonance-imaging-signal-during-rest-and-task---he-2011-hescalefreepropertiesfunctional2011-1}
+
+\begin{quote}
+its power-law exponent differentiates between brain networks and
+correlates with fMRI signal variance and brain glucose metabolism.
+Importantly, in parallel to brain electrical field potentials, the
+variance and power-law exponent of the fMRI signal decrease during task
+activation, suggesting that the signal contains more long-range memory
+during rest and conversely is more efficient at online information
+processing during task. The scale-free properties of the fMRI signal and
+brain electrical field potentials bespeak their respective stationarity
+and nonstationarity. This suggests that neurovascular coupling mechanism
+is likely to contain a transformation from nonstationarity to
+stationarity.
+\end{quote}
+
+\begin{quote}
+The fMRI signal time course from each ROI was extracted for each subject
+and fMRI run. The normalized or non-normalized power spectrum of the
+fMRI signal was computed using the Bartlett smoothing procedure of
+deriving the power spectral function from the lagged autocorrelation or
+auto-covariance function, respectively (Jenkins and Watts, 1998). A
+Tukey window of 20 fMRI frame width was applied for additional
+smoothing. The power spectra were then averaged across runs and subjects
+and across homologous ROIs, resulting in an average power spectrum for
+each of 21 brain regions (Fig. 2A). Finally, to obtain the power-law
+exponent β, the \textless0.1 Hz range of each average power spectrum was
+fit with a power-law function: P(f) ∝ 1/fβ using a least-squares fit.
+Using the low-frequency range to fit the power-law exponent avoids
+aliasing artifact in higher-frequency range (we used TR of 2.16 s, hence
+Nyquist limit is 0.23 Hz) and yields reliable measurement of the
+scale-free distribution (Eke et al., 2002).
+\end{quote}
+
+\begin{quote}
+The DFA method has the particular advantage of being applicable to both
+stationary and nonstationary data. To analyze our fMRI data, window
+lengths of 5, 10, 19, 38, and 95 fMRI frames were chosen so that the
+number of frames in each run (190 after discarding the first four
+frames) is an integer multiple of the window length.
+\end{quote}
+
+\subsubsection{\texorpdfstring{Fractal characterization of complexity in
+dynamic signals: Application to cerebral hemodynamics - Herman (2009)
+\citep{hermanFractalCharacterizationComplexity2009}}{Fractal characterization of complexity in dynamic signals: Application to cerebral hemodynamics - Herman (2009) {[}@hermanFractalCharacterizationComplexity2009{]}}}\label{fractal-characterization-of-complexity-in-dynamic-signals-application-to-cerebral-hemodynamics---herman-2009-hermanfractalcharacterizationcomplexity2009-1}
+
+\subsubsection{\texorpdfstring{Identification of brain activity from
+fMRI data: Comparison of three fractal scaling analyses. - Hu (2006)
+\citep{huIdentificationBrainActivity2006}}{Identification of brain activity from fMRI data: Comparison of three fractal scaling analyses. - Hu (2006) {[}@huIdentificationBrainActivity2006{]}}}\label{identification-of-brain-activity-from-fmri-data-comparison-of-three-fractal-scaling-analyses.---hu-2006-huidentificationbrainactivity2006-1}
+
+\subsubsection{\texorpdfstring{A shift to randomness of brain
+oscillations in people with autism. Lai (2010)
+\citep{laiShiftRandomnessBrain2010}}{A shift to randomness of brain oscillations in people with autism. Lai (2010) {[}@laiShiftRandomnessBrain2010{]}}}\label{a-shift-to-randomness-of-brain-oscillations-in-people-with-autism.-lai-2010-laishiftrandomnessbrain2010-1}
+
+\begin{quote}
+Complex fractal scaling of fMRI time-series was found in both groups but
+globally there was a significant shift to randomness in the ASC (mean H
+= .758, SD = .045) compared with neurotypical volunteers (mean H = .788,
+SD = .047).
+\end{quote}
+
+\subsubsection{\texorpdfstring{Extraversion is encoded by scale-free
+dynamics of default mode network. Lei (2013)
+\citep{leiExtraversionEncodedScalefree2013}}{Extraversion is encoded by scale-free dynamics of default mode network. Lei (2013) {[}@leiExtraversionEncodedScalefree2013{]}}}\label{extraversion-is-encoded-by-scale-free-dynamics-of-default-mode-network.-lei-2013-leiextraversionencodedscalefree2013-1}
+
+\subsubsection{\texorpdfstring{Fractional Gaussian noise, functional MRI
+and Alzheimer's disease. Maxim (2005)
+\citep{maximFractionalGaussianNoise2005}}{Fractional Gaussian noise, functional MRI and Alzheimer's disease. Maxim (2005) {[}@maximFractionalGaussianNoise2005{]}}}\label{fractional-gaussian-noise-functional-mri-and-alzheimers-disease.-maxim-2005-maximfractionalgaussiannoise2005-1}
+
+\begin{quote}
+we adopted the Davies-Harte algorithm, which is both exact and fast, to
+generate the fGn simulations used here. For each value of H = 0.1,
+\ldots{} 0.9, we simulated 1000 realizations of fGn with 512 time-points
+in each series; we set \(\omega^{2} = 1\) for all simulations.
+\end{quote}
+
+\textbf{NOTES:}
+
+\begin{itemize}
+\tightlist
+\item
+  This paper has the figure showing signal goes from fBm to fGn with
+  proper motion regression
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Decomposing multifractal crossovers. Nagy
+(2017)
+\citep{nagyDecomposingMultifractalCrossovers2017}}{Decomposing multifractal crossovers. Nagy (2017) {[}@nagyDecomposingMultifractalCrossovers2017{]}}}\label{decomposing-multifractal-crossovers.-nagy-2017-nagydecomposingmultifractalcrossovers2017-1}
+
+\begin{quote}
+The NIRS and fMRI-BOLD low-frequency fluctuations were dominated by a
+multifractal component over an underlying biologically relevant random
+noise, thus forming a bimodal signal. The crossover between the EEG
+signal components was found at the boundary between the δ and θ bands,
+suggesting an independent generator for the multifractal δ rhythm. The
+robust implementation of the SFD method should be regarded as essential
+in the seamless processing of large volumes of bimodal fMRI-BOLD imaging
+data for the topology of multifractal metrics free of the masking effect
+of the underlying random noise.
+\end{quote}
+
+\subsubsection{\texorpdfstring{Optimizing complexity measures for FMRI
+data: Algorithm, artifact, and sensitivity. Rubin (2013)
+\citep{rubinOptimizingComplexityMeasures2013}}{Optimizing complexity measures for FMRI data: Algorithm, artifact, and sensitivity. Rubin (2013) {[}@rubinOptimizingComplexityMeasures2013{]}}}\label{optimizing-complexity-measures-for-fmri-data-algorithm-artifact-and-sensitivity.-rubin-2013-rubinoptimizingcomplexitymeasures2013-1}
+
+\begin{quote}
+Power-spectrum, Higuchi's fractal dimension, and generalized Hurst
+exponent based estimates were most successful by all criteria; the
+poorest-performing measures were wavelet, detrended fluctuation
+analysis, aggregated variance, and rescaled range. Our results clearly
+demonstrate that decisions regarding choice of algorithm, signal
+processing, time-series length, and scanner have a significant impact on
+the reliability and sensitivity of complexity estimates. operating on
+the edge of chaos, complex systems position themselves for optimal
+responsivity to inputs, as well as ability to maintain homeostatic
+regulation. Daubechies wavelet based computations (Hdb\emph{) have long
+computation times, are not sensitive to spikes, and show poor
+sensitivity to activation, tissue type, and emotional content; for these
+Daubechies wavelet based estimates the overall performance increases
+with the wavelet order up to a point (Hdb8), and then deteriorates. HRS
+and HAV, performed poorly across the board. In terms of image contrast,
+overlap with activation, and group differences, HDFA} performed poorly
+as well, with HDFA-S outperforming HDFA and HDFA-L, suggesting that the
+bulk of useful information is found at shorter lags. The most
+consistently successful measures were the powerspectrum based measures
+HFFT and HpWelch, with the latter slightly outperforming the former
+while taking much longer to compute Second, it appears that detrending,
+regressing out the global mean, and excluding low frequencies improves
+agreement between complexity and activation. 300-600 time-points
+Finally, the best measures to use are either the power-spectrum based
+ones (HFFT or HpWelch) on a restricted frequency range (above ,0.01 Hz),
+\end{quote}
+
+\subsubsection{\texorpdfstring{Mutual information identifies spurious
+Hurst phenomena in resting state EEG and fMRI data. von Wegner (2018)
+\citep{vonwegnerMutualInformationIdentifies2018}}{Mutual information identifies spurious Hurst phenomena in resting state EEG and fMRI data. von Wegner (2018) {[}@vonwegnerMutualInformationIdentifies2018{]}}}\label{mutual-information-identifies-spurious-hurst-phenomena-in-resting-state-eeg-and-fmri-data.-von-wegner-2018-vonwegnermutualinformationidentifies2018-1}
+
+\begin{quote}
+In these processes, which do not have long-range memory by construction,
+a spurious Hurst phenomenon occurs due to slow relaxation times and
+heteroscedasticity (time-varying conditional variance). In summary, we
+find that mutual information correctly distinguishes long-range from
+short-range dependence in the theoretical and experimental cases
+discussed. Our results also suggest that the stationary fGn process is
+not sufficient to describe neural data, which seem to belong to a more
+general class of stochastic processes, in which multiscale variance
+effects produce Hurst phenomena without long-range dependence. In our
+experimental data, the Hurst phenomenon and long-range memory appear as
+different system properties that should be estimated and interpreted
+independently.
+\end{quote}
+
+\newpage{}
+
+\section{References}\label{references-1}
+
+
+\newpage{}
+
+\section{Appendix}\label{appendix-1}
+
+\subsection{Python code}\label{python-code-1}
+
+\subsubsection{Sample python code for testing power-law
+scaling}\label{sec-powerlawscalingcode}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\StringTok{"HELLO"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+, color=``r'', fontsize=14) ax{[}1{]}{[}1{]}.set\_title(``Log-log plot
+of D'', loc=`left') ax{[}1{]}{[}1{]}.set\_xlabel(`Frequency (\(f\))')
+ax{[}1{]}{[}1{]}.set\_ylabel(r'Amplitude (\(|A(f)|^{2}\))')
+
+newpower=power fp5 = FBM(scale1, hurst=0.5, length=1,
+method=`daviesharte') fgnp5 = fp5.fgn()\emph{5 p5freq, p5power =
+signal.periodogram(fgnp5, 1) p5power=p5power - np.mean(p5power) +
+predicted\_power{[}-1{]}}1.4 newpower{[}:10{]}= (np.random.rand(10)+0.5)
+\# 10 was the power value around the low frequency
+newpower{[}312:{]}=p5power{[}312:512{]}
+ax{[}2{]}{[}1{]}.plot(freq.reshape(-1,1), newpower)
+ax{[}2{]}{[}1{]}.plot(freq{[}1:{]}.reshape(-1,1){[}10:312{]},
+predicted\_power{[}10:312{]}, color=`red')
+ax{[}2{]}{[}1{]}.axvline(x=freq{[}10{]}, color=`red', linestyle=`--')
+ax{[}2{]}{[}1{]}.axvline(x=freq{[}312{]}, color=`red', linestyle=`--')
+ax{[}2{]}{[}1{]}.set\_xscale(`log') ax{[}2{]}{[}1{]}.set\_yscale(`log')
+ax{[}2{]}{[}1{]}.set\_xlabel(`Frequency (\(f\))')
+ax{[}2{]}{[}1{]}.set\_title(``E but with a scaling range'', loc=`left')
+
+text\_xy = (freq{[}10{]}*1.7, 0.001) ax{[}2{]}{[}1{]}.annotate(text,
+(freq{[}10{]},0.001), text\_xy, arrowprops=\{``arrowstyle'':
+``-\textgreater{}'', ``color'': ``red''\}, color=``red'')
+ax{[}2{]}{[}1{]}.annotate(text, (freq{[}312{]},0.001), text\_xy,
+arrowprops=\{``arrowstyle'': ``-\textgreater{}'', ``color'': ``red''\},
+color=``red'')
+
+for i in range(3): ax{[}i, 0{]}.text(-0.1, 1.1,
+string.ascii\_uppercase{[}i{]}, transform=ax{[}i, 0{]}.transAxes,
+size=13, weight=`bold') ax{[}i, 1{]}.text(-0.1, 1.1,
+string.ascii\_uppercase{[}i+3{]}, transform=ax{[}i, 1{]}.transAxes,
+size=13, weight=`bold')
+
+plt.savefig(`../image/fourproperties.png', dpi=600,
+bbox\_inches=`tight', format=`png') plt.show()
+
+\begin{verbatim}
+
+::: {.cell-output .cell-output-display}
+![I don't get why this isn't working](index_files/figure-latex/notebooks-Figures-fig-fourprop-output-1.png){#fig-fourprop fig-pos='H'}
+:::
+:::
+
+
+
+
+:::
+
+
+
+
+
+
+
+## Gaussian noise vs Brownian motion
+
+Time-series that are scale-invariant come in two categories: fractional Gaussian noise (fGn) and fractional Brownian motion (fBm) @fig-typicalsamplepaths. fGn signals are stationary, meaning they tend to center themselves along a mean value over time. In contrast, fBm signals are non-stationary, and their values tend to wander away from the mean. fGn and fBm can easily be converted from one to the other: fGn to fBm by applying a successive summation between elements of the fGn series; and fBm to fGn by applying successive differences between elements of a fBm series.
+
+<!-- TODO: find where to put this: -->
+This introduces the first method of measuring H of a time-series: using a log-log plot of its power spectral density (@fig-fourprop D and E), calculating the linear-regression slope, and, depending on the slope angle, using one of two equations:
+
+$$
+H =
+\begin{cases}
+\frac{\beta + 1}{2}, & \text{if } -1 < \beta < 1 \\
+\frac{\beta - 1}{2}, & \text{if } 1 < \beta < 3
+\end{cases}
+$$ {#eq-psdH}
+
+
+
+
+
+
+:::{.quarto-embed-nb-cell notebook="/home/weberam2/Dropbox/AssistantProf_BCCHRI/Projects/BrainDynamics/LiteratureReview/notebooks/Figures.ipynb" notebook-title="Sierpinksi Triangle" notebook-cellId="cell-fig-typicalsamplepaths"}
+
+::: {.cell execution_count=19}
+``` {.python .cell-code .hidden}
+np.random.seed(1)
+plt.rcParams['text.usetex'] = True #latex
+
+def psd(timeseries):
+    freq, power = signal.periodogram(timeseries, 1)
+    power = power[1:]
+    freq = freq[1:]
+
+    log_power = np.log10(power)
+    log_freq = np.log10(freq)
+    log_power = log_power[1:]
+    log_freq = log_freq[1:]
+
+    model = LinearRegression()
+    model.fit(log_freq.reshape(-1,1), log_power)
+    predicted_power = 10**model.predict(log_freq.reshape(-1,1))
+
+    return freq.reshape(-1,1), power, predicted_power
+
+fp5 = FBM(1024, hurst=0.5, length=1, method='daviesharte')
+fp1 = FBM(1024, hurst=0.1, length=1, method='daviesharte')
+fp9 = FBM(1024, hurst=0.9, length=1, method='daviesharte')
+fgnp5 = fp5.fgn()
+fgnp1 = fp1.fgn()
+fgnp9 = fp9.fgn()
+fbmp5 = fp5.fbm()
+fbmp1 = fp1.fbm()
+fbmp9 = fp9.fbm()
+
+fig, ax = plt.subplots(6,2, figsize=(10,7))
+fig.subplots_adjust(wspace=0.25)
+ax[0,0].plot(fgnp1)
+ax[0,0].set_title("Time Series")
+ax[0,0].xaxis.set_visible(False)
+ax[0,0].set_ylabel("0.1", rotation=0, labelpad=12)
+ax[0,0].text(1.05, 0.55, "-0.8", rotation=0,
+             transform=ax[0,0].transAxes, color='red')
+ax[0,0].set_yticks([])
+ax[1,0].plot(fgnp5)
+ax[1,0].xaxis.set_visible(False)
+ax[1,0].set_yticks([])
+ax[1,0].set_ylabel("0.5", rotation=0, labelpad=12)
+ax[1,0].text(1.08, 0.55, "0", rotation=0,
+             transform=ax[1,0].transAxes, color='red')
+ax[2,0].plot(fgnp9)
+ax[2,0].xaxis.set_visible(False)
+ax[2,0].set_yticks([])
+ax[2,0].set_ylabel("0.9", rotation=0, labelpad=12)
+ax[2,0].text(1.06, 0.55, "0.8", rotation=0,
+             transform=ax[2,0].transAxes, color='red')
+ax[3,0].plot(fbmp1)
+ax[3,0].xaxis.set_visible(False)
+ax[3,0].set_yticks([])
+ax[3,0].set_ylabel("0.1", rotation=0, labelpad=12)
+ax[3,0].text(1.06, 0.55, "1.2", rotation=0,
+             transform=ax[3,0].transAxes, color='red')
+ax[4,0].plot(fbmp5)
+ax[4,0].xaxis.set_visible(False)
+ax[4,0].set_yticks([])
+ax[4,0].set_ylabel("0.5", rotation=0, labelpad=12)
+ax[4,0].text(1.08, 0.55, "2", rotation=0,
+             transform=ax[4,0].transAxes, color='red')
+ax[5,0].plot(fbmp9)
+ax[5,0].set_yticks([])
+ax[5,0].set_ylabel("0.9", rotation=0, labelpad=12)
+ax[5,0].set_xlabel("Time")
+ax[5,0].text(1.06, 0.55, "2.8", rotation=0,
+             transform=ax[5,0].transAxes, color='red')
+
+line = lines.Line2D([0.1, 1.05], [0.495, 0.495], transform=fig.transFigure, color='black', linewidth=1)
+fig.add_artist(line)
+fig.text(1, 0.705, r"$H=\frac{\beta+1}{2}$", ha='center', va='center', fontsize=18, transform=fig.transFigure)
+fig.text(1, 0.305, r"$H=\frac{\beta-1}{2}$", ha='center', va='center', fontsize=18, transform=fig.transFigure)
+
+fig.text(0.11, .9, r"H", fontsize=14, ha='center', va='center', transform=fig.transFigure)
+fig.text(0.5, .9, r"$\beta$", fontsize=14, ha='center', va='center', transform=fig.transFigure, color='red')
+
+freq,power,pred_power = psd(fgnp1)
+ax[0,1].plot(freq,power)
+ax[0,1].set_title("Power Spectral Density")
+ax[0,1].plot(freq[1:], pred_power, color='red')
+ax[0,1].set_xscale('log')
+ax[0,1].set_yscale('log')
+ax[0,1].xaxis.set_visible(False)
+ax[0,1].yaxis.tick_right()
+ax[0,1].set_ylim(1e-4,10)
+
+freq,power,pred_power = psd(fgnp5)
+ax[1,1].plot(freq,power)
+ax[1,1].plot(freq[1:], pred_power, color='red')
+ax[1,1].set_xscale('log')
+ax[1,1].set_yscale('log')
+ax[1,1].xaxis.set_visible(False)
+ax[1,1].yaxis.tick_right()
+ax[1,1].set_ylabel(r"$\log|A(f)|^2$")
+ax[1,1].set_ylim(1e-5,1e-2)
+
+freq,power,pred_power = psd(fgnp9)
+ax[2,1].plot(freq,power)
+ax[2,1].plot(freq[1:], pred_power, color='red')
+ax[2,1].set_xscale('log')
+ax[2,1].set_yscale('log')
+ax[2,1].xaxis.set_visible(False)
+ax[2,1].yaxis.tick_right()
+ax[2,1].set_ylim(1e-9,1e-2)
+
+freq,power,pred_power = psd(fbmp1)
+ax[3,1].plot(freq,power)
+ax[3,1].plot(freq[1:], pred_power, color='red')
+ax[3,1].set_xscale('log')
+ax[3,1].set_yscale('log')
+ax[3,1].xaxis.set_visible(False)
+ax[3,1].yaxis.tick_right()
+
+freq,power,pred_power = psd(fbmp5)
+ax[4,1].plot(freq,power)
+ax[4,1].plot(freq[1:], pred_power, color='red')
+ax[4,1].set_xscale('log')
+ax[4,1].set_yscale('log')
+ax[4,1].xaxis.set_visible(False)
+ax[4,1].set_ylabel(r"$\log|A(f)|^2$")
+ax[4,1].yaxis.tick_right()
+ax[4,1].set_ylim(1e-5,1e3)
+
+freq,power,pred_power = psd(fbmp9)
+ax[5,1].plot(freq,power)
+ax[5,1].plot(freq[1:], pred_power, color='red')
+ax[5,1].set_xscale('log')
+ax[5,1].set_yscale('log')
+#ax[5,1].set_xticklabels([])
+ax[5,1].yaxis.tick_right()
+ax[5,1].set_xlabel("$\log(f)$")
+
+plt.savefig('../image/typicalsamplepaths.png', dpi=600, bbox_inches='tight', format='png')
+plt.show()
+\end{verbatim}
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-latex/notebooks-Figures-fig-typicalsamplepaths-output-2.png}
+
+}
+
+\caption{\label{fig-typicalsamplepaths}\textbf{Simulated fractional
+Gaussian noise and fractional Brownian motion.} Raw simulated
+time-series with 1,024 time-points and known Hurst values. Signals were
+created using the Davies-Harte method. a-c) are fractional Gaussian
+noise while d-f are fractional Brownian motion. a) and d) have H values
+of 0.1; b) and e) have H values of 0.5; and c) and f) have H values of
+0.9. Note how fractional Gaussian noise remain centered around a mean
+(i.e.~stationary), while fractional Brownian motion is free to wander
+(i.e.~non-stationary). Exact fractal time-series were created using the
+Davies-Harte method.}
+
+\end{figure}%
+
+:::
+
+:::
+
+If the class of signal is not appropriately identified --- for example,
+when \(\beta\) is \(\sim\) 1 --- it is possible to seriously
+miscalculate the H value, such that a true H \(\sim\) 0.9 will be
+calculated as 0.1. Therefore, algorithms and research in properly
+classifying fractal signals is crucially important.
+
+\subsection{Prerequisites to measuring
+H}\label{prerequisites-to-measuring-h-2}
+
+\subsubsection{Time-points}\label{time-points-2}
+
+Before determining if a time-series exhibits a power-law scaling
+relationship, one should first determine if the time-series has enough
+time-points to do so. The rule of thumb is that the power law
+relationship should be present in a range larger than two decades in the
+frequency domain of a PSD \citep{ekePhysiologicalTimeSeries2000}. Due to
+the Whittaker--Nyquist-Shannon sampling theorem
+\citep{shannonCommunicationPresenceNoise1949}, one requires two times as
+many time-points as frequency samples. Since two decades in the
+frequency domain is 100 distinct frequencies, one would required at
+least 200 time-points to proceed.
+
+\subsubsection{Power-law scaling
+relationship}\label{power-law-scaling-relationship-3}
+
+The next step would be to perform a periodogram or PSD and test for a
+power-law scaling relationship. Usually power laws are tested using a
+probability distribution
+\citep{clausetPowerLawDistributionsEmpirical2009}. However, as the PSD
+is not a probability distribution, alternative methods must be used. A
+goodness-of-fit test can be devised based on
+\citet{clausetPowerLawDistributionsEmpirical2009}, which can also help
+us derive the SR (i.e.~\(freq_{min}\) and \(freq_{max}\)). First, a PSD
+is produced, and the variance (\(\sigma^2\)), \(\beta\), and H are
+computed using Equation~\ref{eq-psdH}. Next, the Kolmogorov--Smirnov
+statistic
+\citep{kolmogorovSullaDeterminazioneEmpirica1933, smirnovTableEstimatingGoodness1948}
+is used to measure the distance D between the raw PSD data-points and
+the best-fit linear-regression line used to calculate H (i.e.~the
+residuals). The D in this case is the largest residual error. Then,
+1,000 time series of either fGn or fBm (depending on what value of
+\(\beta\) was found; see Equation~\ref{eq-psdH}) with the same length (n
+\textgreater{} 200), \(\sigma^2\), and Hurst exponent are generated
+using one of several methods for producing exact fractal signals:
+spectral synthesis method (SSM) \citep{peitgenScienceFractalImages1988},
+Davies-Harte method (DH) \citep{daviesTestsHurstEffect1987}, Cholesky
+method \citep{asmussenStochasticSimulationView1998}, or the Hosking's
+method \citep{hoskingModelingPersistenceHydrological1984}. Each
+synthetic time-series is converted to a PSD, and the Kolmogorov--Smirnov
+statistic is used to measure the distance D between the raw PSD
+data-points and the best-fit linear-regression line. The \(p\)-value is
+defined as the fraction of synthetic time series with Ds that are larger
+than the original D of the original time-series. The larger the
+\(p\)-value, the more plausible the synthetic model (either fGn or fBm)
+is for representing the original time-series, and the better the fit of
+the original data to a scale-free distribution. The null-hypothesis that
+the time-series is not scale free is rejected if \(p\) \textless{} 0.05
+(i.e.~if \(p\) \textgreater{} 0.05, we say that the time-series is
+scale-free).
+
+However, this method can be computationally intensive, and prone to
+false negatives, especially signals with very high or low H values. One
+solution is, instead of applying this test to every voxel in a 4D fMRI
+brain scan, to segment the brain into separate ROIs (e.g.~anatomically
+based on an atlas, or functionally by first running ICA to identify
+RSNs), average the time-series within each ROI, which will improve SNR,
+and then run the power-law scaling test.
+
+A sample python code is provide in Section~\ref{sec-powerlawscalingcode}
+
+\subsubsection{Scaling range}\label{scaling-range-3}
+
+\subsubsection{fGn or fBm}\label{fgn-or-fbm-2}
+
+\subsubsection{Choosing the right
+method}\label{choosing-the-right-method-2}
+
+\begin{quote}
+Ideally therefore, a long memory process signal should be categorized as
+either stationary (fGn) or non-stationary (fBm) and the variance and
+correlation defined. from \citep{ekePhysiologicalTimeSeries2000}
+\end{quote}
+
+\subsection{Methods of measuring H}\label{methods-of-measuring-h-2}
+
+\begin{quote}
+Fractal methods are diverse, but their approaches have one thing in
+common in that they employ equation (2) in fitting their proposed model
+to data pairs of log feature versus log scale for finding the scaling
+exponent, ε, from the regression slope. Each fractal analysis tool has
+different performance, prerequisite conditions, and limitations, and
+each needs thorough evaluation in order to avoid bias or
+misinterpretation of the derived fractal parameters {[}5, 6, 8, 9{]},
+especially when applied to physiological signals which may be
+contaminated with noise {[}15, 28{]}. from
+\citep{ekePhysiologicalTimeSeries2000}
+\end{quote}
+
+\subsection{Neuroscience
+Applications}\label{neuroscience-applications-2}
+
+H has emerged as a valuable tool in neuroscience and clinical research.
+Typically, H values reported in adult brains are above 0.5, with higher
+H values in grey matter than white matter or cerebrospinal fluid
+\citep{dongHurstExponentAnalysis2018, winkMonofractalMultifractalDynamics2008}.
+Some key findings from neuroscience research include: a decrease in H
+during task performance
+\citep{ciuciuInterplayFunctionalConnectivity2014, heScaleFreePropertiesFunctional2011};
+negative correlations with task novelty and difficulty
+\citep{churchillSuppressionScalefreeFMRI2016}; increases with age in the
+frontal and parietal lobes \citep{dongHurstExponentAnalysis2018}, and
+hippocampus \citep{winkAgeCholinergicEffects2006}; decreases with age in
+the insula, and limbic, occipital and temporal lobes
+\citep{dongHurstExponentAnalysis2018}; H \textless{} 0.5 in preterm
+infants \citep{mellaTemporalComplexityBOLDsignal2024}; and more
+\citep{campbellMonofractalAnalysisFunctional2022}. In terms of clinical
+findings, abnormal H values have been identified in Alzheimer's disease
+(AD)
+\citep{maximFractionalGaussianNoise2005, warsiCorrelatingBrainBlood2012},
+autism spectrum disorder (ASD)
+\citep{donaTemporalFractalAnalysis2017, laiShiftRandomnessBrain2010, linkeAlteredDevelopmentHurst2024, uscatescuUsingExcitationInhibition2022},
+mild traumatic brain injury \citep{donaFractalAnalysisBrain2017}, major
+depressive disorder
+\citep{weiIdentifyingMajorDepressive2013, jingIdentifyingCurrentRemitted2017}
+and schizophrenia
+\citep{sokunbiNonlinearComplexityAnalysis2014, uscatescuUsingExcitationInhibition2022}.
+
+\subsection{fMRI preprocessing
+considerations}\label{fmri-preprocessing-considerations-2}
+
+\subsubsection{Nuissance regression}\label{nuissance-regression-2}
+
+When attempting to regress out non-BOLD signal, it is important to apply
+the regression at the same time, and not in succession. Even performing
+a band-pass filter after nuissance regression can re-introduce noise
+components \citep{lindquistModularPreprocessingPipelines2019}.
+
+\subsubsection{Detrending}\label{detrending-2}
+
+see \citet{tanabeComparisonDetrendingMethods2002}
+
+\phantomsection\label{cell-fig-scaleinvariance}
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{index_files/figure-pdf/fig-scaleinvariance-1.pdf}
+
+}
+
+\caption{\label{fig-scaleinvariance}\textbf{Simulated fractional
+Gaussian noise.} a) Raw simulated time-series with 1,024 time-points and
+a known Hurst value of 0.75; b) The same signal from a) in a log-log
+power spectral density plot and a linear-regression used to calculate
+the estimated Hurst value.}
+
+\end{figure}%
+
+\section{Hurst Reviews}\label{hurst-reviews-2}
+
+\subsubsection{\texorpdfstring{Nonparametric trend estimation in the
+presence of fractal noise: Application to fMRI time-series analysis -
+Afshinpour et al.~(2008)
+\citep{afshinpourNonparametricTrendEstimation2008}}{Nonparametric trend estimation in the presence of fractal noise: Application to fMRI time-series analysis - Afshinpour et al.~(2008) {[}@afshinpourNonparametricTrendEstimation2008{]}}}\label{nonparametric-trend-estimation-in-the-presence-of-fractal-noise-application-to-fmri-time-series-analysis---afshinpour-et-al.-2008-afshinpournonparametrictrendestimation2008-2}
+
+\begin{quote}
+In this paper, a method for estimating trend in the presence of fractal
+noise is proposed and applied to fMRI time-series. To this end, a partly
+linear model (PLM) is fitted to each time-series. The parametric and
+nonparametric parts of PLM are considered as contributions of
+hemodynamic response and trend, respectively. Using the whitening
+property of wavelet transform, the unknown components of the model are
+estimated in the wavelet domain. The results of the proposed method are
+compared to those of other parametric trend-removal approaches such as
+spline and polynomial models. It is shown that the proposed method
+improves activation detection and decreases variance of the estimated
+parameters relative to the other methods.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  trend estimation paper
+\item
+  1.5T, 3.9x3.9x6mm, 1.648s TR, 256 time-points
+\item
+  Hurst method: Wavelet db4 with 5 scales
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Fractal Analysis of BOLD time-series in a
+Network Associated With Waiting Impulsivity - Akhrif et al.~(2018)
+\citep{akhrifFractalAnalysisBOLD2018}}{Fractal Analysis of BOLD time-series in a Network Associated With Waiting Impulsivity - Akhrif et al.~(2018) {[}@akhrifFractalAnalysisBOLD2018{]}}}\label{fractal-analysis-of-bold-time-series-in-a-network-associated-with-waiting-impulsivity---akhrif-et-al.-2018-akhriffractalanalysisbold2018-2}
+
+\begin{quote}
+examined \textbf{103 } healthy male students at \textbf{rest} and while
+performing the 5-choice serial reaction time \textbf{task}. We addressed
+fractality in a network associated with waiting impulsivity using the
+\textbf{adaptive fractal analysis (AFA)} approach to determine H. We
+revealed the fractal nature of the impulsivity network. Furthermore,
+fractality was influenced by individual impulsivity in terms of
+decreasing fractality (H) with higher impulsivity in regions of top-down
+control (left middle frontal gyrus) as well as reward processing
+(nucleus accumbens and anterior cingulate cortex).
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  fMRI split into low and high frequency components. LFC is the second
+  order polynomial that is a smooth and global fit of the original time
+  course.
+\item
+  AFA: variance of fluctuation computed around, in this case, a second
+  order polynomial trend \(v(i)\) fitted to time-series within each
+  segment \(w\), and its size:
+  \begin{equation}\phantomsection\label{eq-AFA}{
+  F(w) = \sqrt{\frac{1}{N} \sum_{i=1}^{N} \big(u(i) - v(i)\big)^2} \sim w^H
+  }\end{equation}
+\end{itemize}
+
+\(N\): length of the time-series
+
+\[
+w = 2n + 1, n = 5,6..., 13
+\]
+
+H is determined as the slope of the log-log plot
+log\textsubscript{2}(\(F(w)\)) as a function of
+log\textsubscript{2}(\(w\))
+
+Example code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np}
+
+\KeywordTok{def}\NormalTok{ adaptive\_fractal\_analysis(signal, n\_values}\OperatorTok{=}\BuiltInTok{range}\NormalTok{(}\DecValTok{5}\NormalTok{, }\DecValTok{14}\NormalTok{)):}
+    \CommentTok{"""}
+\CommentTok{    Perform Adaptive Fractal Analysis (AFA) to compute the Hurst exponent.}
+\CommentTok{    }
+\CommentTok{    Parameters:}
+\CommentTok{        signal (array{-}like): time{-}series data to analyze.}
+\CommentTok{        n\_values (iterable): Sequence of \textasciigrave{}n\textasciigrave{} values to define window sizes as w = 2n + 1.}
+\CommentTok{    }
+\CommentTok{    Returns:}
+\CommentTok{        float: Estimated Hurst exponent (H).}
+\CommentTok{    """}
+    \CommentTok{\# Define window sizes as w = 2n + 1}
+\NormalTok{    window\_sizes }\OperatorTok{=}\NormalTok{ [}\DecValTok{2} \OperatorTok{*}\NormalTok{ n }\OperatorTok{+} \DecValTok{1} \ControlFlowTok{for}\NormalTok{ n }\KeywordTok{in}\NormalTok{ n\_values]}
+\NormalTok{    fluctuations }\OperatorTok{=}\NormalTok{ []}
+
+    \ControlFlowTok{for}\NormalTok{ window\_size }\KeywordTok{in}\NormalTok{ window\_sizes:}
+\NormalTok{        segment\_variances }\OperatorTok{=}\NormalTok{ []}
+        \ControlFlowTok{for}\NormalTok{ start }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{0}\NormalTok{, }\BuiltInTok{len}\NormalTok{(signal) }\OperatorTok{{-}}\NormalTok{ window\_size }\OperatorTok{+} \DecValTok{1}\NormalTok{, window\_size):}
+            \CommentTok{\# Extract the window}
+\NormalTok{            window }\OperatorTok{=}\NormalTok{ signal[start:start }\OperatorTok{+}\NormalTok{ window\_size]}
+            \CommentTok{\# Fit a second{-}order polynomial (quadratic fit) and compute residual}
+\NormalTok{            x }\OperatorTok{=}\NormalTok{ np.arange(}\BuiltInTok{len}\NormalTok{(window))}
+\NormalTok{            p }\OperatorTok{=}\NormalTok{ np.polyfit(x, window, deg}\OperatorTok{=}\DecValTok{2}\NormalTok{)  }\CommentTok{\# Degree 2 polynomial}
+\NormalTok{            residual }\OperatorTok{=}\NormalTok{ window }\OperatorTok{{-}}\NormalTok{ np.polyval(p, x)}
+            \CommentTok{\# Compute variance of the residuals}
+\NormalTok{            variance }\OperatorTok{=}\NormalTok{ np.var(residual)}
+\NormalTok{            segment\_variances.append(variance)}
+        
+        \CommentTok{\# Compute average variance for this window size}
+\NormalTok{        fluctuations.append(np.mean(segment\_variances))}
+
+    \CommentTok{\# Fit the scaling law: log(fluctuations) vs. log(window\_sizes)}
+\NormalTok{    log\_window\_sizes }\OperatorTok{=}\NormalTok{ np.log(window\_sizes)}
+\NormalTok{    log\_fluctuations }\OperatorTok{=}\NormalTok{ np.log(fluctuations)}
+\NormalTok{    slope, intercept }\OperatorTok{=}\NormalTok{ np.polyfit(log\_window\_sizes, log\_fluctuations, deg}\OperatorTok{=}\DecValTok{1}\NormalTok{)}
+    
+    \CommentTok{\# The slope corresponds to the Hurst exponent}
+    \ControlFlowTok{return}\NormalTok{ slope}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{\texorpdfstring{Endogenous human brain dynamics recover
+slowly following cognitive effort - Barnes et al.~(2009)
+\citep{barnesEndogenousHumanBrain2009}}{Endogenous human brain dynamics recover slowly following cognitive effort - Barnes et al.~(2009) {[}@barnesEndogenousHumanBrain2009{]}}}\label{endogenous-human-brain-dynamics-recover-slowly-following-cognitive-effort---barnes-et-al.-2009-barnesendogenoushumanbrain2009-2}
+
+\begin{quote}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\tightlist
+\item
+  Does performance of a cognitively effortful task significantly change
+  fractal scaling properties of fMRI time-series compared to their
+  values before task performance? 2) If so, can we relate the extent of
+  task-related perturbation to the difficulty of the task? This result
+  supports the model that endogenous low frequency oscillatory dynamics
+  are relevant to the brain's response to exogenous stimulation.
+  Moreover, it suggests that large-scale neurocognitive systems measured
+  using fMRI, like the heart and other physiological systems subjected
+  to external demands for enhanced performance, can take a considerable
+  period of time to return to a stable baseline state.
+\end{enumerate}
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  maximum likelihood in the wavelet domain
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Wavelets and functional magnetic
+resonance imaging of the human brain - Bullmore et al.~(2004)
+\citep{bullmoreWaveletsFunctionalMagnetic2004}}{Wavelets and functional magnetic resonance imaging of the human brain - Bullmore et al.~(2004) {[}@bullmoreWaveletsFunctionalMagnetic2004{]}}}\label{wavelets-and-functional-magnetic-resonance-imaging-of-the-human-brain---bullmore-et-al.-2004-bullmorewaveletsfunctionalmagnetic2004-2}
+
+\begin{quote}
+We provide a brief formal introduction to key properties of the DWT and
+review the growing literature on its application to fMRI. We focus on
+three applications in particular: (i) wavelet coefficient resampling or
+``wavestrapping'' of 1-D time-series, 2- to 3-D spatial maps and 4-D
+spatiotemporal processes; (ii) wavelet-based estimators for signal and
+noise parameters of time-series regression models assuming the errors
+are fractional Gaussian noise (fGn); and (iii) wavelet shrinkage in
+frequentist and Bayesian frameworks to support multiresolution
+hypothesis testing on spatially extended statistic maps.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  This paper suggests that motion correction translates many fBm signals
+  to fGn\ldots{} however, it is not clear where this data comes from.
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Fractal-Based Analysis of fMRI BOLD
+Signal During Naturalistic Viewing Conditions - Campbell et al.~(2021)
+\citep{campbellFractalBasedAnalysisFMRI2022}}{Fractal-Based Analysis of fMRI BOLD Signal During Naturalistic Viewing Conditions - Campbell et al.~(2021) {[}@campbellFractalBasedAnalysisFMRI2022{]}}}\label{fractal-based-analysis-of-fmri-bold-signal-during-naturalistic-viewing-conditions---campbell-et-al.-2021-campbellfractalbasedanalysisfmri2022-2}
+
+\begin{quote}
+We performed fractal analysis on Human Connectome Project 7T fMRI data
+(n = 72, 41 females, mean age 29.46 ± 3.76 years) to compare H across
+movie-watching and rest. Results: In contrast to previous work using
+conventional tasks, we found higher H values for movie relative to rest
+(mean difference = 0.014; p = 5.279 × 10−7; 95\% CI {[}0.009, 0.019{]}).
+H was significantly higher in movie than rest in the visual, somatomotor
+and dorsal attention networks, but was significantly lower during movie
+in the frontoparietal and default networks. We found no cross-condition
+differences in test-retest reliability of H. Finally, we found that H of
+movie-derived stimulus properties (e.g., luminance changes) were fractal
+whereas H of head motion estimates were non-fractal.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Scale-free brain dynamics under physical
+and psychological distress: Pre-treatment effects in women diagnosed
+with breast cancer - Churchill et al.~(2015)
+\citep{churchillScalefreeBrainDynamics2015}}{Scale-free brain dynamics under physical and psychological distress: Pre-treatment effects in women diagnosed with breast cancer - Churchill et al.~(2015) {[}@churchillScalefreeBrainDynamics2015{]}}}\label{scale-free-brain-dynamics-under-physical-and-psychological-distress-pre-treatment-effects-in-women-diagnosed-with-breast-cancer---churchill-et-al.-2015-churchillscalefreebraindynamics2015-2}
+
+\begin{quote}
+In a BOLD functional magnetic resonance imaging study, we scanned three
+groups during a working memory task: women scheduled to receive
+chemotherapy or radiotherapy and aged-matched controls. Surprisingly,
+patients' BOLD signal exhibited greater H with increasing intensity of
+anticipated treatment. However, an analysis of H and functional
+connectivity against self-reported measures of psychological distress
+(Worry, Anxiety, Depression) and physical distress (Fatigue, Sleep
+problems) revealed significant interactions. The modulation of (Worry,
+Anxiety) versus (Fatigue, Sleep Problems, Depression) showed the
+strongest effect, where higher worry and lower fatigue was related to
+reduced H in regions involved in visuospatial search, attention, and
+memory processing. This is also linked to decreased functional
+connectivity in these brain regions.
+\end{quote}
+
+\textbf{Notes:}
+
+\subsubsection{\texorpdfstring{The suppression of scale-free fMRI brain
+dynamics across three different sources of effort: Aging, task novelty
+and task difficulty - Churchill et al.~(2016)
+\citep{churchillSuppressionScalefreeFMRI2016}}{The suppression of scale-free fMRI brain dynamics across three different sources of effort: Aging, task novelty and task difficulty - Churchill et al.~(2016) {[}@churchillSuppressionScalefreeFMRI2016{]}}}\label{the-suppression-of-scale-free-fmri-brain-dynamics-across-three-different-sources-of-effort-aging-task-novelty-and-task-difficulty---churchill-et-al.-2016-churchillsuppressionscalefreefmri2016-2}
+
+\begin{quote}
+Decreases in the Hurst exponent (H), which quantifies scale-free signal,
+was related to three different sources of cognitive effort/task
+engagement: 1) task difficulty, 2) task novelty, and 3) aging effects.
+These results were consistently observed across multiple datasets and
+task paradigms. We also demonstrated that estimates of H are robust
+across a range of time-window sizes. H was also compared to alternative
+metrics of BOLD variability (SDBOLD) and global connectivity (Gconn),
+with effort-related decreases in H producing similar decreases in SDBOLD
+and Gconn.
+\end{quote}
+
+\textbf{Notes:}
+
+\subsubsection{\texorpdfstring{Interplay between functional connectivity
+and scale-free dynamics in intrinsic fMRI networks - Ciuciu et
+al.~(2014)
+\citep{ciuciuInterplayFunctionalConnectivity2014}}{Interplay between functional connectivity and scale-free dynamics in intrinsic fMRI networks - Ciuciu et al.~(2014) {[}@ciuciuInterplayFunctionalConnectivity2014{]}}}\label{interplay-between-functional-connectivity-and-scale-free-dynamics-in-intrinsic-fmri-networks---ciuciu-et-al.-2014-ciuciuinterplayfunctionalconnectivity2014-2}
+
+\begin{quote}
+We applied this framework to fMRI data acquired from healthy young
+adults at rest and performing a visual detection task. First, we found
+that scale-invariance existed beyond univariate dynamics, being present
+also in bivariate cross-temporal dynamics. Second, we observed that
+frequencies within the scale-free range do not contribute evenly to
+interregional connectivity, with a systematically stronger contribution
+of the lowest frequencies, both at rest and during task. Third, in
+addition to a decrease of the Hurst exponent and inter-regional
+correlations, task performance modified cross-temporal dynamics,
+inducing a larger contribution of the highest frequencies within the
+scale-free range to global correlation. Lastly, we found that across
+individuals, a weaker task modulation of the frequency contribution to
+inter-regional connectivity was associated with better task performance
+manifesting as shorter and less variable reaction times. These findings
+bring together two related fields that have hitherto been studied
+separately -- resting-state networks and scale-free dynamics, and show
+that scale-free dynamics of human brain activity manifest in
+cross-regional interactions as well.
+\end{quote}
+
+\textbf{Notes:}
+
+\subsubsection{\texorpdfstring{Temporal fractal analysis of the rs-BOLD
+signal identifies brain abnormalities in autism spectrum disorder - Dona
+et al.~(2017)
+\citep{donaTemporalFractalAnalysis2017}}{Temporal fractal analysis of the rs-BOLD signal identifies brain abnormalities in autism spectrum disorder - Dona et al.~(2017) {[}@donaTemporalFractalAnalysis2017{]}}}\label{temporal-fractal-analysis-of-the-rs-bold-signal-identifies-brain-abnormalities-in-autism-spectrum-disorder---dona-et-al.-2017-donatemporalfractalanalysis2017-2}
+
+\begin{quote}
+``It is important to mention here that fractal dimension estimation
+based on adispersional analysis isquite robust with respect to
+uncorrelated noise and does not require preprocessing''
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  ASD = reduced FD = increased H;
+\item
+  rare study to properly define fGn vs fBm first?
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Fractal analysis of brain blood
+oxygenation level dependent (BOLD) signals from children with mild
+traumatic brain injury (mTBI) - Dona et al.~(2017)
+\citep{donaFractalAnalysisBrain2017}}{Fractal analysis of brain blood oxygenation level dependent (BOLD) signals from children with mild traumatic brain injury (mTBI) - Dona et al.~(2017) {[}@donaFractalAnalysisBrain2017{]}}}\label{fractal-analysis-of-brain-blood-oxygenation-level-dependent-bold-signals-from-children-with-mild-traumatic-brain-injury-mtbi---dona-et-al.-2017-donafractalanalysisbrain2017-2}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  children with mTBI; mTBI = reduced FD = increased H
+\item
+  rare study to properly define fGn vs fBm first?
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Hurst Exponent Analysis of Resting-State
+fMRI Signal Complexity across the Adult Lifespan - Dong et al.~(2018)
+\citep{dongHurstExponentAnalysis2018}}{Hurst Exponent Analysis of Resting-State fMRI Signal Complexity across the Adult Lifespan - Dong et al.~(2018) {[}@dongHurstExponentAnalysis2018{]}}}\label{hurst-exponent-analysis-of-resting-state-fmri-signal-complexity-across-the-adult-lifespan---dong-et-al.-2018-donghurstexponentanalysis2018-2}
+
+\begin{quote}
+Region-wise and voxel-wise analyses were performed to investigate the
+effects of age, gender, and their interaction on complexity. In
+region-wise analysis, we found that the healthy aging is accompanied by
+a loss of complexity in frontal and parietal lobe and increased
+complexity in insula, limbic, and temporal lobe. Meanwhile, differences
+in HE between genders were found to be significant in parietal lobe (p =
+0.04, corrected). However, there was no interaction between gender and
+age. In voxel-wise analysis, the significant complexity decrease with
+aging was found in frontal and parietal lobe, and complexity increase
+was found in insula, limbic lobe, occipital lobe, and temporal lobe with
+aging. Meanwhile, differences in HE between genders were found to be
+significant in frontal, parietal, and limbic lobe. Furthermore, we found
+age and sex interaction in right parahippocampal gyrus (p = 0.04,
+corrected). Our findings reveal HE variations of the rs-fMRI signal
+across the human adult lifespan and show that HE may serve as a new
+parameter to assess healthy aging process.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  They state that increase in age = decrease in complexity
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Pitfalls in fractal time-series analysis:
+fMRI BOLD as an exemplary case - Eke et al.~(2012)
+\citep{ekePitfallsFractalTime2012}}{Pitfalls in fractal time-series analysis: fMRI BOLD as an exemplary case - Eke et al.~(2012) {[}@ekePitfallsFractalTime2012{]}}}\label{pitfalls-in-fractal-time-series-analysis-fmri-bold-as-an-exemplary-case---eke-et-al.-2012-ekepitfallsfractaltime2012-2}
+
+\begin{quote}
+\end{quote}
+
+\subsubsection{\texorpdfstring{Wavelet-Generalized Least Squares: A New
+BLU Estimator of Linear Regression Models with 1/f Errors - Fadili \&
+Bullmore (2002)
+\citep{fadiliWaveletGeneralizedLeastSquares2002}}{Wavelet-Generalized Least Squares: A New BLU Estimator of Linear Regression Models with 1/f Errors - Fadili \& Bullmore (2002) {[}@fadiliWaveletGeneralizedLeastSquares2002{]}}}\label{wavelet-generalized-least-squares-a-new-blu-estimator-of-linear-regression-models-with-1f-errors---fadili-bullmore-2002-fadiliwaveletgeneralizedleastsquares2002-2}
+
+\begin{quote}
+\end{quote}
+
+\subsubsection{\texorpdfstring{Not in one metric: Neuroticism modulates
+different resting state metrics within distinctive brain regions -
+Gentili et al.~(2017)
+\citep{gentiliNotOneMetric2017}}{Not in one metric: Neuroticism modulates different resting state metrics within distinctive brain regions - Gentili et al.~(2017) {[}@gentiliNotOneMetric2017{]}}}\label{not-in-one-metric-neuroticism-modulates-different-resting-state-metrics-within-distinctive-brain-regions---gentili-et-al.-2017-gentilinotonemetric2017-2}
+
+\begin{quote}
+Metrics more related to the measurement of regional intrinsic brain
+activity (fALFF, ALFF and REHO), or that provide a parsimonious index of
+integrated and segregated brain activity (HE), were more broadly
+modulated in regions related to emotions and their regulation. Metrics
+related to connectivity were modulated across a wider network of areas.
+Overall, these results show that neuroticism affects distinct aspects of
+brain resting state activity.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  ``parsimonious index of integrated and segregated brain activity
+  (HE)''
+\item
+  HE was inversely correlated to neuroticism
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Proneness to social anxiety modulates
+neural complexity in the absence of exposure: A resting state fMRI study
+using Hurst exponent - Gentili et al.~(2015)
+\citep{gentiliPronenessSocialAnxiety2015}}{Proneness to social anxiety modulates neural complexity in the absence of exposure: A resting state fMRI study using Hurst exponent - Gentili et al.~(2015) {[}@gentiliPronenessSocialAnxiety2015{]}}}\label{proneness-to-social-anxiety-modulates-neural-complexity-in-the-absence-of-exposure-a-resting-state-fmri-study-using-hurst-exponent---gentili-et-al.-2015-gentilipronenesssocialanxiety2015-2}
+
+\begin{quote}
+Results from fALFF were highly consistent with those obtained using LSAS
+and BFNE to predict HE. Overall our data indicate that spontaneous brain
+activity is influenced by the degree of social anxiety, on a continuum
+and in the absence of social stimuli. These findings suggest that social
+anxiety is a trait characteristic that shapes brain activity and
+predisposes to different reactions in social contexts.
+\end{quote}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  ``A recent article (Rubin et al., 2013) analyzes the robustness of
+  different algorithms with respect to possible fMRI artifacts and
+  time-series lengths. In particular, the relevance of preprocessing
+  steps as motion correction, detrending and filtering were evaluated
+  both on simulated and real fMRI data, while other preprocessing steps
+  like segmentation were not evaluated, although they may have an impact
+  on''
+\item
+  ``The HE of fMRI time-series is generally higher in gray matter than
+  in white matter (Maxim et al., 2005), augments in the hippocampus with
+  aging, and decreases with cholinergic transmission enhancement (Wink
+  et al., 2006)''
+\item
+  ``As pointed out by Maxim (Maxim et al., 2005), fMRI noise, after
+  these pre-processing steps, can be described as fGn.''
+\item
+  ``The HE of fMRI time-series is generally higher in gray matter than
+  in white matter (Maxim et al., 2005), augments in the hippocampus with
+  aging, and decreases with cholinergic transmission enhancement (Wink
+  et al., 2006).''
+\item
+  ``a reduction of HE has been observed in autistic and schizophrenic
+  patients (Lai et al., 2010; Sokunbi et al., 2014)''
+\item
+  ``Since the HE can describe long and short range memory dynamics, it
+  has been proposed as a measure of online information-processing
+  efficiency: higher HEs are related to long memory dynamics and to
+  higher temporal redundancy and less freedom to vary (He, 2011).''
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Real-time fractal signal processing in
+the time domain. - Hartmann et al.~(2013)
+\citep{hartmannRealtimeFractalSignal2013}}{Real-time fractal signal processing in the time domain. - Hartmann et al.~(2013) {[}@hartmannRealtimeFractalSignal2013{]}}}\label{real-time-fractal-signal-processing-in-the-time-domain.---hartmann-et-al.-2013-hartmannrealtimefractalsignal2013-2}
+
+\begin{quote}
+Here we introduce real-time variants of the Detrended Fluctuation
+Analysis (DFA) and the closely related Signal Summation Conversion (SSC)
+methods, which are suitable to estimate the fractal exponent in one
+pass.
+\end{quote}
+
+\subsubsection{\texorpdfstring{Altered fractal dynamics of gait: Reduced
+stride-interval correlations with aging and Huntington's disease. -
+Hausdoff et al.~(1997)
+\citep{hausdorffAlteredFractalDynamics1997}}{Altered fractal dynamics of gait: Reduced stride-interval correlations with aging and Huntington's disease. - Hausdoff et al.~(1997) {[}@hausdorffAlteredFractalDynamics1997{]}}}\label{altered-fractal-dynamics-of-gait-reduced-stride-interval-correlations-with-aging-and-huntingtons-disease.---hausdoff-et-al.-1997-hausdorffalteredfractaldynamics1997-2}
+
+\textbf{Notes:}
+
+\begin{itemize}
+\tightlist
+\item
+  Gait\ldots{} not fMRI
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Scale-Free Properties of the Functional
+Magnetic Resonance Imaging Signal during Rest and Task - He (2011)
+\citep{heScaleFreePropertiesFunctional2011}}{Scale-Free Properties of the Functional Magnetic Resonance Imaging Signal during Rest and Task - He (2011) {[}@heScaleFreePropertiesFunctional2011{]}}}\label{scale-free-properties-of-the-functional-magnetic-resonance-imaging-signal-during-rest-and-task---he-2011-hescalefreepropertiesfunctional2011-2}
+
+\begin{quote}
+its power-law exponent differentiates between brain networks and
+correlates with fMRI signal variance and brain glucose metabolism.
+Importantly, in parallel to brain electrical field potentials, the
+variance and power-law exponent of the fMRI signal decrease during task
+activation, suggesting that the signal contains more long-range memory
+during rest and conversely is more efficient at online information
+processing during task. The scale-free properties of the fMRI signal and
+brain electrical field potentials bespeak their respective stationarity
+and nonstationarity. This suggests that neurovascular coupling mechanism
+is likely to contain a transformation from nonstationarity to
+stationarity.
+\end{quote}
+
+\begin{quote}
+The fMRI signal time course from each ROI was extracted for each subject
+and fMRI run. The normalized or non-normalized power spectrum of the
+fMRI signal was computed using the Bartlett smoothing procedure of
+deriving the power spectral function from the lagged autocorrelation or
+auto-covariance function, respectively (Jenkins and Watts, 1998). A
+Tukey window of 20 fMRI frame width was applied for additional
+smoothing. The power spectra were then averaged across runs and subjects
+and across homologous ROIs, resulting in an average power spectrum for
+each of 21 brain regions (Fig. 2A). Finally, to obtain the power-law
+exponent β, the \textless0.1 Hz range of each average power spectrum was
+fit with a power-law function: P(f) ∝ 1/fβ using a least-squares fit.
+Using the low-frequency range to fit the power-law exponent avoids
+aliasing artifact in higher-frequency range (we used TR of 2.16 s, hence
+Nyquist limit is 0.23 Hz) and yields reliable measurement of the
+scale-free distribution (Eke et al., 2002).
+\end{quote}
+
+\begin{quote}
+The DFA method has the particular advantage of being applicable to both
+stationary and nonstationary data. To analyze our fMRI data, window
+lengths of 5, 10, 19, 38, and 95 fMRI frames were chosen so that the
+number of frames in each run (190 after discarding the first four
+frames) is an integer multiple of the window length.
+\end{quote}
+
+\subsubsection{\texorpdfstring{Fractal characterization of complexity in
+dynamic signals: Application to cerebral hemodynamics - Herman (2009)
+\citep{hermanFractalCharacterizationComplexity2009}}{Fractal characterization of complexity in dynamic signals: Application to cerebral hemodynamics - Herman (2009) {[}@hermanFractalCharacterizationComplexity2009{]}}}\label{fractal-characterization-of-complexity-in-dynamic-signals-application-to-cerebral-hemodynamics---herman-2009-hermanfractalcharacterizationcomplexity2009-2}
+
+\subsubsection{\texorpdfstring{Identification of brain activity from
+fMRI data: Comparison of three fractal scaling analyses. - Hu (2006)
+\citep{huIdentificationBrainActivity2006}}{Identification of brain activity from fMRI data: Comparison of three fractal scaling analyses. - Hu (2006) {[}@huIdentificationBrainActivity2006{]}}}\label{identification-of-brain-activity-from-fmri-data-comparison-of-three-fractal-scaling-analyses.---hu-2006-huidentificationbrainactivity2006-2}
+
+\subsubsection{\texorpdfstring{A shift to randomness of brain
+oscillations in people with autism. Lai (2010)
+\citep{laiShiftRandomnessBrain2010}}{A shift to randomness of brain oscillations in people with autism. Lai (2010) {[}@laiShiftRandomnessBrain2010{]}}}\label{a-shift-to-randomness-of-brain-oscillations-in-people-with-autism.-lai-2010-laishiftrandomnessbrain2010-2}
+
+\begin{quote}
+Complex fractal scaling of fMRI time-series was found in both groups but
+globally there was a significant shift to randomness in the ASC (mean H
+= .758, SD = .045) compared with neurotypical volunteers (mean H = .788,
+SD = .047).
+\end{quote}
+
+\subsubsection{\texorpdfstring{Extraversion is encoded by scale-free
+dynamics of default mode network. Lei (2013)
+\citep{leiExtraversionEncodedScalefree2013}}{Extraversion is encoded by scale-free dynamics of default mode network. Lei (2013) {[}@leiExtraversionEncodedScalefree2013{]}}}\label{extraversion-is-encoded-by-scale-free-dynamics-of-default-mode-network.-lei-2013-leiextraversionencodedscalefree2013-2}
+
+\subsubsection{\texorpdfstring{Fractional Gaussian noise, functional MRI
+and Alzheimer's disease. Maxim (2005)
+\citep{maximFractionalGaussianNoise2005}}{Fractional Gaussian noise, functional MRI and Alzheimer's disease. Maxim (2005) {[}@maximFractionalGaussianNoise2005{]}}}\label{fractional-gaussian-noise-functional-mri-and-alzheimers-disease.-maxim-2005-maximfractionalgaussiannoise2005-2}
+
+\begin{quote}
+we adopted the Davies-Harte algorithm, which is both exact and fast, to
+generate the fGn simulations used here. For each value of H = 0.1,
+\ldots{} 0.9, we simulated 1000 realizations of fGn with 512 time-points
+in each series; we set \(\omega^{2} = 1\) for all simulations.
+\end{quote}
+
+\textbf{NOTES:}
+
+\begin{itemize}
+\tightlist
+\item
+  This paper has the figure showing signal goes from fBm to fGn with
+  proper motion regression
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Decomposing multifractal crossovers. Nagy
+(2017)
+\citep{nagyDecomposingMultifractalCrossovers2017}}{Decomposing multifractal crossovers. Nagy (2017) {[}@nagyDecomposingMultifractalCrossovers2017{]}}}\label{decomposing-multifractal-crossovers.-nagy-2017-nagydecomposingmultifractalcrossovers2017-2}
+
+\begin{quote}
+The NIRS and fMRI-BOLD low-frequency fluctuations were dominated by a
+multifractal component over an underlying biologically relevant random
+noise, thus forming a bimodal signal. The crossover between the EEG
+signal components was found at the boundary between the δ and θ bands,
+suggesting an independent generator for the multifractal δ rhythm. The
+robust implementation of the SFD method should be regarded as essential
+in the seamless processing of large volumes of bimodal fMRI-BOLD imaging
+data for the topology of multifractal metrics free of the masking effect
+of the underlying random noise.
+\end{quote}
+
+\subsubsection{\texorpdfstring{Optimizing complexity measures for FMRI
+data: Algorithm, artifact, and sensitivity. Rubin (2013)
+\citep{rubinOptimizingComplexityMeasures2013}}{Optimizing complexity measures for FMRI data: Algorithm, artifact, and sensitivity. Rubin (2013) {[}@rubinOptimizingComplexityMeasures2013{]}}}\label{optimizing-complexity-measures-for-fmri-data-algorithm-artifact-and-sensitivity.-rubin-2013-rubinoptimizingcomplexitymeasures2013-2}
+
+\begin{quote}
+Power-spectrum, Higuchi's fractal dimension, and generalized Hurst
+exponent based estimates were most successful by all criteria; the
+poorest-performing measures were wavelet, detrended fluctuation
+analysis, aggregated variance, and rescaled range. Our results clearly
+demonstrate that decisions regarding choice of algorithm, signal
+processing, time-series length, and scanner have a significant impact on
+the reliability and sensitivity of complexity estimates. operating on
+the edge of chaos, complex systems position themselves for optimal
+responsivity to inputs, as well as ability to maintain homeostatic
+regulation. Daubechies wavelet based computations (Hdb\emph{) have long
+computation times, are not sensitive to spikes, and show poor
+sensitivity to activation, tissue type, and emotional content; for these
+Daubechies wavelet based estimates the overall performance increases
+with the wavelet order up to a point (Hdb8), and then deteriorates. HRS
+and HAV, performed poorly across the board. In terms of image contrast,
+overlap with activation, and group differences, HDFA} performed poorly
+as well, with HDFA-S outperforming HDFA and HDFA-L, suggesting that the
+bulk of useful information is found at shorter lags. The most
+consistently successful measures were the powerspectrum based measures
+HFFT and HpWelch, with the latter slightly outperforming the former
+while taking much longer to compute Second, it appears that detrending,
+regressing out the global mean, and excluding low frequencies improves
+agreement between complexity and activation. 300-600 time-points
+Finally, the best measures to use are either the power-spectrum based
+ones (HFFT or HpWelch) on a restricted frequency range (above ,0.01 Hz),
+\end{quote}
+
+\subsubsection{\texorpdfstring{Mutual information identifies spurious
+Hurst phenomena in resting state EEG and fMRI data. von Wegner (2018)
+\citep{vonwegnerMutualInformationIdentifies2018}}{Mutual information identifies spurious Hurst phenomena in resting state EEG and fMRI data. von Wegner (2018) {[}@vonwegnerMutualInformationIdentifies2018{]}}}\label{mutual-information-identifies-spurious-hurst-phenomena-in-resting-state-eeg-and-fmri-data.-von-wegner-2018-vonwegnermutualinformationidentifies2018-2}
+
+\begin{quote}
+In these processes, which do not have long-range memory by construction,
+a spurious Hurst phenomenon occurs due to slow relaxation times and
+heteroscedasticity (time-varying conditional variance). In summary, we
+find that mutual information correctly distinguishes long-range from
+short-range dependence in the theoretical and experimental cases
+discussed. Our results also suggest that the stationary fGn process is
+not sufficient to describe neural data, which seem to belong to a more
+general class of stochastic processes, in which multiscale variance
+effects produce Hurst phenomena without long-range dependence. In our
+experimental data, the Hurst phenomenon and long-range memory appear as
+different system properties that should be estimated and interpreted
+independently.
+\end{quote}
+
+\newpage{}
+
+\section{References}\label{references-2}
+
+
+\newpage{}
+
+\section{Appendix}\label{appendix-2}
+
+\subsection{Python code}\label{python-code-2}
+
+\subsubsection{Sample python code for testing power-law
+scaling}\label{sec-powerlawscalingcode}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\StringTok{"HELLO"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+
+
+
+
+\end{document}

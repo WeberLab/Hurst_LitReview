@@ -1,0 +1,6 @@
+freq, power = psd(fbmp9)
+ax[5, 1].plot(freq, power)
+ax[5, 1].set_xscale("log")
+ax[5, 1].set_yscale("log")
+ax[5, 1].set_xticklabels([])
+ax[5, 1].yaxis.tick_right()

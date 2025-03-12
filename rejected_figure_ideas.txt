@@ -1,0 +1,77 @@
+#| label: fig-scaleinvariance
+#| fig-cap: "**Simulated fractional Gaussian noise.** a) Raw simulated time-series with 1,024 time-points and a known Hurst value of 0.75; b) The same signal from a) in a log-log power spectral density plot and a linear-regression used to calculate the estimated Hurst value."
+
+f = FBM(1024, hurst=0.75, length=1, method='daviesharte')
+fgn_sample_0p75 = f.fgn()
+
+def tspowerplot(data):
+    fig, ax = plt.subplots(1,2, constrained_layout=True, figsize=(7,3))
+    ax[0].plot(data)
+    ax[0].set_title("a)", loc='left')
+
+    freq, power = signal.periodogram(data, 1)
+    power = power[1:]
+    freq = freq[1:]
+
+    log_power = np.log10(power)
+    log_freq = np.log10(freq)
+    log_power = log_power[1:]
+    log_freq = log_freq[1:]
+
+    model = LinearRegression()
+    model.fit(log_freq.reshape(-1,1), log_power)
+    predicted_power = 10**model.predict(log_freq.reshape(-1,1))
+    Hurst = (model.coef_*-1+1)/2
+
+    ax[1].plot(freq.reshape(-1,1), power)
+    ax[1].set_xscale('log')
+    ax[1].set_yscale('log')
+    ax[1].plot(freq[1:].reshape(-1,1), predicted_power, color='red')
+    ax[1].set_title("b)", loc='left')
+
+    fig.suptitle(f"Real Hurst: 0.75\nSlope (m): {round(float(model.coef_),3)}; Estimated Hurst: {round(float(Hurst),2)}")
+
+tspowerplot(fgn_sample_0p75)
+plt.show()
+
+---
+
+np.random.seed(1)
+plt.rcParams['text.usetex'] = True #latex
+fp5 = FBM(1024, hurst=0.5, length=1, method='daviesharte')
+fp1 = FBM(1024, hurst=0.1, length=1, method='daviesharte')
+fp9 = FBM(1024, hurst=0.9, length=1, method='daviesharte')
+fgnp5 = fp5.fgn()
+fgnp1 = fp1.fgn()
+fgnp9 = fp9.fgn()
+fbmp5 = fp5.fbm()
+fbmp1 = fp1.fbm()
+fbmp9 = fp9.fbm()
+
+fig, ax = plt.subplots(2,3, constrained_layout=True, figsize=(7,3))
+ax[0,0].plot(fgnp1)
+ax[0,0].yaxis.set_visible(False)
+ax[0,1].plot(fgnp5)
+ax[0,1].yaxis.set_visible(False)
+ax[0,2].plot(fgnp9)
+ax[0,2].yaxis.set_visible(False)
+ax[1,0].plot(fbmp1)
+ax[1,0].yaxis.set_visible(False)
+ax[1,1].plot(fbmp5)
+ax[1,1].yaxis.set_visible(False)
+ax[1,2].plot(fbmp9)
+ax[1,2].yaxis.set_visible(False)
+
+fig.supylabel('Signal amplitude')
+fig.supxlabel('Time')
+# fig.suptitle(f"Real Hurst: 0.75\nSlope (m): {round(float(model.coef_),3)}; Estimated Hurst: {round(float(Hurst),2)}")
+
+ax = ax.flat
+
+for n, ax in enumerate(ax):  
+    ax.text(-0.1, 1.1, string.ascii_uppercase[n]+")", transform=ax.transAxes, 
+            size=10, weight='bold')
+
+plt.show()
+
+---

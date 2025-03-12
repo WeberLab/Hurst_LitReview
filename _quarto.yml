@@ -1,0 +1,35 @@
+project:
+  type: manuscript
+
+manuscript:
+  article: index.qmd
+
+format:
+  html:
+    comments:
+      hypothesis: true
+  # docx: default
+  # jats: default
+
+  # (other formats)
+  # pdf:
+  #   keep-tex: true
+  nature-pdf:
+    # default
+    journal: 
+      cite-style: sn-vancouver
+    cite-method: natbib
+    classoption: 
+      - Numbered
+      - referee
+      - lineno
+    keep-tex: true
+
+execute:
+  freeze: auto
+  # cache: true
+
+filters:
+  - parse-latex
+
+
