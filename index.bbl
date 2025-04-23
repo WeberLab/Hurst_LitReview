@@ -1,0 +1,505 @@
+\begin{thebibliography}{10}
+\providecommand{\doi}[1]{\url{https://doi.org/#1}}
+\bibcommenthead
+
+\bibitem[\protect\citeauthoryear{Eke et~al.}{2000}]{ekePhysiologicalTimeSeries2000}
+Eke A, Herm{\'a}n P, Bassingthwaighte J, Raymond G, Percival D, Cannon M, et~al.
+\newblock Physiological Time Series: Distinguishing Fractal Noises from Motions.
+\newblock Pfl{\"u}gers Archiv - European Journal of Physiology. 2000 Feb;439(4):403--415.
+\newblock \doi{10.1007/s004249900135}.
+
+\bibitem[\protect\citeauthoryear{Koch}{1904}]{koch1904}
+Koch HV.
+\newblock Sur Une Courbe Continue sans Tangente, Obtenue Par Une Construction G{\'e}om{\'e}trique {\'E}l{\'e}mentaire.
+\newblock Astron och Fys. 1904;1:681--702.
+
+\bibitem[\protect\citeauthoryear{Koch}{1906}]{kochMethodeGeometriqueElementaire1906}
+Koch H.
+\newblock Une M{\'e}thode G{\'e}om{\'e}trique {\'E}l{\'e}mentaire Pour l'{\'e}tude de Certaines Questions de La Th{\'e}orie Des Courbes Planes.
+\newblock Acta Mathematica. 1906;30(0):145--174.
+\newblock \doi{10.1007/BF02418570}.
+
+\bibitem[\protect\citeauthoryear{Mandelbrot}{1967}]{mandelbrotHowLongCoast1967}
+Mandelbrot B.
+\newblock How {{Long Is}} the {{Coast}} of {{Britain}}? {{Statistical Self-Similarity}} and {{Fractional Dimension}}.
+\newblock Science. 1967 May;156(3775):636--638.
+\newblock \doi{10.1126/science.156.3775.636}.
+
+\bibitem[\protect\citeauthoryear{Jayalalitha et~al.}{2008}]{jayalalithaFractalModelBlood2008}
+Jayalalitha G, Shanthoshini~Deviha V, Uthayakumar R.
+\newblock Fractal Model for Blood Flow in Cardiovascular System.
+\newblock Computers in Biology and Medicine. 2008 Jun;38(6):684--693.
+\newblock \doi{10.1016/j.compbiomed.2008.03.002}.
+
+\bibitem[\protect\citeauthoryear{Ansell and Kov{\'a}cs}{2024}]{ansellUnveilingUniversalAspects2024}
+Ansell HS, Kov{\'a}cs IA.
+\newblock Unveiling Universal Aspects of the Cellular Anatomy of the Brain.
+\newblock Communications Physics. 2024 Jun;7(1):184.
+\newblock \doi{10.1038/s42005-024-01665-y}.
+
+\bibitem[\protect\citeauthoryear{Riley et~al.}{2012}]{rileyTutorialIntroductionAdaptive2012}
+Riley MA, Bonnette S, Kuznetsov N, Wallot S, Gao J.
+\newblock A Tutorial Introduction to Adaptive Fractal Analysis.
+\newblock Frontiers in Physiology. 2012;3.
+\newblock \doi{10.3389/fphys.2012.00371}.
+
+\bibitem[\protect\citeauthoryear{Csermely}{2006}]{csermelyWeakLinksStabilizers2006}
+Csermely P.
+\newblock Weak Links: Stabilizers of Complex Systems from Proteins to Social Networks.
+\newblock 1st ed. The Frontiers Collection. Berlin New York: Springer; 2006.
+
+\bibitem[\protect\citeauthoryear{Bak et~al.}{1987}]{bakSelforganizedCriticalityExplanation1987}
+Bak P, Tang C, Wiesenfeld K.
+\newblock Self-Organized Criticality: {{An}} Explanation of the 1/ {\emph{f}} Noise.
+\newblock Physical Review Letters. 1987 Jul;59(4):381--384.
+\newblock \doi{10.1103/PhysRevLett.59.381}.
+
+\bibitem[\protect\citeauthoryear{Lipsitz}{1992}]{lipsitzLossComplexityAging1992}
+Lipsitz LA.
+\newblock Loss of '{{Complexity}}' and {{Aging}}: {{Potential Applications}} of {{Fractals}} and {{Chaos Theory}} to {{Senescence}}.
+\newblock JAMA. 1992 Apr;267(13):1806.
+\newblock \doi{10.1001/jama.1992.03480130122036}.
+
+\bibitem[\protect\citeauthoryear{Lipsitz}{2002}]{lipsitzDynamicsStabilityPhysiologic2002}
+Lipsitz LA.
+\newblock Dynamics of {{Stability}}: {{The Physiologic Basis}} of {{Functional Health}} and {{Frailty}}.
+\newblock The Journals of Gerontology Series A: Biological Sciences and Medical Sciences. 2002 Mar;57(3):B115--B125.
+\newblock \doi{10.1093/gerona/57.3.B115}.
+
+\bibitem[\protect\citeauthoryear{Beggs}{2022}]{beggsCortexCriticalPoint2022}
+Beggs JM.
+\newblock The {{Cortex}} and the {{Critical Point}}.
+\newblock 1st ed. Cambridge, MA: MIT Press Direct; 2022.
+
+\bibitem[\protect\citeauthoryear{Herman et~al.}{2009}]{hermanFractalCharacterizationComplexity2009}
+Herman P, Kocsis L, Eke A.
+\newblock Fractal {{Characterization}} of {{Complexity}} in {{Dynamic Signals}}: {{Application}} to {{Cerebral Hemodynamics}}.
+\newblock In: Walker JM, Hyder F, editors. Dynamic {{Brain Imaging}}. vol. 489. Totowa, NJ: Humana Press; 2009. p. 23--40.
+
+\bibitem[\protect\citeauthoryear{Werner}{2010}]{wernerFractalsNervousSystem2010}
+Werner G.
+\newblock Fractals in the Nervous System: Conceptual Implications for Theoretical Neuroscience.
+\newblock Frontiers in Physiology. 2010;\doi{10.3389/fphys.2010.00015}.
+
+\bibitem[\protect\citeauthoryear{Barnes et~al.}{2009}]{barnesEndogenousHumanBrain2009}
+Barnes A, Bullmore ET, Suckling J.
+\newblock Endogenous {{Human Brain Dynamics Recover Slowly Following Cognitive Effort}}.
+\newblock PLoS ONE. 2009 Aug;4(8):e6626.
+\newblock \doi{10.1371/journal.pone.0006626}.
+
+\bibitem[\protect\citeauthoryear{Suckling et~al.}{2008}]{sucklingEndogenousMultifractalBrain2008}
+Suckling J, Wink AM, Bernard FA, Barnes A, Bullmore E.
+\newblock Endogenous Multifractal Brain Dynamics Are Modulated by Age, Cholinergic Blockade and Cognitive Performance.
+\newblock Journal of Neuroscience Methods. 2008 Sep;174(2):292--300.
+\newblock \doi{10.1016/j.jneumeth.2008.06.037}.
+
+\bibitem[\protect\citeauthoryear{Eke et~al.}{2002}]{ekeFractalCharacterizationComplexity2002}
+Eke A, Herman P, Kocsis L, Kozak LR.
+\newblock Fractal Characterization of Complexity in Temporal Physiological Signals.
+\newblock Physiological Measurement. 2002 Feb;23(1):R1--R38.
+\newblock \doi{10.1088/0967-3334/23/1/201}.
+
+\bibitem[\protect\citeauthoryear{Herm{\'a}n et~al.}{2001}]{hermanFractalBranchingPattern2001}
+Herm{\'a}n P, Kocsis L, Eke A.
+\newblock Fractal Branching Pattern in the Pial Vasculature in the Cat.
+\newblock Journal of Cerebral Blood Flow and Metabolism: Official Journal of the International Society of Cerebral Blood Flow and Metabolism. 2001 Jun;21(6):741--753.
+\newblock \doi{10.1097/00004647-200106000-00012}.
+
+\bibitem[\protect\citeauthoryear{Taylor}{2006}]{taylorPersonalReflectionsJackson2006}
+Taylor R.
+\newblock Personal Reflections on {{Jackson Pollock}}'s Fractal Paintings.
+\newblock Hist{\'o}ria, Ci{\^e}ncias, Sa{\'u}de-Manguinhos. 2006 Oct;13(suppl):109--123.
+\newblock \doi{10.1590/S0104-59702006000500007}.
+
+\bibitem[\protect\citeauthoryear{Hurst}{1951}]{hurstLongTermStorageCapacity1951}
+Hurst HE.
+\newblock Long-{{Term Storage Capacity}} of {{Reservoirs}}.
+\newblock Transactions of the American Society of Civil Engineers. 1951 Jan;116(1):770--799.
+\newblock \doi{10.1061/TACEAT.0006518}.
+
+\bibitem[\protect\citeauthoryear{Mandelbrot}{1965}]{mandelbrotClasseProcessusStochastiques1965}
+Mandelbrot B.
+\newblock Une Classe de Processus Stochastiques Homothetiquesa Soi: {{Application}} a Loi Climatologique de {{H}}. {{E}}. {{Hurst}}.
+\newblock Comptes Rendus Del academie Des Sciences De Paris. 1965;240:3274--3277.
+
+\bibitem[\protect\citeauthoryear{Molz et~al.}{1997}]{molzFractionalBrownianMotion1997}
+Molz FJ, Liu HH, Szulga J.
+\newblock Fractional {{Brownian}} Motion and Fractional {{Gaussian}} Noise in Subsurface Hydrology: {{A}} Review, Presentation of Fundamental Properties, and Extensions.
+\newblock Water Resources Research. 1997 Oct;33(10):2273--2286.
+\newblock \doi{10.1029/97WR01982}.
+
+\bibitem[\protect\citeauthoryear{Korvin}{1992}]{korvinFractalModelsEarth1992}
+Korvin G.
+\newblock Fractal Models in the Earth Sciences.
+\newblock Amsterdam ; New York: Elsevier; 1992.
+
+\bibitem[\protect\citeauthoryear{Park and Willinger}{2000}]{parkSelfSimilarNetworkTraffic2000}
+Park K, Willinger W, editors.
+\newblock Self-{{Similar Network Traffic}} and {{Performance Evaluation}}.
+\newblock 1st ed. Wiley; 2000.
+
+\bibitem[\protect\citeauthoryear{Graves et~al.}{2017}]{gravesBriefHistoryLong2017}
+Graves T, Gramacy R, Watkins N, Franzke C.
+\newblock A {{Brief History}} of {{Long Memory}}: {{Hurst}}, {{Mandelbrot}} and the {{Road}} to {{ARFIMA}}, 1951--1980.
+\newblock Entropy. 2017 Sep;19(9):437.
+\newblock \doi{10.3390/e19090437}.
+
+\bibitem[\protect\citeauthoryear{Shannon}{1949}]{shannonCommunicationPresenceNoise1949}
+Shannon CE.
+\newblock Communication in the {{Presence}} of {{Noise}}.
+\newblock Proceedings of the IRE. 1949 Jan;37(1):10--21.
+\newblock \doi{10.1109/JRPROC.1949.232969}.
+
+\bibitem[\protect\citeauthoryear{Clauset et~al.}{2009}]{clausetPowerLawDistributionsEmpirical2009}
+Clauset A, Shalizi CR, Newman MEJ.
+\newblock Power-{{Law Distributions}} in {{Empirical Data}}.
+\newblock SIAM Review. 2009 Nov;51(4):661--703.
+\newblock \doi{10.1137/070710111}.
+
+\bibitem[\protect\citeauthoryear{Kolmogorov}{1933}]{kolmogorovSullaDeterminazioneEmpirica1933}
+Kolmogorov A.
+\newblock Sulla Determinazione Empirica Di Una Legge Di Distribuzione.
+\newblock Giornale dell'Istituto Italiano degli Attuari. 1933;4:83--91.
+
+\bibitem[\protect\citeauthoryear{Smirnov}{1948}]{smirnovTableEstimatingGoodness1948}
+Smirnov N.
+\newblock Table for {{Estimating}} the {{Goodness}} of {{Fit}} of {{Empirical Distributions}}.
+\newblock The Annals of Mathematical Statistics. 1948 Jun;19(2):279--281.
+\newblock \doi{10.1214/aoms/1177730256}.
+
+\bibitem[\protect\citeauthoryear{Peitgen}{1988}]{peitgenScienceFractalImages1988}
+Peitgen HO.
+\newblock The {{Science}} of {{Fractal Images}}.
+\newblock New York, NY: Springer New York; 1988.
+
+\bibitem[\protect\citeauthoryear{Davies and Harte}{1987}]{daviesTestsHurstEffect1987}
+Davies RB, Harte DS.
+\newblock Tests for {{Hurst}} Effect.
+\newblock Biometrika. 1987;74(1):95--101.
+\newblock \doi{10.1093/biomet/74.1.95}.
+
+\bibitem[\protect\citeauthoryear{Asmussen}{1998}]{asmussenStochasticSimulationView1998}
+Asmussen S.
+\newblock Stochastic {{Simulation}} with a {{View Towards Stochastic Processes}}.
+\newblock {University of Aarhus, Centre for Mathematical Physics and Stochastics}; 1998.
+
+\bibitem[\protect\citeauthoryear{Hosking}{1984}]{hoskingModelingPersistenceHydrological1984}
+Hosking JR.
+\newblock Modeling Persistence in Hydrological Time Series Using Fractional Differencing.
+\newblock Water Resources Research. 1984;20(12):1898--1908.
+
+\bibitem[\protect\citeauthoryear{Roume et~al.}{2019}]{roumeBiasesSimulationAnalysis2019}
+Roume C, Ezzina S, Blain H, Deligni{\`e}res D.
+\newblock Biases in the {{Simulation}} and {{Analysis}} of {{Fractal Processes}}.
+\newblock Computational and Mathematical Methods in Medicine. 2019 Dec;2019:1--12.
+\newblock \doi{10.1155/2019/4025305}.
+
+\bibitem[\protect\citeauthoryear{Granger and Joyeux}{1980}]{grangerINTRODUCTIONLONGMEMORYTIME1980}
+Granger CWJ, Joyeux R.
+\newblock {{AN INTRODUCTION TO LONG}}-{{MEMORY TIME SERIES MODELS AND FRACTIONAL DIFFERENCING}}.
+\newblock Journal of Time Series Analysis. 1980 Jan;1(1):15--29.
+\newblock \doi{10.1111/j.1467-9892.1980.tb00297.x}.
+
+\bibitem[\protect\citeauthoryear{Lindquist et~al.}{2019}]{lindquistModularPreprocessingPipelines2019}
+Lindquist MA, Geuter S, Wager TD, Caffo BS.
+\newblock Modular Preprocessing Pipelines Can Reintroduce Artifacts into {{fMRI}} Data.
+\newblock Human Brain Mapping. 2019 Jun;40(8):2358--2376.
+\newblock \doi{10.1002/hbm.24528}.
+
+\bibitem[\protect\citeauthoryear{Peng et~al.}{1993}]{pengLongrangeAnticorrelationsNonGaussian1993}
+Peng CK, Mietus J, Hausdorff JM, Havlin S, Stanley HE, Goldberger AL.
+\newblock Long-Range Anticorrelations and Non-{{Gaussian}} Behavior of the Heartbeat.
+\newblock Physical Review Letters. 1993 Mar;70(9):1343--1346.
+\newblock \doi{10.1103/PhysRevLett.70.1343}.
+
+\bibitem[\protect\citeauthoryear{Ramirez~Pacheco et~al.}{2012}]{ramirezpachecoDistinguishingStationaryNonstationary2012}
+Ramirez~Pacheco J, Torres~Rom{\'a}n D, Toral~Cruz H.
+\newblock Distinguishing {{Stationary}}/{{Nonstationary Scaling Processes Using Wavelet Tsallis}} {\emph{q}} -{{Entropies}}.
+\newblock Mathematical Problems in Engineering. 2012 Jan;2012(1):867042.
+\newblock \doi{10.1155/2012/867042}.
+
+\bibitem[\protect\citeauthoryear{{Ram{\'i}rez-Pacheco} et~al.}{2017}]{ramirez-pachecoClassificationFractalSignals2017}
+{Ram{\'i}rez-Pacheco} J, {Trejo-S{\'a}nchez} J, {Cortez-Gonz{\'a}lez} J, Palacio R.
+\newblock Classification of {{Fractal Signals Using Two-Parameter Non-Extensive Wavelet Entropy}}.
+\newblock Entropy. 2017 May;19(5):224.
+\newblock \doi{10.3390/e19050224}.
+
+\bibitem[\protect\citeauthoryear{Bassingthwaighte and Raymond}{1994}]{bassingthwaighteEvaluatingRescaledRange1994}
+Bassingthwaighte JB, Raymond GM.
+\newblock Evaluating Rescaled Range Analysis for Time Series.
+\newblock Annals of Biomedical Engineering. 1994 Jul;22(4):432--444.
+\newblock \doi{10.1007/BF02368250}.
+
+\bibitem[\protect\citeauthoryear{Dong et~al.}{2018}]{dongHurstExponentAnalysis2018}
+Dong J, Jing B, Ma X, Liu H, Mo X, Li H.
+\newblock Hurst {{Exponent Analysis}} of {{Resting-State fMRI Signal Complexity}} across the {{Adult Lifespan}}.
+\newblock Frontiers in Neuroscience. 2018 Feb;12:34.
+\newblock \doi{10.3389/fnins.2018.00034}.
+
+\bibitem[\protect\citeauthoryear{Bassingthwaighte}{1988}]{bassingthwaightePhysiologicalHeterogeneityFractals1988}
+Bassingthwaighte J.
+\newblock Physiological {{Heterogeneity}}: {{Fractals Link Determinism}} and {{Randomness}} in {{Structures}} and {{Functions}}.
+\newblock Physiology. 1988 Feb;3(1):5--10.
+\newblock \doi{10.1152/physiologyonline.1988.3.1.5}.
+
+\bibitem[\protect\citeauthoryear{Dona et~al.}{2017}]{donaTemporalFractalAnalysis2017}
+Dona O, Hall GB, Noseworthy MD.
+\newblock Temporal Fractal Analysis of the Rs-{{BOLD}} Signal Identifies Brain Abnormalities in Autism Spectrum Disorder.
+\newblock PLOS ONE. 2017 Dec;12(12):e0190081.
+\newblock \doi{10.1371/journal.pone.0190081}.
+
+\bibitem[\protect\citeauthoryear{Dona et~al.}{2017}]{donaFractalAnalysisBrain2017}
+Dona O, Noseworthy MD, DeMatteo C, Connolly JF.
+\newblock Fractal {{Analysis}} of {{Brain Blood Oxygenation Level Dependent}} ({{BOLD}}) {{Signals}} from {{Children}} with {{Mild Traumatic Brain Injury}} ({{mTBI}}).
+\newblock PLOS ONE. 2017 Jan;12(1):e0169647.
+\newblock \doi{10.1371/journal.pone.0169647}.
+
+\bibitem[\protect\citeauthoryear{Wink et~al.}{2008}]{winkMonofractalMultifractalDynamics2008}
+Wink AM, Bullmore E, Barnes A, Bernard F, Suckling J.
+\newblock Monofractal and Multifractal Dynamics of Low Frequency Endogenous Brain Oscillations in Functional {{MRI}}.
+\newblock Human Brain Mapping. 2008 Jul;29(7):791--801.
+\newblock \doi{10.1002/hbm.20593}.
+
+\bibitem[\protect\citeauthoryear{Ciuciu et~al.}{2014}]{ciuciuInterplayFunctionalConnectivity2014}
+Ciuciu P, Abry P, He BJ.
+\newblock Interplay between Functional Connectivity and Scale-Free Dynamics in Intrinsic {{fMRI}} Networks.
+\newblock NeuroImage. 2014 Jul;95:248--263.
+\newblock \doi{10.1016/j.neuroimage.2014.03.047}.
+
+\bibitem[\protect\citeauthoryear{He}{2011}]{heScaleFreePropertiesFunctional2011}
+He BJ.
+\newblock Scale-{{Free Properties}} of the {{Functional Magnetic Resonance Imaging Signal}} during {{Rest}} and {{Task}}.
+\newblock The Journal of Neuroscience. 2011 Sep;31(39):13786--13795.
+\newblock \doi{10.1523/JNEUROSCI.2111-11.2011}.
+
+\bibitem[\protect\citeauthoryear{Churchill et~al.}{2016}]{churchillSuppressionScalefreeFMRI2016}
+Churchill NW, Spring R, Grady C, Cimprich B, Askren MK, {Reuter-Lorenz} PA, et~al.
+\newblock The Suppression of Scale-Free {{fMRI}} Brain Dynamics across Three Different Sources of Effort: Aging, Task Novelty and Task Difficulty.
+\newblock Scientific Reports. 2016 Aug;6(1):30895.
+\newblock \doi{10.1038/srep30895}.
+
+\bibitem[\protect\citeauthoryear{Wink et~al.}{2006}]{winkAgeCholinergicEffects2006}
+Wink AM, Bernard F, Salvador R, Bullmore E, Suckling J.
+\newblock Age and Cholinergic Effects on Hemodynamics and Functional Coherence of Human Hippocampus.
+\newblock Neurobiology of Aging. 2006 Oct;27(10):1395--1404.
+\newblock \doi{10.1016/j.neurobiolaging.2005.08.011}.
+
+\bibitem[\protect\citeauthoryear{Mella et~al.}{2024}]{mellaTemporalComplexityBOLDsignal2024}
+Mella AE, Vanderwal T, Miller SP, Weber AM.
+\newblock Temporal Complexity of the {{BOLD-signal}} in Preterm versus Term Infants.
+\newblock Cerebral Cortex. 2024 Oct;34(10):bhae426.
+\newblock \doi{10.1093/cercor/bhae426}.
+
+\bibitem[\protect\citeauthoryear{Campbell and Weber}{2022}]{campbellMonofractalAnalysisFunctional2022}
+Campbell OL, Weber AM.
+\newblock Monofractal Analysis of Functional Magnetic Resonance Imaging: {{An}} Introductory Review.
+\newblock Human Brain Mapping. 2022 Jun;43(8):2693--2706.
+\newblock \doi{10.1002/hbm.25801}.
+
+\bibitem[\protect\citeauthoryear{Maxim et~al.}{2005}]{maximFractionalGaussianNoise2005}
+Maxim V, {\c S}endur L, Fadili J, Suckling J, Gould R, Howard R, et~al.
+\newblock Fractional {{Gaussian}} Noise, Functional {{MRI}} and {{Alzheimer}}'s Disease.
+\newblock NeuroImage. 2005 Mar;25(1):141--158.
+\newblock \doi{10.1016/j.neuroimage.2004.10.044}.
+
+\bibitem[\protect\citeauthoryear{Warsi et~al.}{2012}]{warsiCorrelatingBrainBlood2012}
+Warsi MA, Molloy W, Noseworthy MD.
+\newblock Correlating Brain Blood Oxygenation Level Dependent ({{BOLD}}) Fractal Dimension Mapping with Magnetic Resonance Spectroscopy ({{MRS}}) in {{Alzheimer}}'s Disease.
+\newblock Magnetic Resonance Materials in Physics, Biology and Medicine. 2012 Oct;25(5):335--344.
+\newblock \doi{10.1007/s10334-012-0312-0}.
+
+\bibitem[\protect\citeauthoryear{Lai et~al.}{2010}]{laiShiftRandomnessBrain2010}
+Lai MC, Lombardo MV, Chakrabarti B, Sadek SA, Pasco G, Wheelwright SJ, et~al.
+\newblock A {{Shift}} to {{Randomness}} of {{Brain Oscillations}} in {{People}} with {{Autism}}.
+\newblock Biological Psychiatry. 2010 Dec;68(12):1092--1099.
+\newblock \doi{10.1016/j.biopsych.2010.06.027}.
+
+\bibitem[\protect\citeauthoryear{Linke et~al.}{2024}]{linkeAlteredDevelopmentHurst2024}
+Linke AC, Chen B, Olson L, Cordova M, Wilkinson M, Wang T, et~al.
+\newblock Altered {{Development}} of the {{Hurst Exponent}} in the {{Medial Prefrontal Cortex}} in {{Preschoolers With Autism}}.
+\newblock Biological Psychiatry: Cognitive Neuroscience and Neuroimaging. 2024 Sep;p. S2451902224002714.
+\newblock \doi{10.1016/j.bpsc.2024.09.003}.
+
+\bibitem[\protect\citeauthoryear{Usc{\u a}tescu et~al.}{2022}]{uscatescuUsingExcitationInhibition2022}
+Usc{\u a}tescu LC, Hyatt CJ, Dunn J, Kronbichler M, Calhoun V, Corbera S, et~al.: Using the {{Excitation}}/{{Inhibition Ratio}} to {{Optimize}} the {{Classification}} of {{Autism}} and {{Schizophrenia}}.
+
+\bibitem[\protect\citeauthoryear{Wei et~al.}{2013}]{weiIdentifyingMajorDepressive2013}
+Wei M, Qin J, Yan R, Li H, Yao Z, Lu Q.
+\newblock Identifying Major Depressive Disorder Using {{Hurst}} Exponent of Resting-State Brain Networks.
+\newblock Psychiatry Research: Neuroimaging. 2013 Dec;214(3):306--312.
+\newblock \doi{10.1016/j.pscychresns.2013.09.008}.
+
+\bibitem[\protect\citeauthoryear{Jing et~al.}{2017}]{jingIdentifyingCurrentRemitted2017}
+Jing B, Long Z, Liu H, Yan H, Dong J, Mo X, et~al.
+\newblock Identifying Current and Remitted Major Depressive Disorder with the {{Hurst}} Exponent: A Comparative Study on Two Automated Anatomical Labeling Atlases.
+\newblock Oncotarget. 2017 Oct;8(52):90452--90464.
+\newblock \doi{10.18632/oncotarget.19860}.
+
+\bibitem[\protect\citeauthoryear{Sokunbi et~al.}{2014}]{sokunbiNonlinearComplexityAnalysis2014}
+Sokunbi MO, Gradin VB, Waiter GD, Cameron GG, Ahearn TS, Murray AD, et~al.
+\newblock Nonlinear {{Complexity Analysis}} of {{Brain fMRI Signals}} in {{Schizophrenia}}.
+\newblock PLoS ONE. 2014 May;9(5):e95146.
+\newblock \doi{10.1371/journal.pone.0095146}.
+
+\bibitem[\protect\citeauthoryear{Tanabe et~al.}{2002}]{tanabeComparisonDetrendingMethods2002}
+Tanabe J, Miller D, Tregellas J, Freedman R, Meyer FG.
+\newblock Comparison of Detrending Methods for Optimal {{fMRI}} Preprocessing.
+\newblock NeuroImage. 2002 Apr;15(4):902--907.
+\newblock \doi{10.1006/nimg.2002.1053}.
+
+\bibitem[\protect\citeauthoryear{Akhrif et~al.}{2018}]{akhrifFractalAnalysisBOLD2018}
+Akhrif A, Romanos M, Domschke K, {Schmitt-Boehrer} A, Neufang S.
+\newblock Fractal {{Analysis}} of {{BOLD Time Series}} in a {{Network Associated With Waiting Impulsivity}}.
+\newblock Frontiers in Physiology. 2018 Oct;9:1378.
+\newblock \doi{10.3389/fphys.2018.01378}.
+
+\bibitem[\protect\citeauthoryear{Campbell et~al.}{2022}]{campbellFractalBasedAnalysisFMRI2022}
+Campbell O, Vanderwal T, Weber AM.
+\newblock Fractal-{{Based Analysis}} of {{fMRI BOLD Signal During Naturalistic Viewing Conditions}}.
+\newblock Frontiers in Physiology. 2022 Jan;12:809943.
+\newblock \doi{10.3389/fphys.2021.809943}.
+
+\bibitem[\protect\citeauthoryear{Churchill et~al.}{2015}]{churchillScalefreeBrainDynamics2015}
+Churchill NW, Cimprich B, Askren MK, Reuter-Lorenz PA, Jung MS, Peltier S, et~al.
+\newblock Scale-free Brain Dynamics under Physical and Psychological Distress: {{Pre}}-treatment Effects in Women Diagnosed with Breast Cancer.
+\newblock Human Brain Mapping. 2015 Mar;36(3):1077--1092.
+\newblock \doi{10.1002/hbm.22687}.
+
+\bibitem[\protect\citeauthoryear{Drayne et~al.}{2024}]{drayneLongrangeTemporalCorrelation2024}
+Drayne JP, Mella AE, McLean MM, Ufkes S, Chau V, Guo T, et~al.
+\newblock Long-Range Temporal Correlation Development in Resting-State {{fMRI}} Signal in Preterm Infants: {{Scanned}} Shortly after Birth and at Term-Equivalent Age.
+\newblock PLOS Complex Systems. 2024 Dec;1(4):e0000024.
+\newblock \doi{10.1371/journal.pcsy.0000024}.
+
+\bibitem[\protect\citeauthoryear{Erbil and Deshpande}{2025}]{erbilScaleFreeDynamicsRestingState2025}
+Erbil N, Deshpande G.
+\newblock Scale-{{Free Dynamics}} of {{Resting-State fMRI Microstates}}.
+\newblock Fractal and Fractional. 2025 Feb;9(2):112.
+\newblock \doi{10.3390/fractalfract9020112}.
+
+\bibitem[\protect\citeauthoryear{Gao et~al.}{2018}]{gaoTemporalDynamicsSpontaneous2018}
+Gao W, Chen S, Biswal B, Lei X, Yuan J.
+\newblock Temporal Dynamics of Spontaneous Default-Mode Network Activity Mediate the Association between Reappraisal and Depression.
+\newblock Social Cognitive and Affective Neuroscience. 2018 Oct;\doi{10.1093/scan/nsy092}.
+
+\bibitem[\protect\citeauthoryear{Gao et~al.}{2023}]{gaoTemporalDynamicPatterns2023}
+Gao W, Biswal B, Yang J, Li S, Wang Y, Chen S, et~al.
+\newblock Temporal Dynamic Patterns of the Ventromedial Prefrontal Cortex Underlie the Association between Rumination and Depression.
+\newblock Cerebral Cortex. 2023 Feb;33(4):969--982.
+\newblock \doi{10.1093/cercor/bhac115}.
+
+\bibitem[\protect\citeauthoryear{Gentili et~al.}{2017}]{gentiliNotOneMetric2017}
+Gentili C, Cristea IA, Ricciardi E, Vanello N, Popita C, David D, et~al.
+\newblock Not in One Metric: {{Neuroticism}} Modulates Different Resting State Metrics within Distinctive Brain Regions.
+\newblock Behavioural Brain Research. 2017 Jun;327:34--43.
+\newblock \doi{10.1016/j.bbr.2017.03.031}.
+
+\bibitem[\protect\citeauthoryear{Gentili et~al.}{2015}]{gentiliPronenessSocialAnxiety2015}
+Gentili C, Vanello N, Cristea I, David D, Ricciardi E, Pietrini P.
+\newblock Proneness to Social Anxiety Modulates Neural Complexity in the Absence of Exposure: {{A}} Resting State {{fMRI}} Study Using {{Hurst}} Exponent.
+\newblock Psychiatry Research: Neuroimaging. 2015 May;232(2):135--144.
+\newblock \doi{10.1016/j.pscychresns.2015.03.005}.
+
+\bibitem[\protect\citeauthoryear{Guan et~al.}{2025}]{guanMultifractalDynamicChanges2025}
+Guan S, Zhang Z, Meng C, Biswal B.
+\newblock Multifractal Dynamic Changes of Spontaneous Brain Activity in Psychiatric Disorders: {{Adult}} Attention Deficit-Hyperactivity Disorder, Bipolar Disorder, and Schizophrenia.
+\newblock Journal of Affective Disorders. 2025 Mar;373:291--305.
+\newblock \doi{10.1016/j.jad.2025.01.007}.
+
+\bibitem[\protect\citeauthoryear{J{\"a}ger et~al.}{2024}]{jagerDecreasedLongrangeTemporal2024}
+J{\"a}ger ATP, Bailey A, Huntenburg JM, Tardif CL, Villringer A, Gauthier CJ, et~al.
+\newblock Decreased Long-range Temporal Correlations in the {\textsc{Resting-state Functional Magnetic Resonance Imaging Blood-oxygen-level-dependent}} Signal Reflect Motor Sequence Learning up to 2 Weeks Following Training.
+\newblock Human Brain Mapping. 2024 Mar;45(4):e26539.
+\newblock \doi{10.1002/hbm.26539}.
+
+\bibitem[\protect\citeauthoryear{Lei et~al.}{2013}]{leiExtraversionEncodedScalefree2013}
+Lei X, Zhao Z, Chen H.
+\newblock Extraversion Is Encoded by Scale-Free Dynamics of Default Mode Network.
+\newblock NeuroImage. 2013 Jul;74:52--57.
+\newblock \doi{10.1016/j.neuroimage.2013.02.020}.
+
+\bibitem[\protect\citeauthoryear{Lei et~al.}{2021}]{leiFadedCriticalDynamics2021}
+Lei Y, Li Y, Yu L, Xu L, Zhang X, Zheng G, et~al.
+\newblock Faded {{Critical Dynamics}} in {{Adult Moyamoya Disease Revealed}} by {{EEG}} and {{fMRI}}.
+\newblock Oxidative Medicine and Cellular Longevity. 2021 Jan;2021(1):6640108.
+\newblock \doi{10.1155/2021/6640108}.
+
+\bibitem[\protect\citeauthoryear{Omidvarnia et~al.}{2021}]{omidvarniaAssessmentTemporalComplexity2021}
+Omidvarnia A, Li{\'e}geois R, Amico E, Preti MG, Zalesky A, Van De~Ville D.: Assessment of Temporal Complexity in Functional {{MRI}} between Rest and Task Conditions.
+\newblock Bioengineering.
+
+\bibitem[\protect\citeauthoryear{Rubin et~al.}{2013}]{rubinOptimizingComplexityMeasures2013}
+Rubin D, Fekete T, {Mujica-Parodi} LR.
+\newblock Optimizing {{Complexity Measures}} for {{fMRI Data}}: {{Algorithm}}, {{Artifact}}, and {{Sensitivity}}.
+\newblock PLoS ONE. 2013 May;8(5):e63448.
+\newblock \doi{10.1371/journal.pone.0063448}.
+
+\bibitem[\protect\citeauthoryear{Varley et~al.}{2020}]{varleyFractalDimensionCortical2020}
+Varley TF, Craig M, Adapa R, Finoia P, Williams G, Allanson J, et~al.
+\newblock Fractal Dimension of Cortical Functional Connectivity Networks \& Severity of Disorders of Consciousness.
+\newblock PLOS ONE. 2020 Feb;15(2):e0223812.
+\newblock \doi{10.1371/journal.pone.0223812}.
+
+\bibitem[\protect\citeauthoryear{Von~Wegner et~al.}{2018}]{vonwegnerMutualInformationIdentifies2018}
+Von~Wegner F, Laufs H, Tagliazucchi E.
+\newblock Mutual Information Identifies Spurious {{Hurst}} Phenomena in Resting State {{EEG}} and {{fMRI}} Data.
+\newblock Physical Review E. 2018 Feb;97(2):022415.
+\newblock \doi{10.1103/PhysRevE.97.022415}.
+
+\bibitem[\protect\citeauthoryear{Weber et~al.}{2014}]{weberPreliminaryStudyEffects2014}
+Weber AM, Soreni N, Noseworthy MD.
+\newblock A Preliminary Study on the Effects of Acute Ethanol Ingestion on Default Mode Network and Temporal Fractal Properties of the Brain.
+\newblock Magnetic Resonance Materials in Physics, Biology and Medicine. 2014 Aug;27(4):291--301.
+\newblock \doi{10.1007/s10334-013-0420-5}.
+
+\bibitem[\protect\citeauthoryear{Xie et~al.}{2024}]{xiePharmacoresistantTemporalLobe2024}
+Xie K, Royer J, {Rodriguez-Cruces} R, Horwood L, Ngo A, Arafat T, et~al.: Pharmaco-Resistant Temporal Lobe Epilepsy Gradually Perturbs the Cortex-Wide Excitation-Inhibition Balance.
+
+\bibitem[\protect\citeauthoryear{Afshinpour et~al.}{2008}]{afshinpourNonparametricTrendEstimation2008}
+Afshinpour B, {Hossein-Zadeh} GA, {Soltanian-Zadeh} H.
+\newblock Nonparametric Trend Estimation in the Presence of Fractal Noise: {{Application}} to {{fMRI}} Time-Series Analysis.
+\newblock Journal of Neuroscience Methods. 2008 Jun;171(2):340--348.
+\newblock \doi{10.1016/j.jneumeth.2008.03.017}.
+
+\bibitem[\protect\citeauthoryear{Bullmore et~al.}{2004}]{bullmoreWaveletsFunctionalMagnetic2004}
+Bullmore E, Fadili J, Maxim V, {\c S}endur L, Whitcher B, Suckling J, et~al.
+\newblock Wavelets and Functional Magnetic Resonance Imaging of the Human Brain.
+\newblock NeuroImage. 2004 Jan;23:S234--S249.
+\newblock \doi{10.1016/j.neuroimage.2004.07.012}.
+
+\bibitem[\protect\citeauthoryear{Eke}{2012}]{ekePitfallsFractalTime2012}
+Eke A.
+\newblock Pitfalls in Fractal Time Series Analysis: {{fMRI BOLD}} as an Exemplary Case.
+\newblock Frontiers in Physiology. 2012;3.
+\newblock \doi{10.3389/fphys.2012.00417}.
+
+\bibitem[\protect\citeauthoryear{Fadili and Bullmore}{2002}]{fadiliWaveletGeneralizedLeastSquares2002}
+Fadili MJ, Bullmore ET.
+\newblock Wavelet-{{Generalized Least Squares}}: {{A New BLU Estimator}} of {{Linear Regression Models}} with 1/f {{Errors}}.
+\newblock NeuroImage. 2002 Jan;15(1):217--232.
+\newblock \doi{10.1006/nimg.2001.0955}.
+
+\bibitem[\protect\citeauthoryear{Hartmann et~al.}{2013}]{hartmannRealtimeFractalSignal2013}
+Hartmann A, Mukli P, Nagy Z, Kocsis L, Herm{\'a}n P, Eke A.
+\newblock Real-Time Fractal Signal Processing in the Time Domain.
+\newblock Physica A: Statistical Mechanics and its Applications. 2013 Jan;392(1):89--102.
+\newblock \doi{10.1016/j.physa.2012.08.002}.
+
+\bibitem[\protect\citeauthoryear{Hausdorff et~al.}{1997}]{hausdorffAlteredFractalDynamics1997}
+Hausdorff JM, Mitchell SL, Firtion R, Peng CK, Cudkowicz ME, Wei JY, et~al.
+\newblock Altered Fractal Dynamics of Gait: Reduced Stride-Interval Correlations with Aging and {{Huntington}}'s Disease.
+\newblock Journal of Applied Physiology. 1997 Jan;82(1):262--269.
+\newblock \doi{10.1152/jappl.1997.82.1.262}.
+
+\bibitem[\protect\citeauthoryear{Hu et~al.}{2006}]{huIdentificationBrainActivity2006}
+Hu J, Lee J, Gao J, White KD, Crosson B.
+\newblock Identification of Brain Activity from {{fMRI}} Data: Comparison of Three Fractal Scaling Analyses.
+\newblock In: 2006 {{IEEE}}/{{NLM Life Science Systems}} and {{Applications Workshop}}. Bethesda, MD: IEEE; 2006. p. 1--2.
+
+\bibitem[\protect\citeauthoryear{Nagy et~al.}{2017}]{nagyDecomposingMultifractalCrossovers2017}
+Nagy Z, Mukli P, Herman P, Eke A.
+\newblock Decomposing {{Multifractal Crossovers}}.
+\newblock Frontiers in Physiology. 2017 Jul;8:533.
+\newblock \doi{10.3389/fphys.2017.00533}.
+
+\end{thebibliography}

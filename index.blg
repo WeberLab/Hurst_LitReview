@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: index.aux
+The style file: sn-vancouver.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: references.bib
+Warning--empty author and editor in uscatescuUsingExcitationInhibition2022
+Warning--missing publisher in uscatescuUsingExcitationInhibition2022
+Warning--empty author and editor in omidvarniaAssessmentTemporalComplexity2021
+Warning--empty author and editor in xiePharmacoresistantTemporalLobe2024
+Warning--missing publisher in xiePharmacoresistantTemporalLobe2024
+You've used 87 entries,
+            3503 wiz_defined-function locations,
+            1376 strings with 31604 characters,
+and the built_in function-call counts, 176289 in all, are:
+= -- 22111
+> -- 1404
+< -- 8
++ -- 780
+- -- 328
+* -- 14678
+:= -- 18641
+add.period$ -- 410
+call.type$ -- 87
+change.case$ -- 10
+chr.to.int$ -- 12
+cite$ -- 92
+duplicate$ -- 15086
+empty$ -- 16984
+format.name$ -- 498
+if$ -- 41175
+int.to.chr$ -- 0
+int.to.str$ -- 87
+missing$ -- 1060
+newline$ -- 505
+num.names$ -- 177
+pop$ -- 1775
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1492
+stack$ -- 0
+substring$ -- 33940
+swap$ -- 2542
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 5
+while$ -- 871
+width$ -- 89
+write$ -- 1437
+(There were 5 warnings)
