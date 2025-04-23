@@ -41,36 +41,15 @@ crossref:
   title-delim: "**.**"
 csl: _extensions/christopherkenny/nature/csl/springer-vancouver.csl
 engine: knitr
-# knitr:
-#   opts_knit:
-#     warning: false
-#     message: false
-#     error: false
-# execute:
-#   cache: true
-#   echo: false
-#   warning: false
-#   message: false
-#   error: false
 ---
 
-```{r rsetup, include=FALSE}
-# options
-knitr::opts_chunk$set(
-  echo=FALSE,
-  message=FALSE,
-  warning=FALSE,
-  cache=FALSE
-  )
-set.seed(1234) # reproducible
-options(knitr.kable.NA = '') # how kable handles NA
-```
 
 # Introduction
 
-A fractal structure, either spatial or temporal, is composed of smaller parts that exhibit the same pattern at every scale [@koch1904;@kochMethodeGeometriqueElementaire1906;@mandelbrotHowLongCoast1967]. Classic spatial examples of fractals in nature are coastlines [@mandelbrotHowLongCoast1967], circulatory system [@jayalalithaFractalModelBlood2008], and brain anatomy [@ansellUnveilingUniversalAspects2024], where at each level of magnification these structures look the same; i.e. *self-similarity*. For a dynamic process, or in the temporal domain, this is known as *scale invariance*, meaning that both rapid and slow processes follow the same pattern [@rileyTutorialIntroductionAdaptive2012]. Scale-free behavior, characterized by the absence of any inherent scale or preferred length, is a signature characteristic of complex systems that can be understood as the collective outcome of numerous interacting components with weak and random connections [@csermelyWeakLinksStabilizers2006]. Physiological systems usually need a mix of randomness and structure to function optimally. <!-- TODO: need a reference here -->
-When a system is operating near the critical point, it is expected to exhibit these long range temporal correlations (LRTCs). Therefore, by analyzing the LRTC of a time-series, valuable insights can be found into the underlying mechanisms driving system behavior, such as memory effects, self-organization, and criticality [@beggsCortexCriticalPoint2022].
+Like many physiological data, neurological signals --- such as fMRI-BOLD --- appear as irregular time-series. Often thought of as being random or noisy, there was an initial tendency to measure them statistically, such as calculating their standard deviation, assuming that the elements of the series were independent. However, this approach is inadequate when events exhibit interdependence, whether through short- or long-range temporal correlations (LRTCs) [@ekePhysiologicalTimeSeries2000]. Therefore, there is a need for methods that can both identify and characterize random noise from irregular but structured and correlated noise. One such method used for LRTCs is the fractal method.
 
+A fractal structure, either spatial or temporal, is composed of smaller parts that exhibit the same pattern at every scale [@koch1904;@kochMethodeGeometriqueElementaire1906;@mandelbrotHowLongCoast1967]. Classic spatial examples of fractals in nature are coastlines [@mandelbrotHowLongCoast1967], circulatory system [@jayalalithaFractalModelBlood2008], and brain anatomy [@ansellUnveilingUniversalAspects2024], where at each level of magnification these structures look the same; i.e. *self-similarity*. For a dynamic process, or in the temporal domain, this is known as *scale invariance*, meaning that both rapid and slow processes follow the same pattern [@rileyTutorialIntroductionAdaptive2012]. These scale-free LRTCs exhibit a gradual decay in their autocorrelation function, indicating that the system maintains a long-lasting, multiscale memory of its past states, which play a role in shaping its present behaviour. Scale-free behavior is a signature characteristic of complex systems that can be understood as the collective outcome of numerous interacting components with weak and random connections [@csermelyWeakLinksStabilizers2006]. 
+Physiological systems, such as the brain, require a mix of randomness and structure to function optimally [@bakSelforganizedCriticalityExplanation1987]. In many cases, this balance between order and randomness allows the system to remain adaptable and responsive to changing conditions [@lipsitzLossComplexityAging1992;@lipsitzDynamicsStabilityPhysiologic2002]. This adaptability is particularly evident when a system is operating near what is called a 'critical point', the phase change between order and disorder. When a system is operating near the critical point, it is expected to exhibit LRTCs. Therefore, by analyzing the LRTC of a time-series, valuable insights can be found into the underlying mechanisms driving system behavior, such as memory effects, self-organization, and criticality [@beggsCortexCriticalPoint2022].
 
 ---
 
@@ -80,10 +59,14 @@ When a system is operating near the critical point, it is expected to exhibit th
 
 See @hermanFractalCharacterizationComplexity2009 for a really good review
 
-> Scale-free dynamics is a hallmark of complexity viewed as an emergent property of biological systems composed of numerous elements with a network of stochastic (typically weak) connections amongst them (Csermely, 2006) from @mukliImpactHealthyAging2018
-
 Another good review is by Werner (2010) linking fractals/Hurst and Criticality @wernerFractalsNervousSystem2010
 
+> "This 1/f power relationship implies that perturbations occurring at slow frequencies can cause a cascade of energy dissipation at higher frequencies so that widespread slow oscillations, observed with BOLD contrast fMRI, are modulating faster local events [12]." from @barnesEndogenousHumanBrain2009
+
+> "Systems operating at a phase transition are metastable with respect to a set of control parameters, and capable of rapid qualitative change in response to external stimuli." 
+> Moreover, these transitions occur over short and long spatial and temporal scales (Freeman, 2003) lending credence to the proposition that the brain is maintained in a state of self-organised criticality (Bak et al, 1987).
+> Whilst these models are incomplete in their description of the cortex, they draw interesting parallels with the scale-invariant, small-world topologies observed from resting state fMRI and MEG data (Achard et al, 2006; Achard et al, 2008). From these observations and the results presented in this study, self-organised criticality appears to offer a tractable association between the spatial and temporal behaviours of the brain.
+> from @sucklingEndogenousMultifractalBrain2008
 ---
 
 # Fractal Dimension and Hurst Exponent
@@ -102,7 +85,7 @@ H=2–D.
 $$ {#eq-HRD}
 This means that FD and H are inversely correlated, and that H is a real number between 0 and 1 (non-inclusive; although it can be extended to > 1; see ...). For the rest of this paper, we will be discussing H. <!-- TODO: -->
 
-*Thus, the basic premise behind fractal time-series analysis is that, beneath the seemingly chaotic and unpredictable variations in the signal, there lies a stable underlying mechanism which can be effectively described using the fewest possible parameters (i.e. H or FD).*
+*Thus, the basic premise behind fractal time-series analysis is: beneath the seemingly chaotic and unpredictable variations in the signal, there lies a stable underlying mechanism which can be effectively described using only a few possible parameters (i.e. H or FD).*
 
 ## Properties {#sec-properties}
 
@@ -136,7 +119,7 @@ $$
 \log{q} = \log{p} + \epsilon\log{s}
 $$ {#eq-logpowerlawscaling}
 
-Data points for exact fractals will line up along perfectly with regression slope, while statistical fractals scatter around it since the two sides of @eq-logpowerlawscaling are equal only in distribution. 
+Data points for exact fractals will line up along perfectly with a linear-regression slope, while statistical fractals will scatter around it since the two sides of @eq-logpowerlawscaling are equal only in distribution. 
 
 ### Scale-invariance
 
@@ -158,12 +141,37 @@ $$ {#eq-scalerange}
 
 {{< embed notebooks/Figures.ipynb#fig-fourprop >}}
 
-## Gaussian noise vs Brownian motion
 
-Time-series that are scale-invariant come in two categories: fractional Gaussian noise (fGn) and fractional Brownian motion (fBm) @fig-typicalsamplepaths. fGn signals are stationary, meaning they tend to center themselves along a mean value over time. In contrast, fBm signals are non-stationary, and their values tend to wander away from the mean. fGn and fBm can easily be converted from one to the other: fGn to fBm by applying a successive summation between elements of the fGn series; and fBm to fGn by applying successive differences between elements of a fBm series.
+## Prerequisites to measuring H
 
-<!-- TODO: find where to put this: -->
-This introduces the first method of measuring H of a time-series: using a log-log plot of its power spectral density (@fig-fourprop D and E), calculating the linear-regression slope, and, depending on the slope angle, using one of two equations:
+### Time-points
+
+Before determining if a time-series exhibits a power-law scaling relationship, one should first determine if the time-series has enough time-points to do so. The rule of thumb is that the power law relationship should be present in a range larger than two decades in the frequency domain of a PSD [@ekePhysiologicalTimeSeries2000]. Due to the Whittaker–Nyquist-Shannon sampling theorem [@shannonCommunicationPresenceNoise1949], one requires two times as many time-points as frequency samples. Since two decades in the frequency domain is 100 distinct frequencies, one would required at least 200 fMRI volumes / time-points to proceed (not including non-steady state volumes). Furthermore, many algorithms for measuring H require powers of 2, bringing the recommended number of volumes to 256. With a TR of 1s, this translates to $\sim$ 5 minutes (and 10 minutes for the more common TR of 2s).
+
+### Power-law scaling relationship
+
+The next step would be to perform a periodogram or PSD and test for a power-law scaling relationship. Usually power laws are tested using a probability distribution [@clausetPowerLawDistributionsEmpirical2009]. However, as the PSD is not a probability distribution, alternative methods must be used. A goodness-of-fit test can be devised based on @clausetPowerLawDistributionsEmpirical2009, which can also help us derive the SR (i.e. $freq_{min}$ and $freq_{max}$). First, a PSD is produced, and the variance ($\sigma^2$), $\beta$, and H are computed using @eq-psdH. Next, the Kolmogorov–Smirnov (KS) statistic [@kolmogorovSullaDeterminazioneEmpirica1933; @smirnovTableEstimatingGoodness1948] is used to measure the distance D between the raw PSD data-points and the best-fit linear-regression line used to calculate H (i.e. the residuals). The D in this case is the largest residual error. Then, 1,000 time series of either fGn or fBm (depending on what value of $\beta$ was found; see @eq-psdH) with the same length, $\sigma^2$, and Hurst exponent are generated using a simulated exact fractal signal (spectral synthesis method (SSM) [@peitgenScienceFractalImages1988], Davies-Harte method (DH) [@daviesTestsHurstEffect1987], Cholesky method [@asmussenStochasticSimulationView1998], the Hosking's method [@hoskingModelingPersistenceHydrological1984] or the ARFIMA simulation method [@roumeBiasesSimulationAnalysis2019; @grangerINTRODUCTIONLONGMEMORYTIME1980]). The 1,000 synthetic time-series are then converted to PSDs, and the KS distance is again measured. The $p$-value is defined as the fraction of synthetic time series with Ds that are larger than the D of the original time-series. The larger the $p$-value, the more plausible the synthetic model (either fGn or fBm) is for representing the original time-series, and the better the fit of the original data to a scale-free distribution. The null-hypothesis that the time-series is not scale free is rejected if $p$ < 0.05 (i.e. if $p$ > 0.05, we say that the time-series is scale-free).
+
+It is important to note, however, that the $p$-value in question may need to be adjusted based on the number of time-points.
+<!-- TODO: lots to add here... Such as test 256, 512, and 1024 --> 
+
+A sample python code is provide in @sec-powerlawscalingcode
+
+### Scaling range
+
+As previously mentioned, statistical fractals are unlikely to display their power-law scaling relationship across all scales. Therefore, it is important to test the scaling relationship across a range of scales, determining the minimum and maximum scale for which the scaling relationship exists (if at all). One way to determine this range is to apply the power-law scaling test across a range of scales, starting with the full range, and progressively reducing the size while trying to maintain the widest range. 
+
+However, this method can be computationally intensive, and prone to false negatives, especially signals with very high or low H values. One solution is, instead of applying this test to every voxel in a 4D fMRI brain scan, to segment the brain into separate ROIs (e.g. anatomically based on an atlas, or functionally by first running ICA to identify RSNs), average the time-series within each ROI, which will improve SNR, and then run the power-law scaling test.
+
+Once a scaling range is discovered, it is then important to use this range when measuring H. For example, if H is being calculated using a frequency approach, the linear regression can be limited to within the frequency range. However, if another approach is used, a bandpass filter may be necessary first to remove unwanted frequencies. Careful attention should be paid to the type of frequency filtering method employed, and care must be taken not to re-introduce nuissance regressors previously removed [@lindquistModularPreprocessingPipelines2019].
+
+## Classification: Gaussian noise vs Brownian motion
+
+If the prerequisites above have been met, the next step is to classify the signal type. Fractal signals can be organized into two distinct kinds: fractional Gaussian noise (fGn) and fractional Brownian motion (fBm) @fig-typicalsamplepaths [@mandelbrotFractionalBrownianMotions1968]. fGn signals are stationary, meaning they tend to center along a mean and variance value over time. In contrast, fBm signals are non-stationary: their values tend to wander away from the mean, and their variance is a power function of the time span over which it is computed. Curiously, fGn and fBm can easily be converted from one to the other: fGn to fBm by applying a successive summation between elements of the fGn series; and fBm to fGn by applying successive differences between elements of a fBm series.
+
+When calculating the H of a signal, it is imperative to first classify the signal as either fGn or fBm. Failure to do so can result in serious miscalculation of H, as different estimators can produce extremely biased calculations depending on the assumed type of signal. The distinction between fGn and fBm can be seen in their spectral properties. Applying a Fourier transform of a signal to convert it from the time-domain to the frequency domain, we can obtain a power spectral density, which relates the amplitude of the frequency (y-axis) to the frequency (x-axis). The PSD of fGn signals follow a power-law form: $|A(f)|^2 \propto f^{-\beta}$, where the exponent $\beta$ ranges between -1 and 1. This is known as $1/f$ noise, as the power is inversely proportional to frequency. fBm, being a cumulative sum of fGn, has a different spectral behaviour: $|A(f)|^2 \propto f^{-(\beta + 2)}$. This steeper decay ($\beta + 2$) causes fBm to exhibit stronger low-frequency dominance, making it distinct from $1/f$ noise. Thus, when $\beta \sim 1$, a signal is said to exist on the $1/f$ boundary.
+
+One method of calculating H, known as the spectral method or periodogram method (PM), is based on the PSD. The PM method involves creating a log-log plot of the time-series' periodogram using a fast Fourier transform (FFT; @fig-fourprop D and E), calculating the linear-regression slope ($-\beta$), and, depending on the slope angle, using one of two equations:
 
 $$
 H =
@@ -173,40 +181,78 @@ H =
 \end{cases}
 $$ {#eq-psdH}
 
-
 {{< embed notebooks/Figures.ipynb#fig-typicalsamplepaths >}}
 
-If the class of signal is not appropriately identified --- for example, when $\beta$ is $\sim$ 1 --- it is possible to seriously miscalculate the H value, such that a true H $\sim$ 0.9 will be calculated as 0.1. Therefore, algorithms and research in properly classifying fractal signals is crucially important.
+If the class of signal is not appropriately identified --- for example, when $\beta$ is $\sim$ 1 --- it is possible for a true H $\sim$ 0.9 to be calculated as 0.1. Therefore, algorithms and research in properly classifying fractal signals is crucially important.
 
-## Prerequisites to measuring H
+Several methods have been proposed for classifying fGn and fBm signals, including ones that make use of the PM described above [@ekePhysiologicalTimeSeries2000; @ekeFractalCharacterizationComplexity2002], detrended fluctuation analysis (DFA) [@pengLongrangeAnticorrelationsNonGaussian1993], autoregressive
+fractionally integrated moving average (ARFIMA) [@grangerINTRODUCTIONLONGMEMORYTIME1980], and wavelet entropy [@ramirezpachecoDistinguishingStationaryNonstationary2012; @ramirez-pachecoClassificationFractalSignals2017]. These methods, however, all struggle to distinguish signals whose PSD $\beta$ values are $\sim$ 1 [@ekePhysiologicalTimeSeries2000] (AKA the $1/f$ boundary).
 
-### Time-points
+### fMRI Signals
 
-Before determining if a time-series exhibits a power-law scaling relationship, one should first determine if the time-series has enough time-points to do so. The rule of thumb is that the power law relationship should be present in a range larger than two decades in the frequency domain of a PSD [@ekePhysiologicalTimeSeries2000]. Due to the Whittaker–Nyquist-Shannon sampling theorem [@shannonCommunicationPresenceNoise1949], one requires two times as many time-points as frequency samples. Since two decades in the frequency domain is 100 distinct frequencies, one would required at least 200 time-points to proceed.
+Are fMRI signals expected to be fGn or fBm? 
 
-### Power-law scaling relationship
+## Measuring H
 
-The next step would be to perform a periodogram or PSD and test for a power-law scaling relationship. Usually power laws are tested using a probability distribution [@clausetPowerLawDistributionsEmpirical2009]. However, as the PSD is not a probability distribution, alternative methods must be used. A goodness-of-fit test can be devised based on @clausetPowerLawDistributionsEmpirical2009, which can also help us derive the SR (i.e. $freq_{min}$ and $freq_{max}$). First, a PSD is produced, and the variance ($\sigma^2$), $\beta$, and H are computed using @eq-psdH. Next, the Kolmogorov–Smirnov statistic [@kolmogorovSullaDeterminazioneEmpirica1933; @smirnovTableEstimatingGoodness1948] is used to measure the distance D between the raw PSD data-points and the best-fit linear-regression line used to calculate H (i.e. the residuals). The D in this case is the largest residual error. Then, 1,000 time series of either fGn or fBm (depending on what value of $\beta$ was found; see @eq-psdH) with the same length (n > 200), $\sigma^2$, and Hurst exponent are generated using one of several methods for producing exact fractal signals: spectral synthesis method (SSM) [@peitgenScienceFractalImages1988], Davies-Harte method (DH) [@daviesTestsHurstEffect1987], Cholesky method [@asmussenStochasticSimulationView1998], or the Hosking's method [@hoskingModelingPersistenceHydrological1984]. Each synthetic time-series is converted to a PSD, and the Kolmogorov–Smirnov statistic is used to measure the distance D between the raw PSD data-points and the best-fit linear-regression line. The $p$-value is defined as the fraction of synthetic time series with Ds that are larger than the original D of the original time-series. The larger the $p$-value, the more plausible the synthetic model (either fGn or fBm) is for representing the original time-series, and the better the fit of the original data to a scale-free distribution. The null-hypothesis that the time-series is not scale free is rejected if $p$ < 0.05 (i.e. if $p$ > 0.05, we say that the time-series is scale-free).
+Fractal analysis tools vary in performance, assumptions, and limitations. In order to avoid biasing ones results [@bassingthwaighteEvaluatingRescaledRange1994; @; @; @], it is important to choose the right method carefully, especially when applied to physiological signals which can be contaminated by unrelated noise. The following is a non-exhaustive list of methods, and their relative strengths and weaknesses. Despite their diversity, all approaches employ a version of scale-invariance analysis, by fitting a log feature versus log scale for finding a scaling exponent from a regression slope, and then calculating H from this scaling exponent. These methods, however, can be subdivided into those that 
 
-However, this method can be computationally intensive, and prone to false negatives, especially signals with very high or low H values. One solution is, instead of applying this test to every voxel in a 4D fMRI brain scan, to segment the brain into separate ROIs (e.g. anatomically based on an atlas, or functionally by first running ICA to identify RSNs), average the time-series within each ROI, which will improve SNR, and then run the power-law scaling test.
+- ARIMA (autoregressive integrated moving average) and ARFIMA (autoregressive fractionally integrated moving- average)
+- Adaptive fractal analysis (https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2020.00827/full)
 
-A sample python code is provide in @sec-powerlawscalingcode
+### Time-domain
 
-### Scaling range
+#### Rescaled range analysis (R/S)
+
+This is the original method used by Hurst in 1951 when studying hydrology and the long term storage capacity of dams [@hurstLongTermStorageCapacity1951].
+
+@dongHurstExponentAnalysis2018
+
+#### Dispersional analysis (DA)
+[@bassingthwaightePhysiologicalHeterogeneityFractals1988]
+
+@donaTemporalFractalAnalysis2017 @donaFractalAnalysisBrain2017
+
+#### Scaled window variance (SWV)
+
+@donaTemporalFractalAnalysis2017 @donaFractalAnalysisBrain2017
+
+#### Generalized Hurst exponent (GHE)
+
+#### Triangle total areas (TTA)
+
+#### Higuchi method (HM)
+
+#### Central estimation (AM & AV)
+
+#### Detrended fluctuation analysis (DFA)
+
+#### Least squares method via standard deviation (LSSD)
+
+Bayesian
+
+#### Least squares method via variance (LSV)
+
+#### Whittle's estimator (WE)
 
 
+### Frequency-domain
 
-### fGn or fBm
+#### Periodogram method (PM)
 
-### Choosing the right method
+#### Welch technique (PSD~Welch~)
 
+#### Local Whittle (LW)
 
-> Ideally therefore, a long memory process signal should be categorized as either stationary (fGn) or non-stationary (fBm) and the variance and correlation defined.
-from [@ekePhysiologicalTimeSeries2000]
+Bayesian?
 
-## Methods of measuring H
+### Mixture
 
-> Fractal methods are diverse, but their approaches have one thing in common in that they employ equation (2) in fitting their proposed model to data pairs of log feature versus log scale for finding the scaling exponent, ε, from the regression slope.
+#### Average wavelet coefficient (AWC) https://journals.aps.org/pre/abstract/10.1103/PhysRevE.58.2779
+
+#### Variance vs level (VVL)
+
+#### Maximum likelihood in the wavelet domain (MLW)
+
 > Each fractal analysis tool has different performance, prerequisite conditions, and limitations, and each needs thorough evaluation in order to avoid bias or misinterpretation of the derived fractal parameters [5, 6, 8, 9], especially when applied to physiological signals which may be contaminated with noise [15, 28].
 from [@ekePhysiologicalTimeSeries2000]
 
@@ -225,6 +271,50 @@ When attempting to regress out non-BOLD signal, it is important to apply the reg
 see @tanabeComparisonDetrendingMethods2002
 
 # Hurst Reviews
+
+## Table
+
+| Study | n | Age range | Methods | Volumes | TR (s) | Results |
+|------ | -- | -- |------ |------ | -- | -- |
+| Akhrif et al. (2018) [@akhrifFractalAnalysisBOLD2018] | 103 | 19-28 | AFA | task: 425, resting: 350 | 2 | impulsivity: $\downarrow$ |
+| Barnes et al. (2009) [@barnesEndogenousHumanBrain2009] | 14 | 21-29 | MLW | 2048 | 1.1 | cognitive effort: $\downarrow$ H |
+| Campbell et al. (2015) [@campbellFractalBasedAnalysisFMRI2022] | 72 | mean 29 | PSD~Welch~ | 900 | 1 | movie-watching: $\uparrow$ H in visual, somatosensory, and dorsal attention; $\downarrow$ frontoparietal and DMN |
+| Churchill et al. (2015) [@churchillScalefreeBrainDynamics2015] | 97 (28 chemo; 37 radiation; 32 HC) | n/a | DFA, Wavelet | 285 | 1.5 | worry: $\downarrow$ H |
+| Churchill et al. (2016) [@churchillSuppressionScalefreeFMRI2016] | three datasets (98): 19; 49; 30 | 20-82 | DFA, PSD~Welch~ | $\sim$ 300 | 2 | age, task novelty and difficulty: $\downarrow$ H |
+| Ciuciu et al. (2014) [@ciuciuInterplayFunctionalConnectivity2014] | 17 | 18-27 | Wavelet | 194 | 2.16 | networks |
+| Dona et al. (2017) [@donaTemporalFractalAnalysis2017] | 71 (56 ASD; 15 HC) | mean 13 | PSD, DA, SWV | 300 | 2 | ASD: $\uparrow$ H |
+| Dona et al. (2017) [@donaFractalAnalysisBrain2017] | 110 (55 mTBI; 55 HC) | mean 13 | PSD, DA, SWV | 180 | 2 | mTBI: $\uparrow$ H |
+| Dong et al. (2018) [@dongHurstExponentAnalysis2018] | 116 | 19-85 | RS | 260 | 2.5 | age: $\uparrow$ H frontal and parietal lobe; $\downarrow$ H insula, limbic, occipital, temporal lobes |
+| Drayne et al. (2024) [@drayneLongrangeTemporalCorrelation2024] | 98 | preterm | PSD~Welch~ | 100 | 3 | preterm: $\downarrow$ H; differentiates networks |
+| Erbil et al. (2025) [@erbilScaleFreeDynamicsRestingState2025] | 7 | 21-28 | Wavelet | 1,000; 1,000, 3,000 | 1; 0.6; 0.2 | microstates |
+| Gao et al. (2018) [@gaoTemporalDynamicsSpontaneous2018] | 110 | mean 21 | PSD, Wavelet | 232 | 2 | reappraisal scores: $\downarrow$ H |
+| Gao et al. (2023) [@gaoTemporalDynamicPatterns2023] | 195 (100; 95) | 18-28 | Wavelet | ? | 2 | rumination: $\uparrow$ H |
+| Gentili et al. (2017) [@gentiliNotOneMetric2017] | 31 | mean 25 | Wavelet | 512 | 1.64 | neuroticism: $\downarrow$ | 
+| Gentili et al. (2015) [@gentiliPronenessSocialAnxiety2015] | 36 | mean 27 | Wavelet | 450 | 2 | social anxiety: $\uparrow$ H |
+| Guan et al. (2024) [@guanMultifractalDynamicChanges2025] | 31 HC and 31 ADHD; 34 HC and 34 BP; 42 HC and 42 SCHZ | 21-50 | multifractal DFA | 160 | 1.9 | ADHD, BP, SZ: multifractal reduction in bell-shaped asymmetry |
+| He et al. (2011) [@heScaleFreePropertiesFunctional2011] | 17 | 18-27 | DFA, PSD | 194 | 2.16 | task: $\downarrow$ H; differentiates networks; brain glucose metabolism and neurovascular coupling |
+| Jager et al. (2023) [@jagerDecreasedLongrangeTemporal2024] | 40 (20 task; 20 no task) | 20-32 | DFA | 512 | 1.13 | motor sequence learning: $\downarrow$ H |
+| Lai et al. (2010) [@laiShiftRandomnessBrain2010] | 63 (33 ASD; 3- HC) | n/a | Wavelet | 512 | 1.3 | ASD: $\downarrow$ H |
+| Lei et al. (2013) [@leiExtraversionEncodedScalefree2013] | 17 | 18-29 | Wavelet | 200 | 1.5 | extroversion: $\downarrow$ H in DMN |
+| Lei et al. (2021) [@leiFadedCriticalDynamics2021] | 75 (16 HMMD; 34 IMMD; 25 HC) | mean $\sim$ 41 | RS | 240 | 2 | moyamoya disease: $\downarrow$ H |
+| Linke et al. (2024) [@linkeAlteredDevelopmentHurst2024] | 83 | 1.5-5 | WML | 400 | 0.8 | age of children ASD: $\downarrow$ H in vmPFC |
+| Maxim et al. (2005) [@maximFractionalGaussianNoise2005] | 21 | n/a | LW, Wornell, MLW | 150 | 2 | AD: $\uparrow$ H |
+| Mella et al. (2024) [@mellaTemporalComplexityBOLDsignal2024] | 716 | preterm | PSD~Welch~ | 2,300 | 0.392 | preterm: $\downarrow$ H; H starts < 0.5 at preterm age ; differentiates networks | 
+| Omidvarnia et al. (2021) [@omidvarniaAssessmentTemporalComplexity2021] | 100 | 22-35 | PSD, DFA | min 250 | 0.72 | cognitive load: $\downarrow$ H; H and entropy-based complexity highly correlated; H highest in frontoparietal network and default mode network | 
+| Rubin et al. (2013) [@rubinOptimizingComplexityMeasures2013] | 22 | ? | Many | ? | ? | HFFT and PSD~Welch~ outperform other methods |
+| Sokunbi et al. (2014) [@sokunbiNonlinearComplexityAnalysis2014] | 29 (13 SZ; 16 HC) | ? | DA, DFA | ? | ? |  SZ: $\downarrow$ H |
+| Suckling et al. (2008) [@sucklingEndogenousMultifractalBrain2008] | 22 (11 old; 11 young) | 22 and 65 | MLW | 512 | 1.1 | multifractal reanalysis of [@winkAgeCholinergicEffects2006] |
+| Tetereva et al. (2020) | 23 | mean 23.9 | DFA | 300 | 2 | fear: $\downarrow$ H then $\uparrow$ H |
+| Usc\v atescu et al. (2023) [@uscatescuUsingExcitationInhibition2022] | 124 (55 TD; 30 AT; 39 SZ) | ? |  Wavelet | 947? | 0.475 |  ASD and SZ: $\downarrow$ H |
+| Varley et al. (2020) [@varleyFractalDimensionCortical2020] | 33 (15 HC; 10 min conscious; 8 veg) | ? | HFD | ? | ? |  Lower consciousness: $\downarrow$ H |
+| von Wegner et al. (2018) [@vonwegnerMutualInformationIdentifies2018] | ? | ? | Wavelet, DFA | 1500 | 2.08 | multiscale variance effects produce Hurst phenomena without long-range dependence |
+| Warsi et al. (2012) [@warsiCorrelatingBrainBlood2012] | 46 (33 AD; 13 HC) | ? | PSD, RD | 2,400 | 0.25 | AD: $\uparrow$ H |
+| Weber et al. (2014) [@weberPreliminaryStudyEffects2014] | 14 | 22-38 | Wavelet | 512 | 2 | acute alcohol intoxication: mix of $uparrow$ and $downarrow$ H |
+| Wink et al. (2006) [@winkAgeCholinergicEffects2006] | 22 (11 old; 11 young) | 22 and 65 | MLW | 512 | 1.1 | age: $\uparrow$ H in bilateral hippocampus; scopolamine: $\uparrow$ H; faster task: $\uparrow$ H |
+| Wink et al. (2008) [@winkMonofractalMultifractalDynamics2008] | 11 | mean 35 $\pm$ 10 | Wavelet | 136 | 1.1 | latency in fame decision task: $\downarrow$ H |
+| Xie et al. (2024) [@xiePharmacoresistantTemporalLobe2024] | 70 | ? | Wavelet | 700 | 0.6 | pharmaco-resistant TLE: $\downarrow$ H |
+
+: **fMRI-Hurst studies.** An attempt to gather all published fMRI studies that have used Hurst or Hurst-like analysis, some stats, and the main findings. Main findings are almost certainly more nuanced than how we have reported them here; we have attempted to condense the findings as succinctly as possible. n = number of subjects in the study; TR = repition time; MLWD = maximum likelihood wavelet; PSD~Welch~ = power spectral density Welch method; DMN = default mode network; DFA = detrended fluctuation analysis; DA = dispersional analysis; SWV = scaled window variance; RS = rescaled range; LW = local Whittle;   {#tbl-fmrihurst}
 
 ### Nonparametric trend estimation in the presence of fractal noise: Application to fMRI time-series analysis - Afshinpour et al. (2008) [@afshinpourNonparametricTrendEstimation2008]
 
@@ -258,7 +348,7 @@ H is determined as the slope of the log-log plot log~2~($F(w)$) as a function of
 
 Example code:
 
-```{python}
+````python
 #| echo: true
 #| code-fold: true
 #| code-summary: "Code"
@@ -302,7 +392,7 @@ def adaptive_fractal_analysis(signal, n_values=range(5, 14)):
     
     # The slope corresponds to the Hurst exponent
     return slope
-```
+````
 
 ### Endogenous human brain dynamics recover slowly following cognitive effort - Barnes et al. (2009) [@barnesEndogenousHumanBrain2009]
 

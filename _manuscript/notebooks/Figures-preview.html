@@ -207,7 +207,7 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sierpinksi-triangle" id="toc-sierpinksi-triangle" class="nav-link active" data-scroll-target="#sierpinksi-triangle">Sierpinksi Triangle</a></li>
+  <li><a href="#sierpinski-triangle" id="toc-sierpinski-triangle" class="nav-link active" data-scroll-target="#sierpinski-triangle">Sierpinski Triangle</a></li>
   <li><a href="#exact-vs-statistical-fractal" id="toc-exact-vs-statistical-fractal" class="nav-link" data-scroll-target="#exact-vs-statistical-fractal">Exact vs Statistical Fractal</a></li>
   <li><a href="#four-properties-of-fractal-signals" id="toc-four-properties-of-fractal-signals" class="nav-link" data-scroll-target="#four-properties-of-fractal-signals">Four Properties of Fractal Signals</a></li>
   <li><a href="#typical-sample-paths" id="toc-typical-sample-paths" class="nav-link" data-scroll-target="#typical-sample-paths">Typical Sample Paths</a></li>
@@ -218,7 +218,10 @@
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-       <div class="cell-container"><div class="cell-decorator"><pre>In [28]:</pre></div><div id="f5505725-3659-4c9c-b9e2-d1e128cbac4d" class="cell" data-execution_count="28">
+       <div id="39f35033-1e6e-4f89-a19b-d6e9cd295758" class="cell markdown">
+
+</div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="479e22e5-5982-4655-ae0b-137d2b2e79e5" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fbm <span class="im">import</span> FBM <span class="co">#fractional signals</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt <span class="co">#plotting</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.lines <span class="im">as</span> lines <span class="co">#draw lines</span></span>
@@ -230,15 +233,12 @@
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
-<div id="e6e5a9ac-67e1-4d69-af32-44e193114401" class="cell markdown">
-
-</div>
-<div id="b512e355-a9b1-4cd9-b9e3-58b59f5954f0" class="cell markdown">
-<section id="sierpinksi-triangle" class="level2">
-<h2 class="anchored" data-anchor-id="sierpinksi-triangle">Sierpinksi Triangle</h2>
+<div id="61d16679-b62b-461b-9fdc-96aaff468989" class="cell markdown">
+<section id="sierpinski-triangle" class="level2">
+<h2 class="anchored" data-anchor-id="sierpinski-triangle">Sierpinski Triangle</h2>
 </section>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [15]:</pre></div><div id="cell-fig-fractal" class="cell" data-execution_count="15">
+<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="cell-fig-fractal" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sierpinski_triangle(level, p1, p2, p3):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Generate the triangles for a Sierpinski triangle at the given iteration level."""</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> level <span class="op">==</span> <span class="dv">0</span>:</span>
@@ -312,12 +312,12 @@ Figure&nbsp;1: <strong>Ideal mathematical fractal.</strong> The 2D Sierpinski tr
 </div>
 </div>
 </div></div>
-<div id="21b8611f-1b1c-407f-91a4-0126440eddf6" class="cell markdown">
+<div id="f360f6b9-76f7-4f15-afab-5be42c69bb81" class="cell markdown">
 <section id="exact-vs-statistical-fractal" class="level2">
 <h2 class="anchored" data-anchor-id="exact-vs-statistical-fractal">Exact vs Statistical Fractal</h2>
 </section>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [16]:</pre></div><div id="88e6b44f-7abf-4a36-a3c9-80d87d45de0c" class="cell" data-execution_count="16">
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="5128f27f-79ac-42bd-8578-875041206c2b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_fractal_tree(ax, x, y, length, angle, depth):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Draw a self-similar fractal tree.</span></span>
@@ -376,12 +376,12 @@ Figure&nbsp;1: <strong>Ideal mathematical fractal.</strong> The 2D Sierpinski tr
 </div>
 </div>
 </div></div>
-<div id="8629f13e-1958-4752-90fb-4788a34a12ce" class="cell markdown">
+<div id="cab0a684-5d9c-454a-901a-37959640d304" class="cell markdown">
 <section id="four-properties-of-fractal-signals" class="level2">
 <h2 class="anchored" data-anchor-id="four-properties-of-fractal-signals">Four Properties of Fractal Signals</h2>
 </section>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [31]:</pre></div><div id="cell-fig-fourprop" class="cell" data-execution_count="31">
+<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div id="cell-fig-fourprop" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'text.usetex'</span>] <span class="op">=</span> <span class="va">True</span> <span class="co">#latex</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">4</span>)</span>
@@ -450,18 +450,19 @@ Figure&nbsp;1: <strong>Ideal mathematical fractal.</strong> The 2D Sierpinski tr
 <span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">2</span>][<span class="dv">1</span>].set_xlabel(<span class="vs">r"Frequency ($f$)"</span>)</span>
 <span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">2</span>][<span class="dv">1</span>].set_title(<span class="st">"E but with a scaling range"</span>, loc<span class="op">=</span><span class="st">'left'</span>)</span>
 <span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>text_xy <span class="op">=</span> (freq[<span class="dv">10</span>]<span class="op">*</span><span class="fl">1.7</span>, <span class="fl">0.001</span>)</span>
-<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">2</span>][<span class="dv">1</span>].annotate(text, (freq[<span class="dv">10</span>],<span class="fl">0.001</span>), text_xy, arrowprops<span class="op">=</span>{<span class="st">"arrowstyle"</span>: <span class="st">"-&gt;"</span>, <span class="st">"color"</span>: <span class="st">"red"</span>}, color<span class="op">=</span><span class="st">"red"</span>)</span>
-<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">2</span>][<span class="dv">1</span>].annotate(text, (freq[<span class="dv">312</span>],<span class="fl">0.001</span>), text_xy, arrowprops<span class="op">=</span>{<span class="st">"arrowstyle"</span>: <span class="st">"-&gt;"</span>, <span class="st">"color"</span>: <span class="st">"red"</span>}, color<span class="op">=</span><span class="st">"red"</span>)</span>
-<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
-<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a>    ax[i, <span class="dv">0</span>].text(<span class="op">-</span><span class="fl">0.1</span>, <span class="fl">1.1</span>, string.ascii_uppercase[i], transform<span class="op">=</span>ax[i, <span class="dv">0</span>].transAxes, </span>
-<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>                  size<span class="op">=</span><span class="dv">13</span>, weight<span class="op">=</span><span class="st">'bold'</span>)</span>
-<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>    ax[i, <span class="dv">1</span>].text(<span class="op">-</span><span class="fl">0.1</span>, <span class="fl">1.1</span>, string.ascii_uppercase[i<span class="op">+</span><span class="dv">3</span>], transform<span class="op">=</span>ax[i, <span class="dv">1</span>].transAxes, </span>
-<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>                  size<span class="op">=</span><span class="dv">13</span>, weight<span class="op">=</span><span class="st">'bold'</span>)</span>
-<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'../image/fourproperties.png'</span>, dpi<span class="op">=</span><span class="dv">600</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>)</span>
-<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> <span class="vs">r"$\log_</span><span class="sc">{10}</span><span class="vs"> \left( \frac{f_</span><span class="sc">{max}</span><span class="vs"> - f_</span><span class="sc">{min}</span><span class="vs">}</span><span class="sc">{f_s}</span><span class="vs"> \right)$"</span></span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>text_xy <span class="op">=</span> (freq[<span class="dv">10</span>]<span class="op">*</span><span class="fl">1.7</span>, <span class="fl">0.001</span>)</span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">2</span>][<span class="dv">1</span>].annotate(text, (freq[<span class="dv">10</span>],<span class="fl">0.001</span>), text_xy, arrowprops<span class="op">=</span>{<span class="st">"arrowstyle"</span>: <span class="st">"-&gt;"</span>, <span class="st">"color"</span>: <span class="st">"red"</span>}, color<span class="op">=</span><span class="st">"red"</span>)</span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">2</span>][<span class="dv">1</span>].annotate(text, (freq[<span class="dv">312</span>],<span class="fl">0.001</span>), text_xy, arrowprops<span class="op">=</span>{<span class="st">"arrowstyle"</span>: <span class="st">"-&gt;"</span>, <span class="st">"color"</span>: <span class="st">"red"</span>}, color<span class="op">=</span><span class="st">"red"</span>)</span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>    ax[i, <span class="dv">0</span>].text(<span class="op">-</span><span class="fl">0.1</span>, <span class="fl">1.1</span>, string.ascii_uppercase[i], transform<span class="op">=</span>ax[i, <span class="dv">0</span>].transAxes, </span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>                  size<span class="op">=</span><span class="dv">13</span>, weight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>    ax[i, <span class="dv">1</span>].text(<span class="op">-</span><span class="fl">0.1</span>, <span class="fl">1.1</span>, string.ascii_uppercase[i<span class="op">+</span><span class="dv">3</span>], transform<span class="op">=</span>ax[i, <span class="dv">1</span>].transAxes, </span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a>                  size<span class="op">=</span><span class="dv">13</span>, weight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'../image/fourproperties.png'</span>, dpi<span class="op">=</span><span class="dv">600</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>)</span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="fig-fourprop" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -475,12 +476,12 @@ Figure&nbsp;2: <strong>Main properties of a fractal time-series</strong> A-C sho
 </div>
 </div>
 </div></div>
-<div id="6eba5b6d-3a43-432d-ae7f-7c6390f6f67a" class="cell markdown">
+<div id="a86744a1-1e92-44a2-a01e-589327e93f69" class="cell markdown">
 <section id="typical-sample-paths" class="level2">
 <h2 class="anchored" data-anchor-id="typical-sample-paths">Typical Sample Paths</h2>
 </section>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [19]:</pre></div><div id="cell-fig-typicalsamplepaths" class="cell" data-execution_count="19">
+<div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div id="cell-fig-typicalsamplepaths" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">1</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'text.usetex'</span>] <span class="op">=</span> <span class="va">True</span> <span class="co">#latex</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -616,853 +617,17 @@ Figure&nbsp;2: <strong>Main properties of a fractal time-series</strong> A-C sho
 <span id="cb5-133"><a href="#cb5-133" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-134"><a href="#cb5-134" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'../image/typicalsamplepaths.png'</span>, dpi<span class="op">=</span><span class="dv">600</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>)</span>
 <span id="cb5-135"><a href="#cb5-135" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>/home/weberam2/Dropbox/AssistantProf_BCCHRI/Projects/BrainDynamics/LiteratureReview/.venv/lib/python3.10/site-packages/fbm/fbm.py:171: UserWarning: Combination of increments n and Hurst value H invalid for Davies-Harte method. Reverting to Hosking method. Occurs when n is small and Hurst is close to 1. 
-  warnings.warn(</code></pre>
-</div>
 <div class="cell-output cell-output-display">
 <div id="fig-typicalsamplepaths" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-typicalsamplepaths-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="Figures_files/figure-html/fig-typicalsamplepaths-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: Simulated fractional Gaussian noise and fractional Brownian motion. Raw simulated time-series with 1,024 time-points and known Hurst values are plotted on the left. The top three time-series are fractional Gaussian noise, while the bottom three are fractional Brownian motion. H values are displayed on the left, while \beta values are displayed on the right. Note how fractional Gaussian noise remain centered around a mean (i.e.&nbsp;stationary), while fractional Brownian motion wanders away from the mean (i.e.&nbsp;non-stationary). Log-log power spectral density plots of the signals on the left are shown on the right. Linear-regression fits are shown in red, which are used to calculate \beta and H using the appropriate equation (on the right). Exact fractal time-series were created using the Davies-Harte method."><img src="Figures_files/figure-html/fig-typicalsamplepaths-output-2.png" class="img-fluid figure-img"></a>
+<a href="Figures_files/figure-html/fig-typicalsamplepaths-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: Simulated fractional Gaussian noise and fractional Brownian motion. Raw simulated time-series with 1,024 time-points and known Hurst values are plotted on the left. The top three time-series are fractional Gaussian noise, while the bottom three are fractional Brownian motion. H values are displayed on the left, while \beta values are displayed on the right. Note how fractional Gaussian noise remain centered around a mean (i.e.&nbsp;stationary), while fractional Brownian motion wanders away from the mean (i.e.&nbsp;non-stationary). Log-log power spectral density plots of the signals on the left are shown on the right. Linear-regression fits are shown in red, which are used to calculate \beta and H using the appropriate equation (on the right). Exact fractal time-series were created using the Davies-Harte method."><img src="Figures_files/figure-html/fig-typicalsamplepaths-output-1.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-typicalsamplepaths-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: <strong>Simulated fractional Gaussian noise and fractional Brownian motion.</strong> Raw simulated time-series with 1,024 time-points and known Hurst values are plotted on the left. The top three time-series are fractional Gaussian noise, while the bottom three are fractional Brownian motion. H values are displayed on the left, while <span class="math inline">\(\beta\)</span> values are displayed on the right. Note how fractional Gaussian noise remain centered around a mean (i.e.&nbsp;stationary), while fractional Brownian motion wanders away from the mean (i.e.&nbsp;non-stationary). Log-log power spectral density plots of the signals on the left are shown on the right. Linear-regression fits are shown in red, which are used to calculate <span class="math inline">\(\beta\)</span> and H using the appropriate equation (on the right). Exact fractal time-series were created using the Davies-Harte method.
 </figcaption>
 </figure>
 </div>
-</div>
-</div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [231]:</pre></div><div id="41defb96-bcf3-4a65-9da1-ceaa43cf7c45" class="cell" data-execution_count="231">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> spectral_synthesis_1d(N, H, seed<span class="op">=</span><span class="va">None</span>):</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">    1D Spectral Synthesis Method for generating fractional Brownian motion</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters:</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">    N: Number of points in the time series</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">    H: Hurst exponent</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">    seed: Random seed for reproducibility</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set random seed if provided</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> seed <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        np.random.seed(seed)</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialize complex array for Fourier coefficients</span></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    A <span class="op">=</span> np.zeros(N, dtype<span class="op">=</span><span class="bu">complex</span>)</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate phases and radii</span></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(N<span class="op">//</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Random phase</span></span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>        phase <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> np.random.rand()</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Radial component (skip origin)</span></span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">!=</span> <span class="dv">0</span>:</span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Spectral density: power law decay</span></span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>            rad <span class="op">=</span> np.power(i, <span class="op">-</span>(H<span class="op">+</span><span class="dv">1</span>)) <span class="op">*</span> np.random.randn()</span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>            rad <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Assign complex Fourier coefficients</span></span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>        A[i] <span class="op">=</span> rad <span class="op">*</span> (np.cos(phase) <span class="op">+</span> <span class="ot">1j</span> <span class="op">*</span> np.sin(phase))</span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Symmetric conjugate for negative frequencies</span></span>
-<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">0</span> <span class="kw">and</span> i <span class="op">&lt;</span> N<span class="op">//</span><span class="dv">2</span>:</span>
-<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>            A[N<span class="op">-</span>i] <span class="op">=</span> rad <span class="op">*</span> (np.cos(phase) <span class="op">-</span> <span class="ot">1j</span> <span class="op">*</span> np.sin(phase))</span>
-<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ensure the Nyquist frequency is real</span></span>
-<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>    A[N<span class="op">//</span><span class="dv">2</span>] <span class="op">=</span> A[N<span class="op">//</span><span class="dv">2</span>].real</span>
-<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Inverse FFT to get time series</span></span>
-<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>    X <span class="op">=</span> np.fft.irfft(A)</span>
-<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> X</span>
-<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Example usage</span></span>
-<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">1024</span>  <span class="co"># Number of points</span></span>
-<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>H <span class="op">=</span> <span class="fl">0.7</span>   <span class="co"># Hurst exponent</span></span>
-<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>time_series <span class="op">=</span> spectral_synthesis_1d(N, H)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [246]:</pre></div><div id="e96df7d6-5f5a-495f-bcd0-bd6bbee8e033" class="cell" data-execution_count="246">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this is adapted from The Science of Fractal Images, Springer-Verlag, 1988, page 108</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fractional_brownian_motion_1d(N, H, seed<span class="op">=</span><span class="va">None</span>):</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Generate a 1D fractional Brownian motion (fBm) using the spectral method."""</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> seed <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        np.random.seed(seed)</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Frequency domain (Fourier space)</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    freqs <span class="op">=</span> np.fft.rfftfreq(N)  <span class="co"># Only positive frequencies</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    S <span class="op">=</span> np.zeros_like(freqs)</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Power spectrum: S(f) ~ |f|^(-2H-1)</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> np.errstate(divide<span class="op">=</span><span class="st">'ignore'</span>, invalid<span class="op">=</span><span class="st">'ignore'</span>):</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>        S[<span class="dv">1</span>:] <span class="op">=</span> freqs[<span class="dv">1</span>:] <span class="op">**</span> (<span class="op">-</span>(<span class="dv">2</span> <span class="op">*</span> H <span class="op">+</span> <span class="dv">1</span>))</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    S[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">0</span>  <span class="co"># DC component should be zero to remove the mean drift</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate Gaussian noise with correct magnitude</span></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    real_part <span class="op">=</span> np.random.normal(<span class="dv">0</span>, np.sqrt(S <span class="op">/</span> <span class="dv">2</span>), <span class="bu">len</span>(S))</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    imag_part <span class="op">=</span> np.random.normal(<span class="dv">0</span>, np.sqrt(S <span class="op">/</span> <span class="dv">2</span>), <span class="bu">len</span>(S))</span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    imag_part[<span class="op">-</span><span class="dv">1</span>] <span class="op">=</span> <span class="dv">0</span>  <span class="co"># Ensure real-valued inverse FFT</span></span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    F <span class="op">=</span> real_part <span class="op">+</span> <span class="ot">1j</span> <span class="op">*</span> imag_part</span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Mirror frequencies for inverse FFT</span></span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    F_full <span class="op">=</span> np.concatenate([F, np.conj(F[<span class="op">-</span><span class="dv">2</span>:<span class="dv">0</span>:<span class="op">-</span><span class="dv">1</span>])])</span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Inverse FFT to obtain time-domain signal</span></span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    fBm <span class="op">=</span> np.fft.ifft(F_full).real</span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Normalize to unit variance</span></span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>    fBm <span class="op">-=</span> fBm.<span class="bu">min</span>()</span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>    fBm <span class="op">/=</span> fBm.<span class="bu">max</span>()</span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fBm</span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Parameters</span></span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">1024</span>  <span class="co"># Number of points</span></span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>H <span class="op">=</span> <span class="fl">0.9</span>   <span class="co"># Hurst parameter</span></span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="dv">42</span>  <span class="co"># Random seed for reproducibility</span></span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate and plot fBm</span></span>
-<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>fBm_signal <span class="op">=</span> fractional_brownian_motion_1d(N, H, seed)</span>
-<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>plt.plot(fBm_signal, label<span class="op">=</span><span class="ss">f'fBm (H=</span><span class="sc">{</span>H<span class="sc">}</span><span class="ss">)'</span>)</span>
-<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Time"</span>)</span>
-<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Signal"</span>)</span>
-<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"1D Fractional Brownian Motion"</span>)</span>
-<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div class="">
-<figure class="figure">
-<p class=""><a href="Figures_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="Figures_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-</div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [349]:</pre></div><div id="3ef2f9d8-7e3d-4adb-b63a-1daffaa7b911" class="cell" data-execution_count="349">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> spectral_synthesis(N, H, seed<span class="op">=</span><span class="va">None</span>):</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Spectral Synthesis Method for generating fractional Brownian motion</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters:</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">    N: Number of points in the time series</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">    H: Hurst exponent</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">    seed: Random seed for reproducibility</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set random seed if provided</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> seed <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>        np.random.seed(seed)</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate spectral slope</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    beta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> H <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialize arrays for real and imaginary parts</span></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    A <span class="op">=</span> np.zeros(N<span class="op">//</span><span class="dv">2</span>)</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    B <span class="op">=</span> np.zeros(N<span class="op">//</span><span class="dv">2</span>)</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate Fourier coefficients</span></span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(N<span class="op">//</span><span class="dv">2</span>):</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Radial component with power-law decay</span></span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>        rad <span class="op">=</span> np.power(i<span class="op">+</span><span class="dv">1</span>, <span class="op">-</span>beta<span class="op">/</span><span class="dv">2</span>) <span class="op">*</span> np.random.randn()</span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Random phase</span></span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>        phase <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> np.random.rand()</span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Real and imaginary components</span></span>
-<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>        A[i] <span class="op">=</span> rad <span class="op">*</span> np.cos(phase)</span>
-<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>        B[i] <span class="op">=</span> rad <span class="op">*</span> np.sin(phase)</span>
-<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Inverse FFT to get time series</span></span>
-<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Combine real and imaginary parts</span></span>
-<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>    X <span class="op">=</span> np.fft.irfft(A <span class="op">+</span> <span class="ot">1j</span><span class="op">*</span>B, n<span class="op">=</span>N)</span>
-<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> X</span>
-<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Example usage</span></span>
-<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">1024</span>  <span class="co"># Number of points</span></span>
-<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>H <span class="op">=</span> <span class="fl">0.5</span>   <span class="co"># Hurst exponent</span></span>
-<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>time_series <span class="op">=</span> spectral_synthesis(N, H)</span>
-<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualization</span></span>
-<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">4</span>))</span>
-<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>plt.plot(time_series)</span>
-<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f'Synthetic Time Series (H = </span><span class="sc">{</span>H<span class="sc">}</span><span class="ss">)'</span>)</span>
-<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div class="">
-<figure class="figure">
-<p class=""><a href="Figures_files/figure-html/cell-9-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="Figures_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-</div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [247]:</pre></div><div id="dd1f04f5-bfc9-4d45-bcdf-a3332e823529" class="cell" data-execution_count="247">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tspowerplot(data):</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>,<span class="dv">2</span>, constrained_layout<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">7</span>,<span class="dv">3</span>))</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    ax[<span class="dv">0</span>].plot(data)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    ax[<span class="dv">0</span>].set_title(<span class="st">"a)"</span>, loc<span class="op">=</span><span class="st">'left'</span>)</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    freq, power <span class="op">=</span> signal.periodogram(data, <span class="dv">1</span>)</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    power <span class="op">=</span> power[<span class="dv">1</span>:]</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    freq <span class="op">=</span> freq[<span class="dv">1</span>:]</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    log_power <span class="op">=</span> np.log10(power)</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    log_freq <span class="op">=</span> np.log10(freq)</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    log_power <span class="op">=</span> log_power[<span class="dv">1</span>:]</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    log_freq <span class="op">=</span> log_freq[<span class="dv">1</span>:]</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> LinearRegression()</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    model.fit(log_freq.reshape(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>), log_power)</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    predicted_power <span class="op">=</span> <span class="dv">10</span><span class="op">**</span>model.predict(log_freq.reshape(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>))</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    beta <span class="op">=</span> model.coef_<span class="op">*-</span><span class="dv">1</span></span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> beta <span class="op">&lt;</span> <span class="dv">1</span>:</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>        Hurst <span class="op">=</span> (beta<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span></span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>        Hurst <span class="op">=</span> (beta<span class="op">-</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span></span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>    ax[<span class="dv">1</span>].plot(freq.reshape(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>), power)</span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    ax[<span class="dv">1</span>].set_xscale(<span class="st">'log'</span>)</span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    ax[<span class="dv">1</span>].set_yscale(<span class="st">'log'</span>)</span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    ax[<span class="dv">1</span>].plot(freq[<span class="dv">1</span>:].reshape(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>), predicted_power, color<span class="op">=</span><span class="st">'red'</span>)</span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    ax[<span class="dv">1</span>].set_title(<span class="st">"b)"</span>, loc<span class="op">=</span><span class="st">'left'</span>)</span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>    fig.suptitle(<span class="ss">f"Real Hurst: </span><span class="sc">{</span>H<span class="sc">}</span><span class="ch">\n</span><span class="ss">Slope (m): </span><span class="sc">{</span><span class="bu">round</span>(<span class="bu">float</span>(model.coef_),<span class="dv">3</span>)<span class="sc">}</span><span class="ss">; Estimated Hurst: </span><span class="sc">{</span><span class="bu">round</span>(<span class="bu">float</span>(Hurst),<span class="dv">2</span>)<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>tspowerplot(fBm_signal)</span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_24296/2299195824.py:30: DeprecationWarning: Conversion of an array with ndim &gt; 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
-  fig.suptitle(f"Real Hurst: {H}\nSlope (m): {round(float(model.coef_),3)}; Estimated Hurst: {round(float(Hurst),2)}")</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div class="">
-<figure class="figure">
-<p class=""><a href="Figures_files/figure-html/cell-10-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="Figures_files/figure-html/cell-10-output-2.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-</div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [271]:</pre></div><div id="513ae843-d616-4d0b-b3fb-c76e2471147a" class="cell" data-execution_count="271">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>tspowerplot(time_series)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_24296/2299195824.py:30: DeprecationWarning: Conversion of an array with ndim &gt; 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
-  fig.suptitle(f"Real Hurst: {H}\nSlope (m): {round(float(model.coef_),3)}; Estimated Hurst: {round(float(Hurst),2)}")</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div class="">
-<figure class="figure">
-<p class=""><a href="Figures_files/figure-html/cell-11-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="Figures_files/figure-html/cell-11-output-2.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-</div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [379]:</pre></div><div id="e9a13db7-90c3-4664-be33-a035e7b81de5" class="cell" data-execution_count="379">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.fftpack <span class="im">import</span> fft</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> stochastic.processes.noise <span class="im">import</span> FractionalGaussianNoise <span class="im">as</span> fgn</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> stochastic.processes.continuous <span class="im">import</span> FractionalBrownianMotion <span class="im">as</span> fbm</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> linreg_weber(x, y, <span class="op">**</span>kwargs):</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># performs linear regression (OLS) and returns slope, R, residuals and predicted y values</span></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set default min and max values for x</span></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    xMin <span class="op">=</span> np.<span class="bu">min</span>(x)</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    xMax <span class="op">=</span> np.<span class="bu">max</span>(x)</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Handle optional xmin and xmax (here expected frequencies)</span></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The below looks weird, as xMin = max and xMax = min, but it is just ensuring that the xmin and xmax you give are actually larger and smaller (respectively) than the absolute min and max</span></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">'freqmin'</span> <span class="kw">in</span> kwargs:</span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>        xMin <span class="op">=</span> <span class="bu">max</span>(xMin, kwargs[<span class="st">'freqmin'</span>])</span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">'freqmax'</span> <span class="kw">in</span> kwargs:</span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>        xMax <span class="op">=</span> <span class="bu">min</span>(xMax, kwargs[<span class="st">'freqmax'</span>])</span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get indices for the specified xMin and xMax range</span></span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>    xMinInd <span class="op">=</span> np.where(x <span class="op">&gt;=</span> xMin)[<span class="dv">0</span>][<span class="dv">0</span>] <span class="co"># will return an array of all values larger or equal then min, and pick the first</span></span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>    xMaxInd <span class="op">=</span> np.where(x <span class="op">&lt;=</span> xMax)[<span class="dv">0</span>][<span class="op">-</span><span class="dv">1</span>] <span class="co"># will return an array of all values smaller or equal then max, and pick the last</span></span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Slice x and y arrays to focus on the relevant range</span></span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>    x_range <span class="op">=</span> x[xMinInd:xMaxInd <span class="op">+</span> <span class="dv">1</span>]</span>
-<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>    y_range <span class="op">=</span> y[xMinInd:xMaxInd <span class="op">+</span> <span class="dv">1</span>] <span class="co"># note, I have tested this and it is correct</span></span>
-<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Perform linear regression</span></span>
-<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>    X <span class="op">=</span> sm.add_constant(x_range)  <span class="co"># Add constant (intercept)</span></span>
-<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> sm.OLS(y_range, X).fit() <span class="co"># Ordinary Least Squares</span></span>
-<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate correlation coefficient (R value)</span></span>
-<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>    R <span class="op">=</span> np.corrcoef(x_range, y_range)[<span class="dv">0</span>, <span class="dv">1</span>]</span>
-<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get the slope from the model coefficients</span></span>
-<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>    slope <span class="op">=</span> model.params[<span class="dv">1</span>]</span>
-<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate residuals (errors)</span></span>
-<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>    residuals <span class="op">=</span> model.resid</span>
-<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fitted values (predicted y values)</span></span>
-<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>    y_fitted <span class="op">=</span> model.fittedvalues</span>
-<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> slope, R, residuals, y_fitted</span>
-<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> spec_weber(ts, sf):</span>
-<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a>    L <span class="op">=</span> <span class="bu">len</span>(ts) <span class="co"># length of time-series</span></span>
-<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Perform FFT</span></span>
-<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>    Y <span class="op">=</span> fft(ts) <span class="co"># fast fourier</span></span>
-<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a>    Pyy <span class="op">=</span> np.<span class="bu">abs</span>(Y) <span class="op">**</span> <span class="dv">2</span> <span class="op">/</span> L <span class="co"># square of absolute divided by length</span></span>
-<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>    power <span class="op">=</span> Pyy[:L <span class="op">//</span> <span class="dv">2</span>]  <span class="co"># Keep first half of spectrum</span></span>
-<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a>    freq <span class="op">=</span> sf <span class="op">/</span> L <span class="op">*</span> np.arange(<span class="dv">1</span>, L <span class="op">//</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span>) <span class="co"># Create frequencies from sampling rate (sf)</span></span>
-<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Perform log transformation</span></span>
-<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a>    lgPyy <span class="op">=</span> np.log(power)</span>
-<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a>    lgfreq <span class="op">=</span> np.log(freq)</span>
-<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Perform linear regression on log-log data</span></span>
-<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a>    slope, R, residuals, y_fitted <span class="op">=</span> linreg_weber(lgfreq, lgPyy)</span>
-<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">-</span>slope <span class="op">&lt;</span> <span class="dv">1</span>:  <span class="co"># fGn case</span></span>
-<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a>        Hurst <span class="op">=</span> (<span class="op">-</span>slope <span class="op">+</span> <span class="dv">1</span>) <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="op">-</span>slope <span class="op">&gt;</span> <span class="dv">1</span>:  <span class="co"># fBm case</span></span>
-<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a>        Hurst <span class="op">=</span> (<span class="op">-</span>slope <span class="op">-</span> <span class="dv">1</span>) <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="op">-</span>slope <span class="op">==</span> <span class="dv">1</span>:  <span class="co"># Unknown case</span></span>
-<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a>        Hurst <span class="op">=</span> <span class="dv">0</span> <span class="co"># might as well, not sure what else to set it to: Nan? Inf?</span></span>
-<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> freq, power, Hurst, slope, R, residuals, y_fitted</span>
-<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Bridge(ts):</span>
-<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''This function bridge detrends the signal input ts</span></span>
-<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a><span class="co">    The function subtracts a line connecting the first and last points from the signal'''</span></span>
-<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">len</span>(ts)</span>
-<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a>    <span class="co">#points is the length of the time series from n-1 to 0 (backwards i.e. n-1, n-2,...0)</span></span>
-<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a>    points <span class="op">=</span> np.arange(n<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>).reshape(<span class="dv">1</span>,n)</span>
-<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a>    <span class="co">#line is a straight line connecting first and last point</span></span>
-<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a>    line <span class="op">=</span> ((ts[<span class="dv">0</span>]<span class="op">-</span>ts[n<span class="op">-</span><span class="dv">1</span>])<span class="op">*</span>points<span class="op">/</span>(n<span class="op">-</span><span class="dv">1</span>))<span class="op">+</span>ts[n<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a>    line <span class="op">=</span> line.transpose() <span class="co">#transposes line from row to column array</span></span>
-<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a>    <span class="co">#subtract line from time series to return bridge detrended signal (result)</span></span>
-<span id="cb14-81"><a href="#cb14-81" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> ts <span class="op">-</span> np.transpose(line)</span>
-<span id="cb14-82"><a href="#cb14-82" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result </span>
-<span id="cb14-83"><a href="#cb14-83" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Window(ts):</span>
-<span id="cb14-84"><a href="#cb14-84" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''This function applies a parabolic window to the signal input'''</span></span>
-<span id="cb14-85"><a href="#cb14-85" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">len</span>(ts) <span class="co">#n is length of time series</span></span>
-<span id="cb14-86"><a href="#cb14-86" aria-hidden="true" tabindex="-1"></a>    W <span class="op">=</span> np.zeros(n) <span class="co">#initialize empty array</span></span>
-<span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a>    <span class="co">#create parabola from 0 to length n</span></span>
-<span id="cb14-88"><a href="#cb14-88" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> np.arange(n):</span>
-<span id="cb14-89"><a href="#cb14-89" aria-hidden="true" tabindex="-1"></a>        W[j] <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> np.power((<span class="dv">2</span><span class="op">*</span>(j <span class="op">+</span> <span class="dv">1</span>)<span class="op">/</span>(n<span class="op">+</span><span class="dv">1</span>)<span class="op">-</span><span class="dv">1</span>),<span class="dv">2</span>)</span>
-<span id="cb14-90"><a href="#cb14-90" aria-hidden="true" tabindex="-1"></a>    <span class="co">#multiply parabola and signal to get windowed signal (result)</span></span>
-<span id="cb14-91"><a href="#cb14-91" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> ts <span class="op">*</span> W </span>
-<span id="cb14-92"><a href="#cb14-92" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span>
-<span id="cb14-93"><a href="#cb14-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-94"><a href="#cb14-94" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pfgncalc_weber(logfreq, logpower, sf, hurst, ftype, Nsize, <span class="op">**</span>kwargs):</span>
-<span id="cb14-95"><a href="#cb14-95" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Default parameters</span></span>
-<span id="cb14-96"><a href="#cb14-96" aria-hidden="true" tabindex="-1"></a>    logfreqmin <span class="op">=</span> np.<span class="bu">min</span>(logfreq)</span>
-<span id="cb14-97"><a href="#cb14-97" aria-hidden="true" tabindex="-1"></a>    logfreqmax <span class="op">=</span> np.<span class="bu">max</span>(logfreq)</span>
-<span id="cb14-98"><a href="#cb14-98" aria-hidden="true" tabindex="-1"></a>    nSamples <span class="op">=</span> <span class="dv">500</span></span>
-<span id="cb14-99"><a href="#cb14-99" aria-hidden="true" tabindex="-1"></a>    pCrit <span class="op">=</span> <span class="fl">0.05</span></span>
-<span id="cb14-100"><a href="#cb14-100" aria-hidden="true" tabindex="-1"></a>    likelihood <span class="op">=</span> <span class="fl">1e-3</span> <span class="co">#f there's less than a 0.1% chance that continuing the simulations would change whether p exceeds pCrit, the function terminates early</span></span>
-<span id="cb14-101"><a href="#cb14-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-102"><a href="#cb14-102" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Handle optional parameters</span></span>
-<span id="cb14-103"><a href="#cb14-103" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> key, value <span class="kw">in</span> kwargs.items():</span>
-<span id="cb14-104"><a href="#cb14-104" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> key <span class="op">==</span> <span class="st">'freqmin'</span>:</span>
-<span id="cb14-105"><a href="#cb14-105" aria-hidden="true" tabindex="-1"></a>            logfreqmin <span class="op">=</span> value</span>
-<span id="cb14-106"><a href="#cb14-106" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> key <span class="op">==</span> <span class="st">'freqmax'</span>:</span>
-<span id="cb14-107"><a href="#cb14-107" aria-hidden="true" tabindex="-1"></a>            logfreqmax <span class="op">=</span> value</span>
-<span id="cb14-108"><a href="#cb14-108" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> key <span class="op">==</span> <span class="st">'samples'</span>:</span>
-<span id="cb14-109"><a href="#cb14-109" aria-hidden="true" tabindex="-1"></a>            nSamples <span class="op">=</span> value</span>
-<span id="cb14-110"><a href="#cb14-110" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> key <span class="op">==</span> <span class="st">'threshold'</span>:</span>
-<span id="cb14-111"><a href="#cb14-111" aria-hidden="true" tabindex="-1"></a>            pCrit <span class="op">=</span> value</span>
-<span id="cb14-112"><a href="#cb14-112" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> key <span class="op">==</span> <span class="st">'likelihood'</span>:</span>
-<span id="cb14-113"><a href="#cb14-113" aria-hidden="true" tabindex="-1"></a>            likelihood <span class="op">=</span> value</span>
-<span id="cb14-114"><a href="#cb14-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-115"><a href="#cb14-115" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the Kolmogorov-Smirnov statistic for the empirical data</span></span>
-<span id="cb14-116"><a href="#cb14-116" aria-hidden="true" tabindex="-1"></a>    _, _, residuals, _ <span class="op">=</span> linreg_weber(logfreq, logpower, freqmin<span class="op">=</span>logfreqmin, freqmax<span class="op">=</span>logfreqmax)</span>
-<span id="cb14-117"><a href="#cb14-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-118"><a href="#cb14-118" aria-hidden="true" tabindex="-1"></a>    empiricalKS <span class="op">=</span> np.<span class="bu">max</span>(np.<span class="bu">abs</span>(residuals))</span>
-<span id="cb14-119"><a href="#cb14-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-120"><a href="#cb14-120" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Store Kolmogorov-Smirnov statistic</span></span>
-<span id="cb14-121"><a href="#cb14-121" aria-hidden="true" tabindex="-1"></a>    ks <span class="op">=</span> [empiricalKS, np.zeros(nSamples)]</span>
-<span id="cb14-122"><a href="#cb14-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-123"><a href="#cb14-123" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Compute p-value</span></span>
-<span id="cb14-124"><a href="#cb14-124" aria-hidden="true" tabindex="-1"></a>    successCounts <span class="op">=</span> np.zeros(nSamples)</span>
-<span id="cb14-125"><a href="#cb14-125" aria-hidden="true" tabindex="-1"></a>    nSuccesses <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb14-126"><a href="#cb14-126" aria-hidden="true" tabindex="-1"></a>    thisLikelihood <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb14-127"><a href="#cb14-127" aria-hidden="true" tabindex="-1"></a>    binomialFlag <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb14-128"><a href="#cb14-128" aria-hidden="true" tabindex="-1"></a>    criticalThreshold <span class="op">=</span> nSamples <span class="op">*</span> pCrit</span>
-<span id="cb14-129"><a href="#cb14-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-130"><a href="#cb14-130" aria-hidden="true" tabindex="-1"></a>    samplebeta <span class="op">=</span> np.zeros(nSamples)</span>
-<span id="cb14-131"><a href="#cb14-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-132"><a href="#cb14-132" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> iSample <span class="kw">in</span> <span class="bu">range</span>(nSamples):</span>
-<span id="cb14-133"><a href="#cb14-133" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> thisLikelihood <span class="op">&lt;=</span> likelihood <span class="kw">or</span> <span class="kw">not</span> binomialFlag:</span>
-<span id="cb14-134"><a href="#cb14-134" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
-<span id="cb14-135"><a href="#cb14-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-136"><a href="#cb14-136" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> ftype <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb14-137"><a href="#cb14-137" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Generate sample data based on Hurst</span></span>
-<span id="cb14-138"><a href="#cb14-138" aria-hidden="true" tabindex="-1"></a>            <span class="co">#fgnsample = fgn(fsd, hurst, 1, Nsize, 0)</span></span>
-<span id="cb14-139"><a href="#cb14-139" aria-hidden="true" tabindex="-1"></a>            fgnsample <span class="op">=</span> fgn(hurst<span class="op">=</span>hurst, t<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb14-140"><a href="#cb14-140" aria-hidden="true" tabindex="-1"></a>            fsample <span class="op">=</span> fgnsample.sample(Nsize)</span>
-<span id="cb14-141"><a href="#cb14-141" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> ftype <span class="op">==</span> <span class="dv">2</span>:</span>
-<span id="cb14-142"><a href="#cb14-142" aria-hidden="true" tabindex="-1"></a>            fbmsample <span class="op">=</span> fbm(hurst<span class="op">=</span>hurst, t<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a>            fsample <span class="op">=</span> fbmsample.sample(Nsize)</span>
-<span id="cb14-144"><a href="#cb14-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-145"><a href="#cb14-145" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculate power spectrum for the sample data</span></span>
-<span id="cb14-146"><a href="#cb14-146" aria-hidden="true" tabindex="-1"></a>        _, powersample, _, _, _, _, _ <span class="op">=</span> spec_weber(fsample, sf)</span>
-<span id="cb14-147"><a href="#cb14-147" aria-hidden="true" tabindex="-1"></a>        logpowersample <span class="op">=</span> np.log(powersample)</span>
-<span id="cb14-148"><a href="#cb14-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-149"><a href="#cb14-149" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Perform linear regression on log-log data of sample</span></span>
-<span id="cb14-150"><a href="#cb14-150" aria-hidden="true" tabindex="-1"></a>        thisbeta, _, theseresiduals, _ <span class="op">=</span> linreg_weber(logfreq, logpowersample, freqmin<span class="op">=</span>logfreqmin, freqmax<span class="op">=</span>logfreqmax)</span>
-<span id="cb14-151"><a href="#cb14-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-152"><a href="#cb14-152" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pCrit <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb14-153"><a href="#cb14-153" aria-hidden="true" tabindex="-1"></a>            samplebeta[iSample] <span class="op">=</span> <span class="op">-</span>thisbeta</span>
-<span id="cb14-154"><a href="#cb14-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-155"><a href="#cb14-155" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculate the KS statistic for simulated data</span></span>
-<span id="cb14-156"><a href="#cb14-156" aria-hidden="true" tabindex="-1"></a>        sampleKS <span class="op">=</span> np.<span class="bu">max</span>(np.<span class="bu">abs</span>(theseresiduals))</span>
-<span id="cb14-157"><a href="#cb14-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-158"><a href="#cb14-158" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Store sample KS</span></span>
-<span id="cb14-159"><a href="#cb14-159" aria-hidden="true" tabindex="-1"></a>        ks[<span class="dv">1</span>][iSample] <span class="op">=</span> sampleKS</span>
-<span id="cb14-160"><a href="#cb14-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-161"><a href="#cb14-161" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Record a success if the empirical KS is bounded above by the sample KS</span></span>
-<span id="cb14-162"><a href="#cb14-162" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> empiricalKS <span class="op">&lt;=</span> sampleKS:</span>
-<span id="cb14-163"><a href="#cb14-163" aria-hidden="true" tabindex="-1"></a>            successCounts[iSample] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb14-164"><a href="#cb14-164" aria-hidden="true" tabindex="-1"></a>            nSuccesses <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb14-165"><a href="#cb14-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-166"><a href="#cb14-166" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Stop if success count reaches critical threshold</span></span>
-<span id="cb14-167"><a href="#cb14-167" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> nSuccesses <span class="op">==</span> criticalThreshold:</span>
-<span id="cb14-168"><a href="#cb14-168" aria-hidden="true" tabindex="-1"></a>            binomialFlag <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb14-169"><a href="#cb14-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-170"><a href="#cb14-170" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Update likelihood if pCrit != 1</span></span>
-<span id="cb14-171"><a href="#cb14-171" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pCrit <span class="op">!=</span> <span class="dv">1</span>:</span>
-<span id="cb14-172"><a href="#cb14-172" aria-hidden="true" tabindex="-1"></a>            thisLikelihood <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> binom.cdf(criticalThreshold <span class="op">-</span> nSuccesses <span class="op">-</span> <span class="dv">1</span>, nSamples <span class="op">-</span> iSample, pCrit)</span>
-<span id="cb14-173"><a href="#cb14-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-174"><a href="#cb14-174" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate p-value</span></span>
-<span id="cb14-175"><a href="#cb14-175" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> np.<span class="bu">sum</span>(successCounts) <span class="op">/</span> nSamples</span>
-<span id="cb14-176"><a href="#cb14-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-177"><a href="#cb14-177" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Compute standard deviation of beta if enough samples were processed</span></span>
-<span id="cb14-178"><a href="#cb14-178" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> iSample <span class="op">==</span> nSamples:</span>
-<span id="cb14-179"><a href="#cb14-179" aria-hidden="true" tabindex="-1"></a>        sigmabeta <span class="op">=</span> np.std(samplebeta)</span>
-<span id="cb14-180"><a href="#cb14-180" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb14-181"><a href="#cb14-181" aria-hidden="true" tabindex="-1"></a>        sigmabeta <span class="op">=</span> np.nan</span>
-<span id="cb14-182"><a href="#cb14-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-183"><a href="#cb14-183" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p, ks, sigmabeta</span>
-<span id="cb14-184"><a href="#cb14-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-185"><a href="#cb14-185" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plparams_weber(timeseries, samplingfreq, <span class="op">**</span>kwargs):</span>
-<span id="cb14-186"><a href="#cb14-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-187"><a href="#cb14-187" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If all values in the time-series are the same, end the program and return all zeroes</span></span>
-<span id="cb14-188"><a href="#cb14-188" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> np.unique(timeseries).size <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb14-189"><a href="#cb14-189" aria-hidden="true" tabindex="-1"></a>        Hurst, ftype, beta, freqmin, freqmax, sigmabeta, p, pCrit, ks <span class="op">=</span> <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span></span>
-<span id="cb14-190"><a href="#cb14-190" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Timeseries values are all the same. Returning all measures as 0"</span>)</span>
-<span id="cb14-191"><a href="#cb14-191" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Hurst, ftype, beta, freqmin, freqmax, sigmabeta, p, pCrit, ks</span>
-<span id="cb14-192"><a href="#cb14-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-193"><a href="#cb14-193" aria-hidden="true" tabindex="-1"></a>    <span class="co">#default parameters</span></span>
-<span id="cb14-194"><a href="#cb14-194" aria-hidden="true" tabindex="-1"></a>    nSamples<span class="op">=</span><span class="dv">500</span></span>
-<span id="cb14-195"><a href="#cb14-195" aria-hidden="true" tabindex="-1"></a>    <span class="co">#pCrit=0.2</span></span>
-<span id="cb14-196"><a href="#cb14-196" aria-hidden="true" tabindex="-1"></a>    pCrit<span class="op">=</span><span class="fl">0.05</span></span>
-<span id="cb14-197"><a href="#cb14-197" aria-hidden="true" tabindex="-1"></a>    likelihood<span class="op">=</span><span class="fl">1e-3</span></span>
-<span id="cb14-198"><a href="#cb14-198" aria-hidden="true" tabindex="-1"></a>    finalplotFlag<span class="op">=</span><span class="va">False</span></span>
-<span id="cb14-199"><a href="#cb14-199" aria-hidden="true" tabindex="-1"></a>    saveintermplotsFlag<span class="op">=</span><span class="va">False</span></span>
-<span id="cb14-200"><a href="#cb14-200" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb14-201"><a href="#cb14-201" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Handle optional parameters</span></span>
-<span id="cb14-202"><a href="#cb14-202" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> key, value <span class="kw">in</span> kwargs.items():</span>
-<span id="cb14-203"><a href="#cb14-203" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> key <span class="op">==</span> <span class="st">'nSamples'</span>:</span>
-<span id="cb14-204"><a href="#cb14-204" aria-hidden="true" tabindex="-1"></a>            nSamples <span class="op">=</span> value</span>
-<span id="cb14-205"><a href="#cb14-205" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> key <span class="op">==</span> <span class="st">'pCrit'</span>:</span>
-<span id="cb14-206"><a href="#cb14-206" aria-hidden="true" tabindex="-1"></a>            pCrit <span class="op">=</span> value</span>
-<span id="cb14-207"><a href="#cb14-207" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> key <span class="op">==</span> <span class="st">'likelihood'</span>:</span>
-<span id="cb14-208"><a href="#cb14-208" aria-hidden="true" tabindex="-1"></a>            likelihood <span class="op">=</span> value</span>
-<span id="cb14-209"><a href="#cb14-209" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> key <span class="op">==</span> <span class="st">'finalplot'</span>:</span>
-<span id="cb14-210"><a href="#cb14-210" aria-hidden="true" tabindex="-1"></a>            finalplotFlag <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb14-211"><a href="#cb14-211" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> key <span class="op">==</span> <span class="st">'saveintermplots'</span>:</span>
-<span id="cb14-212"><a href="#cb14-212" aria-hidden="true" tabindex="-1"></a>            saveintermplotsFlag <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb14-213"><a href="#cb14-213" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb14-214"><a href="#cb14-214" aria-hidden="true" tabindex="-1"></a>    Nsize <span class="op">=</span> <span class="bu">len</span>(timeseries)</span>
-<span id="cb14-215"><a href="#cb14-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-216"><a href="#cb14-216" aria-hidden="true" tabindex="-1"></a>    <span class="co">### Hopefully this removes any scanner drift without really affecting the signal or the signal categorization</span></span>
-<span id="cb14-217"><a href="#cb14-217" aria-hidden="true" tabindex="-1"></a>    timeseries <span class="op">=</span> np.squeeze(Bridge(Window(signal.detrend(timeseries)))) <span class="co"># Bridge detrend (won't affect if it is already performed) and reduce dimensions</span></span>
-<span id="cb14-218"><a href="#cb14-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-219"><a href="#cb14-219" aria-hidden="true" tabindex="-1"></a>    freq, power, _, _, _, _, _ <span class="op">=</span> spec_weber(timeseries, samplingfreq)</span>
-<span id="cb14-220"><a href="#cb14-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-221"><a href="#cb14-221" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Find combinations of freqmin and freqmax that are two decades apart</span></span>
-<span id="cb14-222"><a href="#cb14-222" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">len</span>(freq)</span>
-<span id="cb14-223"><a href="#cb14-223" aria-hidden="true" tabindex="-1"></a>    combinations <span class="op">=</span> []</span>
-<span id="cb14-224"><a href="#cb14-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-225"><a href="#cb14-225" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
-<span id="cb14-226"><a href="#cb14-226" aria-hidden="true" tabindex="-1"></a>        highfreqs <span class="op">=</span> np.where(freq <span class="op">&gt;=</span> <span class="dv">100</span> <span class="op">*</span> freq[i])[<span class="dv">0</span>]</span>
-<span id="cb14-227"><a href="#cb14-227" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> highfreqs:</span>
-<span id="cb14-228"><a href="#cb14-228" aria-hidden="true" tabindex="-1"></a>            combinations.append([freq[i], freq[j]])</span>
-<span id="cb14-229"><a href="#cb14-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-230"><a href="#cb14-230" aria-hidden="true" tabindex="-1"></a>    combinations <span class="op">=</span> np.array(combinations)</span>
-<span id="cb14-231"><a href="#cb14-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-232"><a href="#cb14-232" aria-hidden="true" tabindex="-1"></a>    idx <span class="op">=</span> np.argsort(<span class="op">-</span>combinations[:, <span class="dv">1</span>])  <span class="co"># Negate for descending sort</span></span>
-<span id="cb14-233"><a href="#cb14-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-234"><a href="#cb14-234" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Rearrange the combinations using the sorted indices</span></span>
-<span id="cb14-235"><a href="#cb14-235" aria-hidden="true" tabindex="-1"></a>    combinations <span class="op">=</span> combinations[idx]</span>
-<span id="cb14-236"><a href="#cb14-236" aria-hidden="true" tabindex="-1"></a>    temp <span class="op">=</span> combinations[<span class="dv">0</span>].copy()  <span class="co"># Copy to prevent unintended reference issues</span></span>
-<span id="cb14-237"><a href="#cb14-237" aria-hidden="true" tabindex="-1"></a>    combinations[<span class="dv">0</span>] <span class="op">=</span> combinations[<span class="dv">1</span>]</span>
-<span id="cb14-238"><a href="#cb14-238" aria-hidden="true" tabindex="-1"></a>    combinations[<span class="dv">1</span>] <span class="op">=</span> temp</span>
-<span id="cb14-239"><a href="#cb14-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-240"><a href="#cb14-240" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initiate greedy search for optimal support</span></span>
-<span id="cb14-241"><a href="#cb14-241" aria-hidden="true" tabindex="-1"></a>    sweepFlag <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb14-242"><a href="#cb14-242" aria-hidden="true" tabindex="-1"></a>    icombination <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb14-243"><a href="#cb14-243" aria-hidden="true" tabindex="-1"></a>    ncombinations <span class="op">=</span> <span class="bu">len</span>(combinations)</span>
-<span id="cb14-244"><a href="#cb14-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-245"><a href="#cb14-245" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> sweepFlag <span class="kw">and</span> icombination <span class="op">&lt;</span> ncombinations:</span>
-<span id="cb14-246"><a href="#cb14-246" aria-hidden="true" tabindex="-1"></a>        freqmin, freqmax <span class="op">=</span> combinations[icombination]</span>
-<span id="cb14-247"><a href="#cb14-247" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Current support pair is </span><span class="sc">{</span>icombination <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss"> of </span><span class="sc">{</span>ncombinations<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>freqmin<span class="sc">}</span><span class="ss"> to </span><span class="sc">{</span>freqmax<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb14-248"><a href="#cb14-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-249"><a href="#cb14-249" aria-hidden="true" tabindex="-1"></a>        log_freq <span class="op">=</span> np.log(freq)</span>
-<span id="cb14-250"><a href="#cb14-250" aria-hidden="true" tabindex="-1"></a>        log_power <span class="op">=</span> np.log(power)</span>
-<span id="cb14-251"><a href="#cb14-251" aria-hidden="true" tabindex="-1"></a>        beta, R, _, fittedvalues <span class="op">=</span> linreg_weber(log_freq, log_power, freqmin<span class="op">=</span>np.log(freqmin), freqmax<span class="op">=</span>np.log(freqmax))</span>
-<span id="cb14-252"><a href="#cb14-252" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"R is </span><span class="sc">{</span>R<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb14-253"><a href="#cb14-253" aria-hidden="true" tabindex="-1"></a>        beta <span class="op">=</span> <span class="op">-</span>beta</span>
-<span id="cb14-254"><a href="#cb14-254" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"beta is </span><span class="sc">{</span>beta<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb14-255"><a href="#cb14-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-256"><a href="#cb14-256" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="dv">0</span> <span class="op">&lt;=</span> beta <span class="op">&lt;</span> <span class="dv">1</span>:</span>
-<span id="cb14-257"><a href="#cb14-257" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"Beta is between 0 and 1. Signal is estimated to be fGn"</span>)</span>
-<span id="cb14-258"><a href="#cb14-258" aria-hidden="true" tabindex="-1"></a>            Hurst <span class="op">=</span> (beta <span class="op">+</span> <span class="dv">1</span>) <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb14-259"><a href="#cb14-259" aria-hidden="true" tabindex="-1"></a>            ftype <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb14-260"><a href="#cb14-260" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> beta <span class="op">&gt;</span> <span class="dv">1</span>:</span>
-<span id="cb14-261"><a href="#cb14-261" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"Beta is greater than 1. Signal is estimated to be fBm"</span>)</span>
-<span id="cb14-262"><a href="#cb14-262" aria-hidden="true" tabindex="-1"></a>            Hurst <span class="op">=</span> (beta <span class="op">-</span> <span class="dv">1</span>) <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb14-263"><a href="#cb14-263" aria-hidden="true" tabindex="-1"></a>            ftype <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb14-264"><a href="#cb14-264" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb14-265"><a href="#cb14-265" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"Signal is unknown"</span>)</span>
-<span id="cb14-266"><a href="#cb14-266" aria-hidden="true" tabindex="-1"></a>            Hurst <span class="op">=</span> <span class="dv">0</span> <span class="co"># might as well, not sure what else to set it to. Nan?</span></span>
-<span id="cb14-267"><a href="#cb14-267" aria-hidden="true" tabindex="-1"></a>            ftype <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb14-268"><a href="#cb14-268" aria-hidden="true" tabindex="-1"></a>            saveintermplotsFlag <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb14-269"><a href="#cb14-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-270"><a href="#cb14-270" aria-hidden="true" tabindex="-1"></a>       <span class="co"># if saveintermplotsFlag:</span></span>
-<span id="cb14-271"><a href="#cb14-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-272"><a href="#cb14-272" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> Hurst <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb14-273"><a href="#cb14-273" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"Hurst can not be defined. Ending program"</span>)</span>
-<span id="cb14-274"><a href="#cb14-274" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span></span>
-<span id="cb14-275"><a href="#cb14-275" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb14-276"><a href="#cb14-276" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"Hurst is estimated to be </span><span class="sc">{</span>Hurst<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb14-277"><a href="#cb14-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-278"><a href="#cb14-278" aria-hidden="true" tabindex="-1"></a>        p, _, _ <span class="op">=</span> pfgncalc_weber(log_freq, log_power, samplingfreq, Hurst, ftype, Nsize, freqmin<span class="op">=</span>np.log(freqmin), freqmax<span class="op">=</span>np.log(freqmax), nSamples<span class="op">=</span>nSamples, pCrit<span class="op">=</span>pCrit, likelihood<span class="op">=</span>likelihood)</span>
-<span id="cb14-279"><a href="#cb14-279" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"The p-value was found to be: </span><span class="sc">{</span>p<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb14-280"><a href="#cb14-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-281"><a href="#cb14-281" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> p <span class="op">&gt;=</span> pCrit:</span>
-<span id="cb14-282"><a href="#cb14-282" aria-hidden="true" tabindex="-1"></a>            sweepFlag <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb14-283"><a href="#cb14-283" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb14-284"><a href="#cb14-284" aria-hidden="true" tabindex="-1"></a>            icombination <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb14-285"><a href="#cb14-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-286"><a href="#cb14-286" aria-hidden="true" tabindex="-1"></a>    <span class="co">#print("Calculating final p, ks and sigmabeta")</span></span>
-<span id="cb14-287"><a href="#cb14-287" aria-hidden="true" tabindex="-1"></a>    p, ks, sigmabeta <span class="op">=</span> pfgncalc_weber(log_freq, log_power, samplingfreq, Hurst, ftype, Nsize, freqmin<span class="op">=</span>np.log(freqmin), freqmax<span class="op">=</span>np.log(freqmax), nSamples<span class="op">=</span>nSamples, pCrit<span class="op">=</span>pCrit, likelihood<span class="op">=</span>likelihood)</span>
-<span id="cb14-288"><a href="#cb14-288" aria-hidden="true" tabindex="-1"></a>    <span class="co">#print(f"min and max freq were found to be: {freqmin} and {freqmax}")</span></span>
-<span id="cb14-289"><a href="#cb14-289" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> p <span class="op">&gt;=</span> pCrit:</span>
-<span id="cb14-290"><a href="#cb14-290" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"""</span></span>
-<span id="cb14-291"><a href="#cb14-291" aria-hidden="true" tabindex="-1"></a><span class="ss">        final Hurst and ftype were found to be: </span><span class="sc">{</span><span class="bu">round</span>(Hurst,<span class="dv">2</span>)<span class="sc">}</span><span class="ss"> and </span><span class="sc">{</span>ftype<span class="sc">}</span><span class="ch">\\</span></span>
-<span id="cb14-292"><a href="#cb14-292" aria-hidden="true" tabindex="-1"></a><span class="ss">        where 1 = fGn; and 2 = fBm</span><span class="ch">\\</span></span>
-<span id="cb14-293"><a href="#cb14-293" aria-hidden="true" tabindex="-1"></a><span class="ss">        final fmin and fmax are: </span><span class="sc">{</span>freqmin<span class="sc">}</span><span class="ss"> and </span><span class="sc">{</span>freqmax<span class="sc">}</span><span class="ss">, respectively</span></span>
-<span id="cb14-294"><a href="#cb14-294" aria-hidden="true" tabindex="-1"></a><span class="ss">        """</span>)</span>
-<span id="cb14-295"><a href="#cb14-295" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb14-296"><a href="#cb14-296" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Hurst can not be defined. Ending program"</span>)</span>
-<span id="cb14-297"><a href="#cb14-297" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-298"><a href="#cb14-298" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> finalplotFlag:</span>
-<span id="cb14-299"><a href="#cb14-299" aria-hidden="true" tabindex="-1"></a>        plt.figure()</span>
-<span id="cb14-300"><a href="#cb14-300" aria-hidden="true" tabindex="-1"></a>        plt.scatter(freq, power, color<span class="op">=</span><span class="st">'red'</span>, s<span class="op">=</span><span class="dv">20</span>)</span>
-<span id="cb14-301"><a href="#cb14-301" aria-hidden="true" tabindex="-1"></a>        plt.plot(freq[(freq <span class="op">&gt;=</span> freqmin) <span class="op">&amp;</span> (freq <span class="op">&lt;=</span> freqmax)], np.exp(fittedvalues), <span class="st">'k'</span>)</span>
-<span id="cb14-302"><a href="#cb14-302" aria-hidden="true" tabindex="-1"></a>        plt.xscale(<span class="st">'log'</span>)</span>
-<span id="cb14-303"><a href="#cb14-303" aria-hidden="true" tabindex="-1"></a>        plt.yscale(<span class="st">'log'</span>)</span>
-<span id="cb14-304"><a href="#cb14-304" aria-hidden="true" tabindex="-1"></a>        plt.xlabel(<span class="st">'logfreq'</span>)</span>
-<span id="cb14-305"><a href="#cb14-305" aria-hidden="true" tabindex="-1"></a>        plt.ylabel(<span class="st">'logpower'</span>)</span>
-<span id="cb14-306"><a href="#cb14-306" aria-hidden="true" tabindex="-1"></a>        plt.title(<span class="st">'loglog Power Frequency'</span>)</span>
-<span id="cb14-307"><a href="#cb14-307" aria-hidden="true" tabindex="-1"></a>        plt.grid(<span class="va">True</span>)</span>
-<span id="cb14-308"><a href="#cb14-308" aria-hidden="true" tabindex="-1"></a>        plt.show()</span>
-<span id="cb14-309"><a href="#cb14-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-310"><a href="#cb14-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-311"><a href="#cb14-311" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Hurst, ftype, beta, freqmin, freqmax, sigmabeta, p, pCrit, ks</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [380]:</pre></div><div id="d9a27d30-0d0d-4230-a7ff-2b9da932e1aa" class="cell" data-execution_count="380">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#time_series = spectral_synthesis(1024, 0.9)</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>hurst<span class="op">=</span><span class="fl">0.7</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>Nsize<span class="op">=</span><span class="dv">1024</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>fbmtestsample <span class="op">=</span> fbm(hurst<span class="op">=</span>hurst, t<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>fbmtestsample <span class="op">=</span> fbmtestsample.sample(Nsize)</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>Hurst, ftype, beta, freqmin, freqmax, sigmabeta, p, pCrit, ks <span class="op">=</span> plparams_weber(time_series,<span class="dv">1</span>,finalplot<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Current support pair is 1 of 1065: 0.001953125 to 0.5
-R is -0.8574247916114793
-beta is 2.7852828614014515
-Beta is greater than 1. Signal is estimated to be fBm
-Hurst is estimated to be 0.8926414307007258
-The p-value was found to be: 0.022
-Current support pair is 2 of 1065: 0.0048828125 to 0.5
-R is -0.8417141074533928
-beta is 2.762894995753699
-Beta is greater than 1. Signal is estimated to be fBm
-Hurst is estimated to be 0.8814474978768494
-The p-value was found to be: 0.024
-Current support pair is 3 of 1065: 0.0009765625 to 0.5
-R is -0.8571529580468066
-beta is 2.7289886364614677
-Beta is greater than 1. Signal is estimated to be fBm
-Hurst is estimated to be 0.8644943182307339
-The p-value was found to be: 0.012
-Current support pair is 4 of 1065: 0.0029296875 to 0.5
-R is -0.8532642694878813
-beta is 2.7978775702989087
-Beta is greater than 1. Signal is estimated to be fBm
-Hurst is estimated to be 0.8989387851494544
-The p-value was found to be: 0.038
-Current support pair is 5 of 1065: 0.00390625 to 0.5
-R is -0.8471275156350423
-beta is 2.7762859816376237
-Beta is greater than 1. Signal is estimated to be fBm
-Hurst is estimated to be 0.8881429908188119
-The p-value was found to be: 0.032
-Current support pair is 6 of 1065: 0.001953125 to 0.4990234375
-R is -0.857100933959892
-beta is 2.7834466440937953
-Beta is greater than 1. Signal is estimated to be fBm
-Hurst is estimated to be 0.8917233220468976
-The p-value was found to be: 0.024
-Current support pair is 7 of 1065: 0.0029296875 to 0.4990234375
-R is -0.8529215940101995
-beta is 2.79599343542999
-Beta is greater than 1. Signal is estimated to be fBm
-Hurst is estimated to be 0.897996717714995
-The p-value was found to be: 0.026
-Current support pair is 8 of 1065: 0.0009765625 to 0.4990234375
-R is -0.8568394630084494
-beta is 2.727145071292325
-Beta is greater than 1. Signal is estimated to be fBm
-Hurst is estimated to be 0.8635725356461625
-The p-value was found to be: 0.042
-Current support pair is 9 of 1065: 0.00390625 to 0.4990234375
-R is -0.8467611493979292
-beta is 2.7743023862036376
-Beta is greater than 1. Signal is estimated to be fBm
-Hurst is estimated to be 0.8871511931018188
-The p-value was found to be: 0.044
-Current support pair is 10 of 1065: 0.0048828125 to 0.4990234375
-R is -0.8413263037021119
-beta is 2.760829844468652
-Beta is greater than 1. Signal is estimated to be fBm
-Hurst is estimated to be 0.880414922234326
-The p-value was found to be: 0.034
-Current support pair is 11 of 1065: 0.0009765625 to 0.498046875
-R is -0.8566605089069635
-beta is 2.727696714278131
-Beta is greater than 1. Signal is estimated to be fBm
-Hurst is estimated to be 0.8638483571390656
-The p-value was found to be: 0.048
-Current support pair is 12 of 1065: 0.0029296875 to 0.498046875
-R is -0.8527392866104269
-beta is 2.796718119235696
-Beta is greater than 1. Signal is estimated to be fBm
-Hurst is estimated to be 0.8983590596178479
-The p-value was found to be: 0.014
-Current support pair is 13 of 1065: 0.0048828125 to 0.498046875
-R is -0.8411190706113308
-beta is 2.7615365359226045
-Beta is greater than 1. Signal is estimated to be fBm
-Hurst is estimated to be 0.8807682679613023
-The p-value was found to be: 0.05
-Hurst can not be defined. Ending program</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div class="">
-<figure class="figure">
-<p class=""><a href="Figures_files/figure-html/cell-13-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="Figures_files/figure-html/cell-13-output-2.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-</div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [406]:</pre></div><div id="31266012-ae0c-4f0c-9823-ca25dc03a30d" class="cell" data-execution_count="406">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.signal <span class="im">import</span> lfilter</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> signal</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>test_signals <span class="op">=</span> {</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Sinusoid"</span>: np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> <span class="dv">5</span> <span class="op">*</span> np.linspace(<span class="dv">0</span>, <span class="dv">10</span>, Nsize)),</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, signals <span class="kw">in</span> test_signals.items():</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Testing: </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>        results <span class="op">=</span> plparams_weber(signals, <span class="dv">1</span>, finalplot<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Results: </span><span class="sc">{</span>results<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">ValueError</span> <span class="im">as</span> e:</span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Failed as expected: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Testing: Sinusoid
-Current support pair is 1 of 1065: 0.001953125 to 0.5
-R is -0.8389971902408805
-beta is 4.29907093408593
-Beta is greater than 1. Signal is estimated to be fBm
-Hurst is estimated to be 1.649535467042965
-Failed as expected: Hurst value must be in interval (0,1).</code></pre>
-</div>
-</div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [411]:</pre></div><div id="be8f0de7-3858-4fd1-a8b8-85cd53a578d1" class="cell" data-execution_count="411">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.signal <span class="im">import</span> butter, filtfilt</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bandpass_filter(signal, fs, lowcut, highcut, order<span class="op">=</span><span class="dv">5</span>):</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Applies a bandpass filter to retain only the desired frequency range."""</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    nyq <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> fs</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    low, high <span class="op">=</span> lowcut <span class="op">/</span> nyq, highcut <span class="op">/</span> nyq</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    b, a <span class="op">=</span> butter(order, [low, high], btype<span class="op">=</span><span class="st">'band'</span>)</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> filtfilt(b, a, signal)</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Parameters</span></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">1024</span>  <span class="co"># Number of points</span></span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>fs <span class="op">=</span> <span class="dv">1</span>    <span class="co"># Sampling frequency</span></span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>hurst <span class="op">=</span> <span class="fl">0.7</span>  <span class="co"># Hurst parameter for scaling range</span></span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Generate scale-invariant (power-law) noise in the middle range</span></span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>fbm_signal <span class="op">=</span> fbm(hurst<span class="op">=</span>hurst, t<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>fbm_signal <span class="op">=</span> fbm_signal.sample(Nsize)</span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Add white noise at high frequencies</span></span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>white_noise <span class="op">=</span> np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, N)</span>
-<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Add low-frequency drift (trend)</span></span>
-<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>low_freq_trend <span class="op">=</span> np.cumsum(np.random.normal(<span class="dv">0</span>, <span class="fl">0.05</span>, N))</span>
-<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Apply bandpass filter to isolate power-law scaling in a frequency band</span></span>
-<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>filtered_fbm <span class="op">=</span> bandpass_filter(fbm_signal, fs, lowcut<span class="op">=</span><span class="fl">0.05</span>, highcut<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Combine all components</span></span>
-<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>test_signal <span class="op">=</span> filtered_fbm[<span class="dv">1</span>:] <span class="op">+</span> white_noise <span class="op">+</span> low_freq_trend</span>
-<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the result</span></span>
-<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">4</span>))</span>
-<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>plt.plot(test_signal, label<span class="op">=</span><span class="st">"Mixed Scaling Signal"</span>)</span>
-<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div class="">
-<figure class="figure">
-<p class=""><a href="Figures_files/figure-html/cell-15-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="Figures_files/figure-html/cell-15-output-1.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-</div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [412]:</pre></div><div id="b9d50feb-c653-4f75-aeda-315d333458cd" class="cell" data-execution_count="412">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> plparams_weber(test_signal, <span class="dv">1</span>, finalplot<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Results: </span><span class="sc">{</span>results<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Current support pair is 1 of 1065: 0.001953125 to 0.5
-R is -0.10171080119157111
-beta is 0.14335106730660838
-Beta is between 0 and 1. Signal is estimated to be fGn
-Hurst is estimated to be 0.5716755336533041
-The p-value was found to be: 0.05
-
-        final Hurst and ftype were found to be: 0.57 and 1\
-        where 1 = fGn; and 2 = fBm\
-        final fmin and fmax are: 0.001953125 and 0.5, respectively
-        </code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div class="">
-<figure class="figure">
-<p class=""><a href="Figures_files/figure-html/cell-16-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="Figures_files/figure-html/cell-16-output-2.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Results: (np.float64(0.5716755336533041), 1, np.float64(0.14335106730660838), np.float64(0.001953125), np.float64(0.5), nan, np.float64(0.05), 0.05, [np.float64(6.990815571360313), array([ 7.89172531,  6.49737403,  5.68118026,  7.86690093,  6.96439008,
-        6.55223895,  6.20327911,  4.50313444,  4.00446681,  6.28834949,
-        4.68179781,  6.51616319,  5.21742891,  4.60386353,  5.7412807 ,
-        9.8865823 ,  6.50715223,  4.23890729,  7.76143263,  9.27164758,
-        6.84451782,  4.85862844,  4.3036136 ,  6.25936068,  6.50129606,
-        7.74249629,  6.07451734,  4.29409213,  7.37479191,  8.87931512,
-        8.09025576,  6.15303747,  5.711248  ,  5.54702655,  5.13943953,
-        8.88358343,  7.30254343,  6.96635362,  5.61441489,  5.00768701,
-        6.32846249,  7.16622669,  5.06373142,  6.05361087,  6.73476941,
-        6.73600108,  5.00839292,  8.09686541,  6.18819748,  5.69259099,
-        6.50923116,  5.63557175,  5.72221459,  7.93671041, 10.70391616,
-        9.58981926,  8.7905443 ,  6.40787417,  5.09065785,  8.40980702,
-        6.34233133,  5.77351961,  8.5260925 ,  4.37439699,  5.09011358,
-        4.55011139,  4.93123752,  4.87223435,  6.05436241,  5.5488693 ,
-        6.47504399,  7.08439029,  7.09856605,  6.98950949,  7.06550383,
-        7.4609977 ,  5.54915591,  6.84682218,  9.66946273,  5.42453045,
-        5.70075655,  5.54326956,  5.26271426,  4.8304552 ,  8.54095757,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-        0.        ,  0.        ,  0.        ,  0.        ,  0.        ])])</code></pre>
 </div>
 </div></div>
      </main>
@@ -1885,7 +1050,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":false});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
