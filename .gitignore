@@ -1,7 +1,6 @@
-.git
-.ipynb_checkpoints
-.quarto
-.venv
-HCPdata
-
+/.git/
+/.ipynb_checkpoints/
 /.quarto/
+/.venv/
+/HCPdata/
+/image/
